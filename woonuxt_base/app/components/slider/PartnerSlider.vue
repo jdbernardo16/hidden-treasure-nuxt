@@ -1,0 +1,51 @@
+<template>
+    <div class="partner-swiper">
+        <swiper 
+            :modules="modules"
+            :slides-per-view="5" 
+            :space-between="20" 
+            :loop="true" 
+            :speed="5000"
+            :autoplay="{ delay: 0, disableOnInteraction: false }" 
+        >
+            <swiper-slide v-for="(partner, index) in partners" :key="index">
+                <img :src="partner" alt="Partner Logo" class="partner-logo m-auto" />
+            </swiper-slide>
+        </swiper>
+    </div>
+</template>
+
+<script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, FreeMode } from 'swiper/modules';
+import "swiper/css/free-mode";
+import 'swiper/css';
+
+const modules = [Autoplay, FreeMode];
+
+// Partner logos (replace with your actual image paths)
+const partners = [
+    "/images/logoipsum-211.svg",
+    "/images/logoipsum-215.svg",
+    "/images/logoipsum-221.svg",
+    "/images/logoipsum-225.svg",
+    "/images/logoipsum-280.svg",
+    "/images/logoipsum-284.svg",
+];
+</script>
+
+<style scoped>
+.partner-swiper {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    background: #333;
+    /* Adjust to your design */
+}
+
+.partner-logo {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+}
+</style>

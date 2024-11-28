@@ -1,0 +1,53 @@
+{
+  "name": "woonuxt",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "dev:ssl": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"woonuxt_base/app/{components,pages,plugins,middleware,layouts,composables,assets}/**/*.{js,jsx,ts,tsx,vue,html,css,scss,json,md}\"",
+    "serve": "nuxi generate && npx serve .output/public -l 8080"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "^4.10.0",
+    "lucide-vue-next": "^0.454.0",
+    "@vueform/slider": "^2.1.10",
+    "@vueuse/core": "^11.2.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.6.1",
+    "@nuxt/eslint-config": "^0.6.1",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxt/icon": "^1.8.1",
+    "@nuxt/image": "1.8.1",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "nuxt": "^3.14.1592",
+    "nuxt-graphql-client": "^0.2.41",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "swiper": "^11.1.9",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "woonuxt-settings": "^1.0.61"
+  },
+  "overrides": {
+    "sharp": "0.32.6"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+        "eslint --fix",
+        "prettier --write",
+        "vitest related --run"
+    ],
+    "*.{css,scss}": "prettier --write"
+  }
+}

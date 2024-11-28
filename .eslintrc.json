@@ -1,0 +1,15 @@
+{
+   "root": true,
+   "extends": ["@nuxt", "plugin:prettier/recommended", "prettier"],
+   "env": {
+      "browser": true,
+      "node": true
+   },
+   "rules": {
+      "prettier/prettier": ["Warn"],
+      "vue/component-name-in-template-casing": ["error", "PascalCase"],
+      "vue/multi-word-component-names": "error",
+      "vue/no-unused-components": "error",
+      "vue/no-unused-vars": "error"
+   }
+}
