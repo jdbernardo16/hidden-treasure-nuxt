@@ -4,29 +4,19 @@ const { isShowingCart, toggleCart } = useCart();
 const { isShowingMobileMenu, toggleMobileMenu, addBodyClass, removeBodyClass } = useHelpers();
 const { siteName } = useAppConfig();
 
-const contentLoaded = ref(false);
-
 const closeCartAndMenu = () => {
   toggleCart(false);
   toggleMobileMenu(false);
 };
 
 watch([isShowingCart, isShowingMobileMenu], () => {
-  isShowingCart.value || isShowingMobileMenu.value
-    ? addBodyClass('overflow-hidden')
-    : removeBodyClass('overflow-hidden');
+  isShowingCart.value || isShowingMobileMenu.value ? addBodyClass('overflow-hidden') : removeBodyClass('overflow-hidden');
 });
 
 watch(
   () => route.path,
   () => closeCartAndMenu(),
 );
-
-
-onMounted(() => {
-  contentLoaded.value = true;
-});
-
 
 useHead({
   titleTemplate: `%s - ${siteName}`,
@@ -45,14 +35,7 @@ useHead({
       <MobileMenu v-if="isShowingMobileMenu" />
     </Transition>
 
-    <!-- Placeholder to reserve space -->
-    <div v-if="!contentLoaded" class="w-full bg-brand-dark1 h-screen">
-    </div>
-
-    <!-- NuxtPage for dynamic content -->
-    <NuxtPage v-if="contentLoaded" />
-
-    <GeneralFooter />
+    <NuxtPage />
 
     <Transition name="fade">
       <div
@@ -61,6 +44,7 @@ useHead({
         @click="closeCartAndMenu"
       />
     </Transition>
+    <GeneralFooter />
   </div>
 </template>
 

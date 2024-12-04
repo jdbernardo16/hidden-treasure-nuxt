@@ -131,11 +131,10 @@ useSeoMeta({
               <NuxtLink v-if="item.product?.node" :to="`/product/${item.product.node.slug}`">
                 <NuxtImg
                   class="w-16 h-16 rounded-xl"
+                  format="webp" quality="90"
                   :src="item.variation?.node?.image?.sourceUrl || item.product.node?.image?.sourceUrl || '/images/placeholder.png'"
                   :alt="item.variation?.node?.image?.altText || item.product.node?.image?.altText || 'Product image'"
                   :title="item.variation?.node?.image?.title || item.product.node?.image?.title || 'Product image'"
-                  width="64"
-                  height="64"
                   loading="lazy" />
               </NuxtLink>
               <div class="flex-1 leading-tight">

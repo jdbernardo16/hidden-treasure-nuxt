@@ -30,7 +30,7 @@ const { isShowingSearch } = useSearching();
   <header class="fixed w-full z-50 bg-brand-dark1 px-10 flex items-center justify-between py-4">
     <NuxtLink to="/" class="cursor-pointer block">
       <div>
-        <nuxt-img src="/images/ht-logo.png" alt="logo" width="93" height="50" format="webp" quality="90"
+        <NuxtImg src="/images/ht-logo.png" alt="logo" width="93" height="50" format="webp" quality="90"
           data-test-id="logo-image" />
       </div>
     </NuxtLink>
@@ -42,7 +42,7 @@ const { isShowingSearch } = useSearching();
       <NuxtLink to="/shop" class="hover:text-white transition">Consignment</NuxtLink>
       <!-- <NuxtLink to="/products" class="hover:text-white transition">{{ $t('messages.general.allProducts') }}</NuxtLink>
       <NuxtLink to="/categories" class="hover:text-white transition">{{ $t('messages.shop.category', 2) }}</NuxtLink> -->
-      <NuxtLink to="/events" class="hover:text-white transition">Events</NuxtLink>
+      <NuxtLink to="/" class="hover:text-white transition">Events</NuxtLink>
       <NuxtLink to="/contact" class="hover:text-white transition">Contact Us</NuxtLink>
       <NuxtLink class="lg:hidden" :to="wishlistLink" :prefetch="false">Wishlist</NuxtLink>
       <NuxtLink class="lg:hidden" to="/my-account" :prefetch="false">My Account</NuxtLink>

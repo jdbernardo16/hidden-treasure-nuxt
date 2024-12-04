@@ -1,9 +1,9 @@
 <template>
-    <footer>
+    <footer class="order-last">
         <div class="relative">
             <div class="px-10 py-10 flex w-full justify-between relative z-10 bg-[#232027]/[0.85]">
                 <div class="text-neutral-200">
-                    <nuxt-img class="mb-4" src="/images/ht-logo.png" alt="logo" width="204" format="webp" quality="90" data-test-id="logo-image" />
+                    <NuxtImg class="mb-4" src="/images/ht-logo.png" alt="logo" width="204" format="webp" quality="90" data-test-id="logo-image" />
                     <p class="text-sm mb-1">Uncover the Potential, Elevate Your Brand.</p>
                     <p class="text-sm">Newport Beach, CA</p>
                 </div>

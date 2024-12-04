@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+const config = useRuntimeConfig();
+const API_BASE_URL = config.public.API_BASE_URL;
 const { siteName, description, shortDescription, siteImage } = useAppConfig();
-const { data } = useFetch('http://localhost:8000/wp-json/wp/v2/pages', {
+const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
     query: {
         slug: 'home',
         _fields: 'acf',

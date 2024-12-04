@@ -60,6 +60,12 @@ export default defineNuxtConfig({
     '#woo': '../.nuxt/gql/default',
   },
 
+  runtimeConfig: {
+    public: {
+      API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000', // Add your API base URL here
+    },
+  },
+
   hooks: {
     'pages:extend'(pages) {
       const addPage = (name: string, path: string, file: string) => {
@@ -76,7 +82,7 @@ export default defineNuxtConfig({
 
   nitro: {
     routeRules: {
-      '/': { prerender: true },
+      '/**': { prerender: true },
       '/products/**': { swr: 3600 },
       '/checkout/order-received/**': { ssr: false },
       '/order-summary/**': { ssr: false },

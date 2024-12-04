@@ -104,7 +104,8 @@
 
 <script setup>
 import { ref } from "vue";
-
+const config = useRuntimeConfig();
+const API_BASE_URL = config.public.API_BASE_URL;
 const VueRecaptcha = defineAsyncComponent({
   loader: () => import('vue-recaptcha').then(module => module.VueRecaptcha),
   loadingComponent: () => '<div>Loading...</div>',
@@ -149,7 +150,7 @@ const handleSubmit = async () => {
     formData.append('_wpcf7_container_post', '0'); // Replace with your container post ID
 
     try {
-        const response = await $fetch("http://localhost:8000/wp-json/contact-form-7/v1/contact-forms/129/feedback", {
+        const response = await $fetch(`${API_BASE_URL}/wp-json/contact-form-7/v1/contact-forms/129/feedback`, {
             method: "POST",
             body: formData,
         });

@@ -31,12 +31,11 @@ const moveToWishList = () => {
     <div v-if="productType" class="flex items-start gap-3 group">
       <NuxtLink :to="productSlug">
         <NuxtImg
-          width="64"
-          height="64"
           class="w-16 h-16 rounded-md skeleton"
           :src="imgScr"
           :alt="productType.image?.altText || productType.name"
           :title="productType.image?.title || productType.name"
+          format="webp" quality="90"
           loading="lazy" />
       </NuxtLink>
       <div class="flex-1">
