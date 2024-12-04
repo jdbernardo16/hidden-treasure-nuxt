@@ -31,7 +31,7 @@ onMounted(() => {
       <icon v-else-if="gateway.id === 'paypal'" name="ion:logo-paypal" size="20" />
       <icon v-else name="ion:cash-outline" size="20" />
       <span class="whitespace-nowrap" v-html="gateway.title" />
-      <icon name="ion:checkmark-circle" size="20" class="ml-auto text-primary checkmark opacity-0" />
+      <icon name="ion:checkmark-circle" size="20" class="ml-auto text-brand-gold checkmark opacity-0" />
     </div>
     <div v-if="activePaymentMethod.description" class="prose block w-full">
       <p class="text-sm text-gray-500" v-html="activePaymentMethod.description" />
@@ -41,10 +41,10 @@ onMounted(() => {
 
 <style lang="postcss" scoped>
 .option {
-  @apply bg-white border rounded-lg text-gray-600 cursor-pointer flex flex-1 text-sm py-3 px-4 gap-2 items-center hover:border-purple-300;
+  @apply bg-white border rounded-lg text-gray-600 cursor-pointer flex flex-1 text-sm py-3 px-4 gap-2 items-center;
 
   &.active-option {
-    @apply border-primary cursor-default border-opacity-50 shadow-sm pointer-events-none;
+    @apply border-brand-gold cursor-default border-opacity-50 shadow-sm pointer-events-none;
 
     & .checkmark {
       @apply opacity-100;

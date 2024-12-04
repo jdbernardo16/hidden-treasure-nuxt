@@ -1,15 +1,15 @@
 <template>
-  <div class="max-w-lg mx-auto my-16 min-h-[600px] lg:my-24">
+  <div class="max-w-lg mx-auto my-16 lg:my-24">
     <div class="flex flex-col items-center">
-      <Logo class="mb-6 scale-125" />
+      <img src="/images/ht-logo.png" alt="Logo" class="object-contain h-20 mb-4" />
       <h1 class="text-xl font-semibold lg:text-3xl">{{ formTitle }}</h1>
       <div v-if="formView === 'login'" class="my-2 text-center">
         {{ $t('messages.account.noAccount') }}
-        <a class="font-semibold cursor-pointer text-primary" @click="navigate('register')"> {{ $t('messages.account.accountRegister') }} </a>.
+        <a class="font-semibold cursor-pointer text-brand-gold" @click="navigate('register')"> {{ $t('messages.account.accountRegister') }} </a>.
       </div>
       <div v-if="formView === 'register'" class="my-2 text-center">
         {{ $t('messages.account.hasAccount') }}
-        <a class="font-semibold cursor-pointer text-primary" @click="navigate('login')">
+        <a class="font-semibold cursor-pointer text-brand-gold" @click="navigate('login')">
           {{ $t('messages.general.please') }} {{ $t('messages.account.accountLogin') }}
         </a>
         .
@@ -46,12 +46,12 @@
       <Transition name="scale-y" mode="out-in">
         <div v-if="errorMessage" class="my-4 text-sm text-red-500" v-html="errorMessage"></div>
       </Transition>
-      <button class="flex items-center justify-center gap-4 mt-4 text-lg">
+      <Button class="flex items-center justify-center gap-4 mt-4 text-lg">
         <LoadingIcon v-if="isPending" stroke="4" size="16" color="#fff" />
         <span>{{ buttonText }}</span>
-      </button>
+      </Button>
     </form>
-    <div class="my-8 text-center cursor-pointer" @click="navigate('forgotPassword')" v-if="formView === 'login'">
+    <div class="my-8 text-center cursor-pointer hover:text-brand-gold" @click="navigate('forgotPassword')" v-if="formView === 'login'">
       {{ $t('messages.account.forgotPassword') }}
     </div>
     <div class="my-8 text-center cursor-pointer" @click="navigate('login')" v-if="formView === 'forgotPassword'">{{ $t('messages.account.backToLogin') }}</div>
@@ -179,6 +179,6 @@ button {
 }
 
 form button {
-  @apply rounded-lg font-bold bg-gray-800 text-white py-3 px-8 hover:bg-gray-800;
+  @apply rounded-lg font-bold bg-gray-800 text-white py-3 px-8 hover:bg-brand-gold;
 }
 </style>

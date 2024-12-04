@@ -10,6 +10,9 @@ const { data } = useFetch('http://localhost:8000/wp-json/wp/v2/pages', {
         return response[0]?.acf || null
     }
 })
+import { ProductsOrderByEnum } from '#woo';
+const { data: productData } = await useAsyncGql('getProducts', { first: 5, orderby: ProductsOrderByEnum.POPULARITY });
+const popularProducts = productData.value.products?.nodes || [];
 
 useSeoMeta({
   title: `Home`,
@@ -99,31 +102,17 @@ useSeoMeta({
                 <p class="valery text-[40px] text-brand-gold">Our Products</p>
             </div>
             <div class="grid grid-cols-3 gap-20 mb-16">
-                <div v-for="i in 3" class="cursor-pointer space-y-6 group/product">
-                    <div class="relative bg-[#363636] aspect-[385/234] px-16 py-5">
-                        <NuxtImg
-                        class="w-full h-full group-hover/product:saturate-100 saturate-0 transition group-hover/product:scale-105"
-                        src="/images/product1.png"
-                        placeholder
-                        placeholder-class="blur-xl" />
-                    </div>
-                    <div>
-                        <div class="mb-4 border-b-2 pb-4 border-brand-gold">
-                            <p class="text-white line-clamp-2">2023 Topps Chrome Platinum Anniversary Baseball Hobby Box</p>
-                        </div>
-                        <div class="flex items-center space-x-1 text-sm mb-1">
-                            <p class="text-brand-gold">Price</p>
-                            <p class="text-white line-through">$229.95</p>
-                        </div>
-                        <div class="flex items-center space-x-1 text-sm mb-3">
-                            <p class="text-brand-gold">Discounted Price:</p>
-                            <p class="text-white stroke">$199.95</p>
-                        </div>
-                        <div class="cursor-pointer px-2 py-1.5 border border-brand-gold text-white text-xs w-fit hover:bg-brand-gold transition">
-                            Add to Cart
-                        </div>
-                    </div>
-                </div>
+          
+                <ProductCard
+                v-for="(node, i) in popularProducts.slice(0, 3)"
+                :key="node.databaseId"
+                class="w-full"
+                :node="node"
+                :index="i"
+                :class="{
+                    hidden: i === popularProducts.length - 1,
+                    'lg:block': i === popularProducts.length - 1,
+                }" />
             </div>
             <div class="w-fit m-auto">
                 <Button class="w-[185px]">View All</Button>

@@ -135,7 +135,7 @@ const { viewer, customer } = useAuth();
 const { t } = useI18n();
 
 const loading = ref<boolean>(false);
-const button = ref<{ text: string; color: string }>({ text: t('messages.account.updateDetails'), color: 'bg-primary hover:bg-primary-dark' });
+const button = ref<{ text: string; color: string }>({ text: t('messages.account.updateDetails'), color: 'bg-brand-gold hover:bg-brand-gold/[0.8]' });
 
 async function saveChanges(): Promise<void> {
   loading.value = true;
@@ -153,7 +153,7 @@ async function saveChanges(): Promise<void> {
   loading.value = false;
 
   setTimeout(() => {
-    button.value = { text: t('messages.account.updateDetails'), color: 'bg-primary hover:bg-primary-dark' };
+    button.value = { text: t('messages.account.updateDetails'), color: 'bg-brand-gold hover:bg-brand-gold/[0.8]' };
   }, 2000);
 }
 </script>

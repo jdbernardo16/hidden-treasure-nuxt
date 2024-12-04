@@ -108,17 +108,17 @@ const attributesWithTerms = globalProductAttributes.map((attr) => ({ ...attr, te
   input[type='checkbox']:checked:after,
   input[type='checkbox'] + label,
   input[type='radio'] + label {
-    @apply cursor-pointer text-gray-600 hover:text-primary;
+    @apply cursor-pointer text-gray-600 hover:text-brand-gold;
   }
 
   input[type='checkbox']:checked + label,
   input[type='radio']:checked + label {
-    @apply text-gray-800 hover:text-primary-dark;
+    @apply text-gray-800 hover:text-brand-gold;
   }
 
   input[type='checkbox']:checked,
   input[type='radio']:checked {
-    @apply bg-primary border-0;
+    @apply bg-brand-gold border-0;
   }
 
   input[type='checkbox']:checked:after {

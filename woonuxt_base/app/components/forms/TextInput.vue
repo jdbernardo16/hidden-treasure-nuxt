@@ -47,7 +47,7 @@
                 class="block w-full focus:outline-none text-sm py-3 h-11 px-4 border-0 text-white"
                 :class="[
                     error
-                        ? 'text-semantic-error border-semantic-error focus:ring-0 focus:border-semantic-error'
+                        ? 'text-red-900 border-brand-gold placeholder-red-300 focus:border-red-500 border-b'
                         : add_on_left
                         ? 'text-gray-800 border-b border-brand-gold placeholder-dark-600 flex-1 min-w-0 block w-full !px-3 py-3 rounded-none focus:ring-0 focus:border-b-[3px] focus:border-primary-700 text-sm'
                         : add_on_right

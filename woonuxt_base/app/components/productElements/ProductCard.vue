@@ -57,7 +57,7 @@ const imagetoDisplay = computed<string>(() => {
       <div>
           <div class="mb-4 border-b-2 pb-4 border-brand-gold">
             <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name">
-              <p class="text-white line-clamp-2">{{ node.name }}</p>
+              <p class="text-white line-clamp-2 min-h-12">{{ node.name }}</p>
             </NuxtLink>
           </div>
 

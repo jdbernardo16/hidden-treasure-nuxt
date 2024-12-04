@@ -22,7 +22,7 @@ export default <Partial<Config>>{
           dark1: '#1A1C1C',
           dark2: '#0c1417',
           dark3: '#11181d',
-          dark4: '#020816',
+          dark4: '#292929',
           green: '#46d39e',
           gold: '#CFA560',
        },

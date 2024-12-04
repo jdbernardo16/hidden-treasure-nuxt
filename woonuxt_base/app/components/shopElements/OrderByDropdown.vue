@@ -19,7 +19,7 @@ watch([orderby, order], () => {
       @click="order = order === 'ASC' ? 'DESC' : 'ASC'">
       <Icon name="ion:filter-outline" size="18" :class="order === 'ASC' ? 'rotate-180' : ''" class="transition-transform transform transform-origin-center text-brand-gold" />
     </button>
-    <select id="orderby-dropdown" v-model="orderby" class="bg-transparent rounded-none border-brand-gold text-brand-gold" aria-label="Order by">
+    <select id="orderby-dropdown" v-model="orderby" class="bg-transparent rounded-none border-brand-gold text-brand-gold hover:bg-transparent" aria-label="Order by">
       <option value="date">{{ $t('messages.general.latest') }}</option>
       <option value="alphabetically">{{ $t('messages.general.alphabetically') }}</option>
       <option value="price">{{ $t('messages.shop.price') }}</option>

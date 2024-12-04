@@ -32,13 +32,13 @@ const onFocusOut = () => {
 </script>
 
 <template>
-  <div class="flex bg-white text-sm leading-none shadow-sm isolate">
+  <div class="flex text-sm leading-none shadow-sm">
     <button
       title="Decrease Quantity"
       aria-label="Decrease Quantity"
       @click="decrementQuantity"
       type="button"
-      class="focus:outline-none w-6 h-6 border border-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed"
+      class="focus:outline-none w-6 h-6 border border-brand-gold hover:bg-brand-gold hover:text-white disabled:cursor-not-allowed"
       :disabled="isUpdatingCart || quantity <= 0">
       <Icon name="ion:remove" size="14" />
     </button>
@@ -49,13 +49,13 @@ const onFocusOut = () => {
       :max="productType.stockQuantity"
       aria-label="Quantity"
       @focusout="onFocusOut"
-      class="flex items-center justify-center w-8 px-2 text-right text-xs focus:outline-none border-y border-gray-300" />
+      class="flex items-center justify-center w-8 px-2 text-right text-xs focus:outline-none border-y border-brand-gold bg-transparent" />
     <button
       title="Increase Quantity"
       aria-label="Increase Quantity"
       @click="incrementQuantity"
       type="button"
-      class="focus:outline-none w-6 h-6 border hover:bg-gray-50 border-gray-300 disabled:cursor-not-allowed disabled:bg-gray-100"
+      class="focus:outline-none w-6 h-6 border hover:bg-brand-gold hover:text-white border-brand-gold disabled:cursor-not-allowed disabled:bg-brand-gold/[0.5]"
       :disabled="isUpdatingCart || hasNoMoreStock">
       <Icon name="ion:add" size="14" />
     </button>

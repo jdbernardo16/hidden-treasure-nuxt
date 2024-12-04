@@ -11,22 +11,22 @@ const clearAll = () => {
 
 <template>
   <div class="w-full my-16 lg:my-24">
-    <div class="flex flex-col items-center justify-center w-full text-center text-pretty">
+    <div class="flex flex-col items-center justify-center w-full text-center text-pretty text-white">
       <Icon name="ion:sad-outline" size="156" class="opacity-25 mb-10" />
       <h2 class="text-2xl font-bold">{{ $t('messages.shop.noProductsFound.title') }}</h2>
       <p class="mt-4 max-w-md">
         <slot>{{ $t('messages.shop.noProductsFound.subText') }}</slot>
       </p>
-      <div>
+      <!-- <div>
         <button
           v-if="allProducts.length"
-          class="bg-primary rounded-lg font-bold mt-8 text-center text-white text-sm w-full p-2 px-3 inline-block hover:bg-primary-dark"
+          class="bg-brand-gold text-white hover:bg-brand-gold/[0.8] px-10 py-4"
           :title="$t('messages.shop.noProductsFound.clearFiltersAndSearch')"
           aria-label="Clear all filters and search"
           @click="clearAll">
           {{ $t('messages.shop.noProductsFound.clearFiltersAndSearch') }}
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

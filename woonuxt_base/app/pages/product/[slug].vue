@@ -79,12 +79,12 @@ const disabledAddToCart = computed(() => {
 
 <template>
   <div class="bg-brand-dark1">
-    <div class="max-w-[1440px] m-auto relative py-6 px-10">
+    <div class="max-w-[1000px] m-auto relative py-6 px-10 lg:px-0">
       <div v-if="product">
         <SEOHead :info="product" />
         <Breadcrumb :product class="mb-6" v-if="storeSettings.showBreadcrumbOnSingleProduct" />
 
-        <div class="flex flex-col gap-10 md:flex-row md:justify-between lg:gap-24">
+        <div class="flex flex-col gap-10 md:flex-row md:justify-between lg:gap-10">
           <ProductImageGallery v-if="product.image" class="relative flex-1" :main-image="product.image"
             :gallery="product.galleryImages!" :node="type" :activeVariation="activeVariation || {}" />
           <NuxtImg v-else class="relative flex-1 skeleton" src="/images/placeholder.jpg"
@@ -95,16 +95,17 @@ const disabledAddToCart = computed(() => {
               <div class="flex-1">
                 <h1 class="flex flex-wrap items-center gap-2 mb-2 text-2xl font-sesmibold text-white">
                   {{ type.name }}
-                  <LazyWPAdminLink :link="`/wp-admin/post.php?post=${product.databaseId}&action=edit`">Edit
-                  </LazyWPAdminLink>
+                  <!-- <LazyWPAdminLink :link="`/wp-admin/post.php?post=${product.databaseId}&action=edit`">Edit
+                  </LazyWPAdminLink> -->
                 </h1>
+                <div class="flex items-center text-white space-x-2 mb-4">
+                  <p class="text-brand-gold text-2xl">{{ type.salePrice }}</p>
+                  <p class="line-through text-gray-400 text-xl">{{ type.regularPrice }}</p>
+                </div>
                 <StarRating :rating="product.averageRating || 0" :count="product.reviewCount || 0"
                   v-if="storeSettings.showReviews" />
               </div>
-              <div class="flex items-center text-white space-x-2">
-                <p class="line-through text-gray-400 text-xl">{{ type.regularPrice }}</p>
-                <p class="text-brand-gold text-2xl">{{ type.salePrice }}</p>
-              </div>
+              
             </div>
 
             <div class="grid gap-2 my-8 text-sm empty:hidden">
@@ -165,7 +166,7 @@ const disabledAddToCart = computed(() => {
         </div>
         <div class="my-32" v-if="product.related && storeSettings.showRelatedProducts">
           <div class="mb-4 text-xl font-semibold text-brand-gold">{{ $t('messages.shop.youMayLike') }}</div>
-          <ProductRow :products="product.related.nodes" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5" />
+          <ProductRow :products="product.related.nodes" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-4" />
         </div>
       </div>
     </div>

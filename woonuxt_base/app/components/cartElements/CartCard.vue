@@ -50,11 +50,11 @@ const moveToWishList = () => {
           </span>
         </div>
         <div class="flex items-center space-x-2 text-sm">
-          <p v-if="productType.regularPrice" :class="productType.salePrice ? 'line-through' : ''">
-            {{ productType.regularPrice }}
-          </p>
           <p v-if="productType.salePrice" class="font-semibold">
             {{ productType.salePrice }}
+          </p>
+          <p v-if="productType.regularPrice" :class="productType.salePrice ? 'line-through text-gray-500' : ''">
+            {{ productType.regularPrice }}
           </p>
         </div>
         <!-- <ProductPrice class="mt-1 text-xs" :sale-price="productType.salePrice" :regular-price="productType.regularPrice" /> -->

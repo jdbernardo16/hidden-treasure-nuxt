@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   css: [
-    './assets/css/general.css',
+    './assets/css/general.scss',
     './assets/css/custom-fonts.css'
   ],
 

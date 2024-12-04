@@ -38,7 +38,7 @@ const { t } = useI18n();
 
 const password = ref<{ new: string; confirm: string }>({ new: '', confirm: '' });
 const loading = ref<boolean>(false);
-const button = ref<{ text: string; color: string }>({ text: t('messages.account.updatePassword'), color: 'bg-primary hover:bg-primary-dark' });
+const button = ref<{ text: string; color: string }>({ text: t('messages.account.updatePassword'), color: 'bg-brand-gold hover:bg-brand-gold/[0.8]' });
 const errorMessage = ref<string>('');
 
 const updatePassword = async () => {
@@ -72,7 +72,7 @@ const updatePassword = async () => {
   loading.value = false;
 
   setTimeout(() => {
-    button.value = { text: t('messages.account.updatePassword'), color: 'bg-primary hover:bg-primary-dark' };
+    button.value = { text: t('messages.account.updatePassword'), color: 'bg-brand-gold hover:bg-brand-gold/[0.8]' };
   }, 2000);
 };
 </script>

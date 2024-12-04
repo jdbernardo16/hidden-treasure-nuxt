@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Search, User, ShoppingCart } from 'lucide-vue-next';
 const { wishlistLink } = useAuth();
 const { isShowingSearch } = useSearching();
 </script>
@@ -31,24 +30,29 @@ const { isShowingSearch } = useSearching();
   <header class="fixed w-full z-50 bg-brand-dark1 px-10 flex items-center justify-between py-4">
     <NuxtLink to="/" class="cursor-pointer block">
       <div>
-        <nuxt-img src="/images/ht-logo.png" alt="logo" width="93" height="50" format="webp" quality="90" data-test-id="logo-image" />
+        <nuxt-img src="/images/ht-logo.png" alt="logo" width="93" height="50" format="webp" quality="90"
+          data-test-id="logo-image" />
       </div>
     </NuxtLink>
 
     <div class="flex items-center space-x-6 text-brand-gold">
 
-      <NuxtLink to="/shop">Shop</NuxtLink>
-      <NuxtLink to="/products">{{ $t('messages.general.allProducts') }}</NuxtLink>
-      <NuxtLink to="/categories">{{ $t('messages.shop.category', 2) }}</NuxtLink>
-      <NuxtLink to="/contact">{{ $t('messages.general.contact') }}</NuxtLink>
+      <NuxtLink to="/shop" class="hover:text-white transition">Consignment</NuxtLink>
+      <NuxtLink to="/products" class="hover:text-white transition">{{ $t('messages.general.allProducts') }}</NuxtLink>
+      <NuxtLink to="/categories" class="hover:text-white transition">{{ $t('messages.shop.category', 2) }}</NuxtLink>
+      <NuxtLink to="/contact" class="hover:text-white transition">{{ $t('messages.general.contact') }}</NuxtLink>
       <NuxtLink class="lg:hidden" :to="wishlistLink" :prefetch="false">Wishlist</NuxtLink>
       <NuxtLink class="lg:hidden" to="/my-account" :prefetch="false">My Account</NuxtLink>
     </div>
 
-    <div class="flex items-center space-x-3 w-[113px] justify-end">
-      <Search class="w-6 h-6 text-brand-gold" />
-      <User class="w-6 h-6 text-brand-gold" />
-      <!-- <ShoppingCart class="w-6 h-6 text-brand-gold" /> -->
+    <div class="flex items-center space-x-3justify-end space-x-3">
+      <!-- <Search class="w-6 h-6 text-brand-gold" /> -->
+      <div class="flex justify-end items-center flex-1 ml-auto gap-4 md:gap-6">
+        <ProductSearch class="hidden sm:inline-flex max-w-[320px] w-[60%]" />
+        <SearchTrigger />
+      </div>
+      
+      <div class="h-6"><SignInLink /></div>
       <CartTrigger />
     </div>
   </header>

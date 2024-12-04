@@ -56,7 +56,7 @@ const imgWidth = 640;
       <NuxtImg
         v-for="galleryImg in galleryImages"
         :key="galleryImg.databaseId"
-        class="cursor-pointer rounded-xl"
+        class="cursor-pointer rounded-lg aspect-square"
         :width="imgWidth"
         :height="imgWidth"
         :src="galleryImg.sourceUrl"
@@ -83,7 +83,7 @@ const imgWidth = 640;
 
 .gallery-images img {
   width: 72px;
-  aspect-ratio: 5/6;
+  aspect-ratio: 6/6;
   object-fit: cover;
 }
 
