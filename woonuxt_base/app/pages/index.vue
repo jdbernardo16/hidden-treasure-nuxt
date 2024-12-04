@@ -69,10 +69,10 @@ useSeoMeta({
             </div>
 
             <div class="space-y-20">
-                <div v-for="i in 3" class="portfolio flex items-center px-20">
+                <div v-for="i,index in 3" class="portfolio flex items-center px-20">
                     <div class="portfolio-image w-7/12">
                         <div class="w-[120%] aspect-[16/9] relative overflow-hidden image-item">
-                            <img src="https://picsum.photos/id/237/800/450" alt="luxeglow" class="object-cover w-full h-full">
+                            <img :src="`https://picsum.photos/id/23${i}/800/450`" alt="luxeglow" class="object-cover w-full h-full">
                             <div class="absolute top-0 left-0 h-full w-full bg-brand-gold opacity-80 overlay"></div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ useSeoMeta({
                                 Redefining Elegance Online</p>
                         </div>
                         <div class="w-full bg-neutral-600 p-4 right-0 text-white">
-                            <p>We created a luxurious e-commerce experience for LuxeGlow, a premium skincare brand. Our team developed a sleek, responsive website paired with an engaging digital marketing campaign. The result? A 40% increase in online sales within three months.</p>
+                            <p>Hidden Treasures is a Luxury Marketing & Promotional Team specializing in Strategic Campaigns, Targeted Ads, Event Management, and Consignment Services bringing exposure and profit to our clients.</p>
                         </div>
 
                         <div>
@@ -101,10 +101,10 @@ useSeoMeta({
             <div class="text-center mb-16">
                 <p class="valery text-[40px] text-brand-gold">Our Products</p>
             </div>
-            <div class="grid grid-cols-3 gap-20 mb-16">
+            <div class="grid grid-cols-4 gap-20 mb-16">
           
                 <ProductCard
-                v-for="(node, i) in popularProducts.slice(0, 3)"
+                v-for="(node, i) in popularProducts.slice(0, 4)"
                 :key="node.databaseId"
                 class="w-full"
                 :node="node"
@@ -141,104 +141,7 @@ useSeoMeta({
         <PartnerSlider />
     </section>
 
-    <section class="bg-brand-dark1 overflow-hidden">
-        <div
-            class="max-w-[1440px] m-auto relative lg:px-12 lg:py-20 px-4 py-16"
-        >
-            <div class="overlay">
-                <img
-                    class="absolute -bottom-[130px] -left-[110px]"
-                    src="/images/envelop.svg"
-                    alt="envelop"
-                />
-                <img
-                    class="absolute lg:-right-5 -right-20 top-5 lg:top-[170px]"
-                    src="/images/at.png"
-                    alt="at"
-                />
-            </div>
-            <div
-                class="max-w-[1080px] m-auto flex flex-col lg:flex-row lg:space-x-20"
-            >
-                <div class="lg:w-[450px] lg:mb-0 mb-8">
-                    <h2
-                        class="lg:text-[40px] leading-tight mb-6 valery text-brand-gold"
-                    >
-                        Let’s Start Uncovering Hidden Opportunities
-                    </h2>
-                    <div
-                        class="text-white"
-                    >
-                        <p>Reach out to Hidden Treasures today and discover how we can transform your brand’s potential into measurable success. We’re here to help you every step of the way.</p>
-                    </div>
-                </div>
-
-                <form class="w-full lg:w-[calc(100%-530px)]">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-                        <TextInput
-                            custom-input-class="bg-transparent"
-                            type="text"
-                            name="first-name"
-                            id="first-name"
-                            placeholder="Enter first name here"
-                            label="First Name"
-                        />
-                        <TextInput
-                            custom-input-class="bg-transparent"
-                            type="text"
-                            name="last-name"
-                            id="last-name"
-                            placeholder="Enter last name here"
-                            label="Last Name"
-                        />
-                        <TextInput
-                            custom-input-class="bg-transparent"
-                            type="text"
-                            name="email-address"
-                            id="email-address"
-                            placeholder="Enter email address here"
-                            label="Email Address"
-                        />
-
-                        <MobileInput
-                            name="mobile-number"
-                            id="mobile-number"
-                            placeholder="Enter mobile number here"
-                            label="Mobile Number"
-                        />
-                        <TextInput
-                            custom-input-class="bg-transparent"
-                            textarea
-                            type="text"
-                            name="message"
-                            id="message"
-                            placeholder="Enter message here"
-                            label="Message"
-                            class="col-span-full"
-                            :maxlength="500"
-                        />
-                    </div>
-
-                   
-
-                    <!-- <vue-recaptcha
-                        class="mt-6"
-                        :sitekey="sitekey"
-                        @verify="verifySubmission"
-                        @expired="expiredRecaptcha"
-                        ref="grecaptcha"
-                    ></vue-recaptcha> -->
-
-                    <Button
-                        size="large"
-                        class="mt-6"
-                    >
-                        SUBMIT INQUIRY
-                    </Button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <ContactForm />
     <!-- <div
         class="container flex flex-wrap items-center justify-center my-16 text-center gap-x-8 gap-y-4 brand lg:justify-between">
         <img src="/images/logoipsum-211.svg" alt="Brand 1" width="132" height="35" />

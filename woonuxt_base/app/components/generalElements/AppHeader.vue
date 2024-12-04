@@ -37,10 +37,13 @@ const { isShowingSearch } = useSearching();
 
     <div class="flex items-center space-x-6 text-brand-gold">
 
+      <NuxtLink to="/" class="hover:text-white transition">Services</NuxtLink>
+      <NuxtLink to="/" class="hover:text-white transition">About Us</NuxtLink>
       <NuxtLink to="/shop" class="hover:text-white transition">Consignment</NuxtLink>
-      <NuxtLink to="/products" class="hover:text-white transition">{{ $t('messages.general.allProducts') }}</NuxtLink>
-      <NuxtLink to="/categories" class="hover:text-white transition">{{ $t('messages.shop.category', 2) }}</NuxtLink>
-      <NuxtLink to="/contact" class="hover:text-white transition">{{ $t('messages.general.contact') }}</NuxtLink>
+      <!-- <NuxtLink to="/products" class="hover:text-white transition">{{ $t('messages.general.allProducts') }}</NuxtLink>
+      <NuxtLink to="/categories" class="hover:text-white transition">{{ $t('messages.shop.category', 2) }}</NuxtLink> -->
+      <NuxtLink to="/events" class="hover:text-white transition">Events</NuxtLink>
+      <NuxtLink to="/contact" class="hover:text-white transition">Contact Us</NuxtLink>
       <NuxtLink class="lg:hidden" :to="wishlistLink" :prefetch="false">Wishlist</NuxtLink>
       <NuxtLink class="lg:hidden" to="/my-account" :prefetch="false">My Account</NuxtLink>
     </div>

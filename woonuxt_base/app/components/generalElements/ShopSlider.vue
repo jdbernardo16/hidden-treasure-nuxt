@@ -24,7 +24,7 @@
                     <div class="max-w-[573px] space-y-8">
                         <h1 class="valery text-brand-gold text-[4rem] leading-tight slider-title">Legendary <br> Mystery Packs</h1>
                         <p class="text-white text-2xl leading-snug slider-description">Shop our curated selection of collectible sports cards, ensuring authenticity and quality in every item.</p>
-                        <Button class="slider-button" variant="secondary">Shop now</Button>
+                        <Button @click="navigateTo('/products')" class="slider-button" variant="secondary">Shop now</Button>
                     </div>
                 </div>
             </div>
