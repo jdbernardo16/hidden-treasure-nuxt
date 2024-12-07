@@ -3,11 +3,11 @@
         <div class="max-w-[1440px] m-auto relative lg:px-12 lg:py-20 px-4 py-16">
             <div class="overlay">
                 <img class="absolute -bottom-[130px] -left-[110px]" src="/images/envelop.svg" alt="envelop" />
-                <img class="absolute lg:-right-5 -right-20 top-5 lg:top-[170px]" src="/images/at.png" alt="at" />
+                <img class="absolute lg:-right-5 -right-20 top-[100px] lg:top-[170px]" src="/images/at.png" alt="at" />
             </div>
-            <div class="max-w-[1080px] m-auto flex flex-col lg:flex-row lg:space-x-20">
+            <div class="max-w-[1080px] m-auto flex flex-col lg:flex-row lg:space-x-20 relative z-10">
                 <div class="lg:w-[450px] lg:mb-0 mb-8">
-                    <h2 class="lg:text-[40px] leading-tight mb-6 valery text-brand-gold">
+                    <h2 class="lg:text-[40px] text-3xl leading-tight mb-6 artegra text-brand-gold">
                         Let’s Start Uncovering Hidden Opportunities
                     </h2>
                     <div class="text-white">
@@ -112,6 +112,12 @@ const VueRecaptcha = defineAsyncComponent({
   delay: 4000
 });
 
+useSeoMeta({
+  title: `Contact Us`,
+  ogTitle: `Contact Us`,
+  twitterCard: `summary_large_image`,
+});
+
 const form = ref({
     "your-name": "",
     "your-email": "",
@@ -184,7 +190,7 @@ const closeModal = () => {
     showSuccessModal.value = false;
 }
 
-const sitekey = "6LczLlYqAAAAAOgatDm5mHHKHdTVsU6X2cvf7pI3";
+const sitekey = config.public.SITE_KEY;
 
 </script>
 

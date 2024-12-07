@@ -34,22 +34,22 @@ onMounted(() => {
     </section>
 
     <section class="bg-brand-dark1">
-      <div class="max-w-[1440px] m-auto px-10 pt-20 pb-10">
+      <div class="max-w-full md:max-w-[1440px] m-auto px-4 md:px-10 pt-20 pb-10">
         <div class="flex items-center justify-between">
-          <h2 class="text-lg valery md:text-4xl text-brand-gold">{{ $t('messages.shop.shopByCategory') }}</h2>
+          <h2 class="text-lg artegra md:text-4xl text-brand-gold">{{ $t('messages.shop.shopByCategory') }}</h2>
           <div class="flex items-center space-x-2 text-brand-gold">
             <NuxtLink to="/categories">{{ $t('messages.general.viewAll') }}</NuxtLink>
             <ArrowRight class="w-5 h-5" />
           </div>
         </div>
-        <div class="grid justify-center grid-cols-2 gap-4 mt-8 md:grid-cols-3 lg:grid-cols-6">
+        <div class="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mt-8">
           <CategoryCard v-for="(category, i) in productCategories" :key="i" class="w-full" :node="category" />
         </div>
       </div>
     </section>
 
     <section class="bg-brand-dark1">
-      <div class="max-w-[1440px] m-auto px-10 py-10 grid grid-cols-4 gap-10">
+      <div class="max-w-full md:max-w-[1440px] m-auto px-4 md:px-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div class="flex items-center space-x-6 px-6 py-8 bg-[#535353] text-brand-gold rounded-lg">
           <div class="w-14">
             <img src="/images/truck.svg" alt="truck">
@@ -90,15 +90,15 @@ onMounted(() => {
     </section>
 
     <section class="bg-brand-dark1">
-      <div class="max-w-[1440px] m-auto px-10 py-10">
+      <div class="max-w-full md:max-w-[1440px] m-auto px-4 md:px-10 py-10">
         <div class="flex items-center justify-between">
-          <h2 class="text-lg valery md:text-4xl text-brand-gold">{{ $t('messages.shop.popularProducts') }}</h2>
+          <h2 class="text-lg artegra md:text-4xl text-brand-gold">{{ $t('messages.shop.popularProducts') }}</h2>
           <div class="flex items-center space-x-2 text-brand-gold">
             <NuxtLink to="/products">{{ $t('messages.general.viewAll') }}</NuxtLink>
             <ArrowRight class="w-5 h-5" />
           </div>
         </div>
-        <ProductRow :products="popularProducts" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5 mt-8" />
+        <ProductRow :products="popularProducts" class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-8" />
         
       </div>
 
@@ -111,5 +111,11 @@ onMounted(() => {
   max-height: min(8vw, 120px);
   object-fit: contain;
   object-position: center;
+}
+
+@media (max-width: 768px) {
+  .grid-cols-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>

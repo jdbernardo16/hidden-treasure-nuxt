@@ -28,7 +28,7 @@ useHead({
 
 <template>
   <section class="bg-brand-dark4">
-    <div class="max-w-[1440px] m-auto flex items-start gap-16 px-10" v-if="allProducts.length">
+    <div class="max-w-[1440px] m-auto flex items-start gap-16 px-4 lg:px-10" v-if="allProducts.length">
       <Filters class="border-brand-gold" v-if="storeSettings.showFilters" />
 
       <div class="w-full">

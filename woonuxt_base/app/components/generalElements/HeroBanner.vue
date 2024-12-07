@@ -1,15 +1,15 @@
 <template>
-    <section class="bg-brand-dark1 h-[calc(100vh-80px)] px-10 pb-10 pt-2 relative overflow-hidden"
+    <section class="bg-brand-dark1 lg:h-[calc(100vh-80px)] px-4 lg:px-10 pb-10 pt-2 relative overflow-hidden"
         id="interactive-section">
-        <div class="border-4 h-full border-brand-gold flex items-center">
-            <div class="w-6/12 pl-16 h-fit py-16 space-y-16">
+        <div class="border-4 h-full border-brand-gold flex items-center lg:flex-row flex-col">
+            <div class="w-full lg:w-6/12 lg:pl-16 lg:pr-0 px-6 h-fit pb-10 lg:py-16 space-y-16 order-2 lg:order-1">
                 <div class="space-y-6">
-                    <h1 class="valery text-brand-gold text-[5rem] leading-tight whitespace-pre-wrap">{{ data?.f1_title
+                    <h1 class="artegra text-brand-gold text-4xl md:text-[3rem] lg:text-[5rem] leading-tight whitespace-pre-wrap">{{ data?.f1_title
                         }}</h1>
                     <div class="max-w-[520px]">
                         <p class="text-white">{{ data?.f1_description }}</p>
                     </div>
-                    <Button variant="secondary">
+                    <Button @click="navigateTo('#your-treasures')" variant="secondary">
                         {{ data?.f1_button_text }}
                     </Button>
                 </div>
@@ -35,9 +35,9 @@
                     <img class="absolute top-0 -right-20" src="/images/twirl.svg" alt="twirl">
                 </div> -->
             </div>
-            <div class="w-6/12 p-20 relative">
+            <div class="w-full lg:w-6/12 p-16 pt-20 lg:p-20 relative order-1 lg:order-2">
                 <img :src="data?.f1_image.url" placeholder-class="blur-xl" id="interactive-image"
-                    class="transition-transform duration-500 ease-out" />
+                    class="transition-transform duration-500 ease-out m-auto" />
             </div>
         </div>
     </section>

@@ -14,24 +14,24 @@
        :speed="1000" class="testimony-swiper"
    >
        <swiper-slide v-for="i in 3">
-            <div class="border border-brand-gold p-16 rounded-3xl relative">
-                <div class="absolute -top-7 left-10 bg-brand-dark1">
-                    <img src="/images/quote.svg" alt="quote">
+            <div class="border border-brand-gold p-4 lg:p-16 rounded-2xl lg:rounded-3xl relative">
+                <div class="absolute -top-4 lg:-top-7 left-4 lg:left-10 bg-brand-dark1">
+                    <img class="lg:w-16 w-8" src="/images/quote.svg" alt="quote">
                 </div>
-                <div class="absolute -bottom-7 right-10 bg-brand-dark1 rotate-180">
-                    <img src="/images/quote.svg" alt="quote">
+                <div class="absolute -bottom-4 lg:-bottom-7 right-4 lg:right-10 bg-brand-dark1 rotate-180">
+                    <img class="lg:w-16 w-8" src="/images/quote.svg" alt="quote">
                 </div>
-                <div class="w-full bg-brand-gold rounded-3xl pb-10 px-10">
-                    <div class="w-[200px] rounded-full overflow-hidden m-auto -translate-y-[50%] border-8 border-[#535353]">
+                <div class="w-full bg-brand-gold rounded-2xl lg:rounded-3xl pb-10 px-4 lg:px-10">
+                    <div class="w-[100px] lg:w-[200px] rounded-full overflow-hidden m-auto -translate-y-[50%] border-4 lg:border-8 border-[#535353]">
                         <div class="aspect-square">
                             <img class="w-full h-full object-cover" src="https://picsum.photos/id/237/200/200" alt="">
                         </div>
                     </div>
-                    <p class="text-2xl leading-10 text-white mb-6">Hidden Treasures brought our brand to life. Their attention to detail and innovative marketing strategies drove a 50% increase in customer engagement in just three months!</p>
-                    <div class="flex items-end w-full justify-between">
+                    <p class="lg:text-2xl lg:leading-10 text-white mb-6">Hidden Treasures brought our brand to life. Their attention to detail and innovative marketing strategies drove a 50% increase in customer engagement in just three months!</p>
+                    <div class="flex lg:items-end w-full justify-between lg:flex-row flex-col lg:space-y-0 space-y-4">
                         <div>
-                            <p class="text-3xl text-neutral-700">Jessica Rowe</p>
-                            <p class="text-2xl text-neutral-700">CEO, LuxeGlow Skincare</p>
+                            <p class="text-xl lg:text-3xl text-neutral-700">Jessica Rowe</p>
+                            <p class="lg:text-2xl text-neutral-700">CEO, LuxeGlow Skincare</p>
                         </div>
                         <div class="flex items-center">
                             <svg v-for="i in 5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ const modules = [Autoplay, Navigation, Pagination];
 
 <style scoped>
 .testimony-swiper {
-    overflow: visible;
+    padding: 50px 0;
     --swiper-theme-color: #CFA560;
     --swiper-pagination-bullet-inactive-color: #CFA560;
     --swiper-pagination-bottom: -50px;

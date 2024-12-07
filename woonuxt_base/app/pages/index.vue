@@ -31,15 +31,15 @@ useSeoMeta({
 
     <!-- Section 2: Services -->
     <section class="bg-brand-dark1">
-        <div class="max-w-[1440px] m-auto px-10 pt-20 pb-20">
-            <div class="flex w-full justify-between mb-20">
+        <div class="max-w-[1440px] m-auto px-4 lg:px-10 pt-10 lg:pt-20 pb-20">
+            <div class="flex w-full justify-between mb-10 lg:mb-20">
                 <div class="flex space-x-4 items-start">
-                    <div class="pt-1">
+                    <div class="lg:block hidden pt-1">
                         <img src="/images/spark.svg" alt="spark">
                     </div>
                     <div>
-                        <h2 class="text-[40px] leading-tight valery text-brand-gold">{{ data?.f2_title }}</h2>
-                        <p class="text-white">{{ data?.f2_description }}</p>
+                        <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold animateUp">{{ data?.f2_title }}</h2>
+                        <p class="text-white animateUp">{{ data?.f2_description }}</p>
                     </div>
                 </div>
                 <div>
@@ -53,43 +53,43 @@ useSeoMeta({
 
     <!-- Section 3: Advantages -->
     <section class="bg-brand-dark1">
-        <div class="max-w-[1440px] m-auto px-10 pt-20 pb-20">
-            <div class="flex w-full justify-between mb-20 items-start">
-                <div class="flex space-x-4 items-start">
-                    <div class="pt-1">
+        <div class="max-w-[1440px] m-auto px-4 lg:px-10 py-10 lg:pt-20 lg:pb-20">
+            <div class="flex w-full justify-between mb-20 items-start lg:flex-row flex-col lg:space-y-0 space-y-4">
+                <div class="flex lg:space-x-4 items-start">
+                    <div class="pt-1 lg:block hidden">
                         <img src="/images/spark.svg" alt="spark">
                     </div>
                     <div>
-                        <h2 class="text-[40px] leading-tight valery text-brand-gold">Our Work, Your Inspiration</h2>
-                        <p class="text-white">Discover how we’ve helped brands uncover their true potential.</p>
+                        <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold animateUp">Our Work, Your Inspiration</h2>
+                        <p class="text-white animateUp">Discover how we’ve helped brands uncover their true potential.</p>
                     </div>
                 </div>
-                <div class="flex items-center text-brand-gold space-x-2">
+                <div class="flex items-center text-brand-gold space-x-2 animateUp">
                     <p>View All</p>
                     <ArrowRight class="w-5 h-5" />
                 </div>
             </div>
 
-            <div class="space-y-20">
-                <div v-for="i,index in 3" class="portfolio flex items-center px-20">
-                    <div class="portfolio-image w-7/12">
-                        <div class="w-[120%] aspect-[16/9] relative overflow-hidden image-item">
+            <div class="space-y-10 lg:space-y-20">
+                <div v-for="i,index in 3" class="portfolio flex items-center px-4 lg:px-20">
+                    <div class="portfolio-image w-full lg:w-7/12 lg:block hidden">
+                        <div class="w-[120%] aspect-[16/9] relative overflow-hidden image-item fadeIn">
                             <img :src="`https://picsum.photos/id/23${i}/800/450`" alt="luxeglow" class="object-cover w-full h-full">
                             <div class="absolute top-0 left-0 h-full w-full bg-brand-gold opacity-80 overlay"></div>
                         </div>
                     </div>
-                    <div class="portfolio-content w-5/12 text-right space-y-6 relative z-[1]">
-                        <div class="w-[310px] port-title">
-                            <p class="text-2xl valery text-brand-gold">LuxeGlow Skincare
+                    <div class="portfolio-content w-full lg:w-5/12 text-right space-y-6 relative z-[1]">
+                        <div class="lg:w-[310px] port-title">
+                            <p class="text-2xl artegra text-brand-gold animateUp">LuxeGlow Skincare
                                 Redefining Elegance Online</p>
                         </div>
-                        <div class="w-full bg-neutral-600 p-4 right-0 text-white">
+                        <div class="w-full bg-neutral-600 p-4 right-0 text-white animateUp">
                             <p>Hidden Treasures is a Luxury Marketing & Promotional Team specializing in Strategic Campaigns, Targeted Ads, Event Management, and Consignment Services bringing exposure and profit to our clients.</p>
                         </div>
 
                         <div>
-                            <p class="text-neutral-400 mb-6">E-Commerce • Branding • Digital Marketing</p>
-                            <img class="port-link" src="/images/link.svg" alt="link">
+                            <p class="text-neutral-400 mb-6 animateUp">E-Commerce • Branding • Digital Marketing</p>
+                            <img class="port-link animateUp" src="/images/link.svg" alt="link">
                         </div>
                         
                     </div>
@@ -99,16 +99,16 @@ useSeoMeta({
     </section>
 
     <section class="bg-brand-dark1">
-        <div class="max-w-[1440px] m-auto px-10 pt-20 pb-20">
-            <div class="text-center mb-16">
-                <p class="valery text-[40px] text-brand-gold">Our Products</p>
+        <div class="max-w-[1440px] m-auto px-4 lg:px-10 lg:pt-20 lg:pb-20 py-10">
+            <div class="text-center mb-10 lg:mb-16">
+                <p class="artegra text-3xl lg:text-[40px] text-brand-gold animateUp">Our Products</p>
             </div>
-            <div class="grid grid-cols-4 gap-20 mb-16">
+            <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-20 mb-10 lg:mb-16">
           
                 <ProductCard
                 v-for="(node, i) in popularProducts.slice(0, 4)"
                 :key="node.databaseId"
-                class="w-full"
+                class="w-full animateUp"
                 :node="node"
                 :index="i"
                 :class="{
@@ -116,30 +116,30 @@ useSeoMeta({
                     'lg:block': i === popularProducts.length - 1,
                 }" />
             </div>
-            <div class="w-fit m-auto">
+            <div class="w-fit m-auto animateUp">
                 <Button class="w-[185px]">View All</Button>
             </div>
         </div>
     </section>
 
     <section class="bg-brand-dark1">
-        <div class="max-w-[1440px] m-auto px-10 py-20">
-            <div class="flex space-x-4 items-start mb-20">
-                <div class="pt-1">
+        <div class="max-w-[1440px] m-auto px-4 lg:px-10 py-10 lg:py-20">
+            <div class="flex space-x-4 items-start mb-10">
+                <div class="pt-1 lg:block hidden">
                     <img src="/images/spark.svg" alt="spark">
                 </div>
                 <div>
-                    <h2 class="text-[40px] leading-tight valery text-brand-gold">What Our Clients Say</h2>
-                    <p class="text-white max-w-[489px]">Discover how Hidden Treasures has transformed brands and driven success through our innovative solutions and dedicated partnership.</p>
+                    <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold animateUp">What Our Clients Say</h2>
+                    <p class="text-white max-w-[489px] animateUp">Discover how Hidden Treasures has transformed brands and driven success through our innovative solutions and dedicated partnership.</p>
                 </div>
             </div>
-            <div class="w-full px-[160px]">
+            <div class="w-full px-4 md:px-10 lg:px-[160px] animateUp">
                 <TestimonySlider />
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="your-treasures">
         <PartnerSlider />
     </section>
 

@@ -29,7 +29,7 @@ useHead({
 
 <template>
   <div class="bg-brand-dark1">
-    <div class="max-w-[1440px] m-auto flex items-start gap-16 px-10" v-if="productsInCategory.length">
+    <div class="max-w-[1440px] m-auto flex items-start gap-16 px-4 lg:px-10" v-if="productsInCategory.length">
       <Filters v-if="storeSettings.showFilters" :hide-categories="true" />
 
       <div class="w-full">

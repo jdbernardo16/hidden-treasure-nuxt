@@ -9,7 +9,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="relative inline-flex -space-x-px shadow-sm rounded-m isolate">
     <button
-      class="relative inline-flex items-center p-2 text-sm text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:z-20"
+      class="relative inline-flex items-center p-2 text-sm bg-transparent border border-brand-gold rounded-md hover:bg-brand-gold focus:z-20 text-brand-gold hover:text-white"
       aria-label="Show filters"
       @click.prevent="toggleBodyClass('show-filters')"
       title="Show filters">

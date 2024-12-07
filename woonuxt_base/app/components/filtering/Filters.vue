@@ -142,7 +142,7 @@ const attributesWithTerms = globalProductAttributes.map((attr) => ({ ...attr, te
 
 @media (max-width: 768px) {
   #filters {
-    @apply bg-white h-full p-8 transform pl-2 transition-all ease-in-out bottom-0 left-4 -translate-x-[110vw] duration-300 overflow-auto fixed;
+    @apply bg-brand-dark1 h-full p-8 transform pl-6 transition-all ease-in-out bottom-0 left-0 -translate-x-[110vw] duration-300 overflow-auto fixed;
 
     box-shadow:
       -100px 0 0 white,

@@ -129,7 +129,7 @@ useSeoMeta({
           <div class="grid gap-2">
             <div v-for="item in order.lineItems.nodes" :key="item.id" class="flex items-center justify-between gap-8">
               <NuxtLink v-if="item.product?.node" :to="`/product/${item.product.node.slug}`">
-                <NuxtImg
+                <img
                   class="w-16 h-16 rounded-xl"
                   format="webp" quality="90"
                   :src="item.variation?.node?.image?.sourceUrl || item.product.node?.image?.sourceUrl || '/images/placeholder.png'"

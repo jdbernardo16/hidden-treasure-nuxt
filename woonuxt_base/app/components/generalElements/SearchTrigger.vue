@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const { toggleSearch } = useSearching();
+import { Search } from 'lucide-vue-next';
 </script>
 
 <template>
   <div class="relative cursor-pointer inline-flex sm:hidden" title="Cart" @click="toggleSearch">
-    <Icon name="ion:search-outline" size="20" class="mr-1 md:mr-0" />
+    <Search class="w-6 h-6 text-brand-gold" />
   </div>
 </template>

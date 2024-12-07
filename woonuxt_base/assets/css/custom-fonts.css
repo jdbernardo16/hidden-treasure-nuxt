@@ -7,6 +7,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Artegra Sans';
+  src: url('.././fonts/FONTSPRINGDEMO-ArtegraSansBlackItalic.woff2') format('woff2'),
+      url('.././fonts/FONTSPRINGDEMO-ArtegraSansBlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Artegra Sans';
+  src: url('.././fonts/FONTSPRINGDEMO-ArtegraSansBlackRegular.woff2') format('woff2'),
+      url('.././fonts/FONTSPRINGDEMO-ArtegraSansBlackRegular.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 .valery {
      font-family: 'Valery';
+}
+
+.artegra {
+  font-family: 'Artegra Sans';
 }

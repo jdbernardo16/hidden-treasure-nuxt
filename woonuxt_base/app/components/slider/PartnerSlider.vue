@@ -2,11 +2,23 @@
     <div class="partner-swiper">
         <swiper 
             :modules="modules"
-            :slides-per-view="5" 
-            :space-between="20" 
             :loop="true" 
             :speed="5000"
             :autoplay="{ delay: 0, disableOnInteraction: false }" 
+            :breakpoints="{
+                '640': {
+                slidesPerView: 1,
+                spaceBetween: 16,
+                },
+                '768': {
+                slidesPerView: 2,
+                spaceBetween: 24,
+                },
+                '1024': {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                },
+            }"
         >
             <swiper-slide v-for="(partner, index) in partners" :key="index">
                 <img :src="partner" alt="Partner Logo" class="partner-logo m-auto" />
