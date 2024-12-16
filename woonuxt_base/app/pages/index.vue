@@ -25,6 +25,31 @@ useSeoMeta({
   ogImage: siteImage,
   twitterCard: `summary_large_image`,
 });
+
+const testimonials = [
+  {
+    image: "https://picsum.photos/id/1010/200/200",
+    text: "Hidden Treasures transformed our brand identity with exceptional design and strategy. Sales skyrocketed by 70% within six months!",
+    name: "Amanda Carter",
+    position: "CMO, Elegant Furnishings",
+    rating: 5,
+  },
+  {
+    image: "https://picsum.photos/id/1011/200/200",
+    text: "Their innovative digital campaigns brought us global recognition. A true game-changer for our company!",
+    name: "Sophia Gomez",
+    position: "Director, StyleGenix",
+    rating: 5,
+  },
+  {
+    image: "https://picsum.photos/id/1012/200/200",
+    text: "A pleasure to work with! Their expert team streamlined our online presence, boosting traffic by 120%.",
+    
+    name: "James Fields",
+    position: "Founder, GreenEarth Initiatives",
+    rating: 5,
+  },
+];
 </script>
 
 <template>
@@ -36,7 +61,7 @@ useSeoMeta({
 
     <!-- Section 2: Services -->
     <section class="bg-brand-dark1">
-        <div class="max-w-[1440px] m-auto px-4 lg:px-20 pt-10 lg:pt-20 pb-20">
+        <div class="max-w-[1440px] m-auto px-4 lg:px-10 pt-10 lg:pt-20 pb-20">
             <div class="flex w-full justify-between mb-10 lg:mb-20">
                 <div class="flex space-x-4 items-start">
                     <div class="lg:block hidden pt-1">
@@ -51,13 +76,24 @@ useSeoMeta({
 
                 </div>
             </div>
-            <ServiceSlider :data="data?.f2_services" />
             
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div v-for="item in data?.f2_services" @click="navigateTo(item.link)" class="space-y-6 px-4 pt-20 pb-16 rounded-t-full border-2 border-brand-gold group/service transition hover:bg-brand-gold cursor-pointer">
+                    <img class="m-auto animateUp" :src="item.icon.url" alt="Target" width="130" height="130">
+                    <div class="text-center space-y-4">
+                        <p class="text-brand-gold text-3xl font-semibold h-[72px] line-clamp-2 animateUp group-hover/service:text-brand-dark1 transition">{{item.title}}</p>
+                        <p class="text-white animateUp lg:min-h-[72px]">
+                            {{ item.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <ServiceSlider :data="data?.f2_services" /> -->
         </div>
     </section>
 
     <!-- Section 3: Advantages -->
-    <PortfolioSection />
+    <!-- <PortfolioSection /> -->
 
     <section class="bg-brand-dark1">
         <div class="max-w-[1440px] m-auto px-4 lg:px-20 lg:pt-20 lg:pb-20 py-10">
@@ -95,7 +131,7 @@ useSeoMeta({
                 </div>
             </div>
             <div class="w-full px-4 md:px-10 lg:px-[160px] animateUp">
-                <TestimonySlider />
+                <TestimonySlider :items="testimonials" />
             </div>
         </div>
     </section>

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import aspectRatio from '@tailwindcss/aspect-ratio';
 import defaultTheme from 'tailwindcss/defaultTheme';
 export default <Partial<Config>>{
   content: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './app.vue'],
@@ -35,5 +36,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), aspectRatio],
 };

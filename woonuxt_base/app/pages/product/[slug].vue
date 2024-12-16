@@ -53,6 +53,7 @@ onMounted(async () => {
     const errorMessage = error?.gqlErrors?.[0].message;
     if (errorMessage) console.error(errorMessage);
   }
+  window.scrollTo(0, 0);
 });
 
 const updateSelectedVariations = (variations: VariationAttribute[]): void => {
@@ -94,10 +95,13 @@ const disabledAddToCart = computed(() => {
         <Breadcrumb :product class="mb-6" v-if="storeSettings.showBreadcrumbOnSingleProduct" />
 
         <div class="flex flex-col gap-10 md:flex-row md:justify-between lg:gap-10">
-          <ProductImageGallery v-if="product.image" class="relative flex-1" :main-image="product.image"
+          <div class="w-full md:w-1/2">
+            <ImageSlider :main-image="product.image" :gallery="product.galleryImages!" :node="type"  />
+          </div>
+          <!-- <ProductImageGallery v-if="product.image" class="relative flex-1" :main-image="product.image"
             :gallery="product.galleryImages!" :node="type" :activeVariation="activeVariation || {}" />
           <NuxtImg v-else class="relative flex-1 skeleton" src="/images/placeholder.jpg"
-            :alt="product?.name || 'Product'" />
+            :alt="product?.name || 'Product'" /> -->
 
           <div class="lg:max-w-md xl:max-w-lg md:py-2 w-full">
             <div class="flex justify-between mb-4 items-start">

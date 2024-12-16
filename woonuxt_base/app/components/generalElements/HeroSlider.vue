@@ -53,14 +53,14 @@ import 'swiper/css';
 const slides = [
   {
     id: 1,
-    title: 'Turn Visions To Victories',
+    title: 'Where Excellence Meets Opportunity',
     description: 'Hidden Treasures is a top marketing team specializing in strategic campaigns, targeted ads, and consignment solutions. We deliver measurable results, helping businesses and individuals excel with tailored strategies.',
     image: '/images/vision.jpg',
     buttonText: 'Unvail Your Treasures'
   },
   {
     id: 2,
-    title: 'Innovate Beyond Limits',
+    title: 'Promotional Prestige',
     description: 'Hidden Treasures empowers businesses to unlock their full potential with cutting-edge marketing solutions, impactful branding, and scalable growth strategies. Together, we redefine success.',
     image: '/images/Innovate.jpg',
     buttonText: 'Discover Innovation'
