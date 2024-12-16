@@ -2,7 +2,9 @@
     <ContactForm />    
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 </script>
 

@@ -2,20 +2,7 @@
     <swiper
         :modules="modules"
         :space-between="24"
-        :breakpoints="{
-            '640': {
-            slidesPerView: 1,
-            spaceBetween: 16,
-            },
-            '768': {
-            slidesPerView: 2,
-            spaceBetween: 24,
-            },
-            '1024': {
-            slidesPerView: 4,
-            spaceBetween: 24,
-            },
-        }"
+        :slides-per-view="4"
     >
         <swiper-slide v-for="item in data">
             <div class="space-y-6 px-4 pt-20 pb-16 rounded-t-full border-2 border-brand-gold">

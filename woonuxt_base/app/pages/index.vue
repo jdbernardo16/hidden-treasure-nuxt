@@ -1,8 +1,7 @@
 <script lang="ts" setup>
+const { siteName, description, shortDescription, siteImage } = useAppConfig();
 const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
-const { siteName, description, shortDescription, siteImage } = useAppConfig();
-import { ArrowRight } from 'lucide-vue-next';
 const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
     query: {
         slug: 'home',
@@ -36,8 +35,8 @@ useSeoMeta({
 
     <!-- Section 2: Services -->
     <section class="bg-brand-dark1">
-        <div class="max-w-[1440px] m-auto px-4 lg:px-20 pt-10 lg:pt-20 pb-20">
-            <div class="flex w-full justify-between mb-10 lg:mb-20">
+        <div class="max-w-[1440px] m-auto px-4 lg:px-10 pt-10 lg:pt-20 pb-20">
+            <div class="flex w-full justify-between mb-10 lg:mb-20 lg:px-10">
                 <div class="flex space-x-4 items-start">
                     <div class="lg:block hidden pt-1">
                         <img src="/images/spark.svg" alt="spark">
