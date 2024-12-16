@@ -112,12 +112,6 @@ const VueRecaptcha = defineAsyncComponent({
   delay: 4000
 });
 
-useSeoMeta({
-  title: `Contact Us`,
-  ogTitle: `Contact Us`,
-  twitterCard: `summary_large_image`,
-});
-
 const form = ref({
     "your-name": "",
     "your-email": "",

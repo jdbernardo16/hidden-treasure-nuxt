@@ -42,16 +42,17 @@ const imgWidth = 640;
 <template>
   <div>
     <SaleBadge :node class="absolute text-base top-4 right-4" />
-    <NuxtImg
-      class="rounded-xl object-contain w-full min-w-[350px]"
-      :width="imgWidth"
-      :height="imgWidth"
-      :alt="imageToShow.altText || node.name"
-      :title="imageToShow.title || node.name"
-      :src="imageToShow.sourceUrl || FALLBACK_IMG"
-      fetchpriority="high"
-      placeholder
-      placeholder-class="blur-xl" />
+    <div class="aspect-square relative rounded-xl overflow-hidden">
+      <NuxtImg
+        class="object-contain w-full h-full"
+        :width="imgWidth"
+        :alt="imageToShow.altText || node.name"
+        :title="imageToShow.title || node.name"
+        :src="imageToShow.sourceUrl || FALLBACK_IMG"
+        fetchpriority="high"
+        placeholder
+        placeholder-class="blur-xl" />
+    </div>
     <div v-if="gallery.nodes.length" class="my-4 gallery-images">
       <NuxtImg
         v-for="galleryImg in galleryImages"

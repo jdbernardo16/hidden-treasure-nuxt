@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { wishlistLink } = useAuth();
 const { isShowingSearch } = useSearching();
-import { AlignLeft, X } from 'lucide-vue-next';
+import { AlignLeft, X, ChevronDown } from 'lucide-vue-next';
 
 const open = ref(false);
 
@@ -29,11 +29,18 @@ const closeMenu = () => {
 
     <div class="lg:flex items-center space-x-6 text-brand-gold hidden">
 
-      <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Services</NuxtLink>
+      <div class="relative dropdown-parent">
+        <NuxtLink to="/" class="hover:text-white transition flex items-center" @click="closeMenu">Services <ChevronDown class="w-5 h-5 ml-2" /></NuxtLink>
+        <div class="dropdown-menu flex flex-col absolute top-full w-max bg-brand-dark1 p-4 space-y-3 text-sm">
+          <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Digital Marketing</NuxtLink>
+          <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Virtual Assistant</NuxtLink>
+          <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Event Management</NuxtLink>
+          <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Consignment Solutions</NuxtLink>
+          <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Event Planning</NuxtLink>
+        </div>
+      </div>
       <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">About Us</NuxtLink>
       <NuxtLink to="/shop" class="hover:text-white transition" @click="closeMenu">Consignment</NuxtLink>
-      <!-- <NuxtLink to="/products" class="hover:text-white transition">{{ $t('messages.general.allProducts') }}</NuxtLink>
-      <NuxtLink to="/categories" class="hover:text-white transition">{{ $t('messages.shop.category', 2) }}</NuxtLink> -->
       <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Events</NuxtLink>
       <NuxtLink to="/contact" class="hover:text-white transition" @click="closeMenu">Contact Us</NuxtLink>
       <NuxtLink class="lg:hidden" :to="wishlistLink" :prefetch="false" @click="closeMenu">Wishlist</NuxtLink>
@@ -64,7 +71,16 @@ const closeMenu = () => {
     class="fixed lg:hidden h-screen bg-brand-dark1 top-0 w-[90%] z-50 right-0 px-10 py-20 text-brand-gold flex flex-col space-y-6 text-xl transition duration-500"
     :class="open ? 'translate-x-0' : 'translate-x-[110%]'"
   >
-    <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Services</NuxtLink>
+    <div>
+      <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Services</NuxtLink>
+      <div class=" flex flex-col p-4 space-y-4 text-sm">
+        <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Digital Marketing</NuxtLink>
+        <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Virtual Assistant</NuxtLink>
+        <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Event Management</NuxtLink>
+        <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Consignment Solutions</NuxtLink>
+        <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Event Planning</NuxtLink>
+      </div>
+    </div>
     <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">About Us</NuxtLink>
     <NuxtLink to="/shop" class="hover:text-white transition" @click="closeMenu">Consignment</NuxtLink>
     <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Events</NuxtLink>
@@ -74,3 +90,12 @@ const closeMenu = () => {
     <X @click="toggleMenu" class="w-6 h-6 text-brand-gold absolute top-0 right-5" />
   </div>
 </template>
+
+<style>
+.dropdown-parent .dropdown-menu {
+  display: none;
+}
+.dropdown-parent:hover .dropdown-menu {
+  display: flex;
+}
+</style>

@@ -40,8 +40,8 @@ const imagetoDisplay = computed<string>(() => {
   <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name" class="cursor-pointer space-y-6 group/product relative">
       <div>
         <SaleBadge :node class="absolute top-2 right-2" />
-        <div class="relative bg-[#363636] aspect-[385/234] px-16 py-5">
-            <NuxtImg
+        <div class="relative bg-[#363636] aspect-[385/234] px-5 lg:px-10 py-5">
+            <!-- <NuxtImg
             :width="imgWidth"
             :height="imgHeight"
             :src="imagetoDisplay"
@@ -51,7 +51,19 @@ const imagetoDisplay = computed<string>(() => {
             :sizes="`sm:${imgWidth / 2}px md:${imgWidth}px`"
             class="w-full h-full group-hover/product:saturate-100 saturate-0 transition group-hover/product:scale-105"
             placeholder
-            placeholder-class="blur-xl" />
+            placeholder-class="blur-xl" /> -->
+            <div class="w-full h-[200px] lg:h-[150px]">
+              <NuxtImg 
+                :alt="node.image?.altText || node.name || 'Product image'"
+                :title="node.image?.title || node.name"
+                :src="node.image?.sourceUrl || '/images/placeholder.jpg'" 
+                :loading="index <= 3 ? 'eager' : 'lazy'"
+                :sizes="`sm:${imgWidth / 2}px md:${imgWidth}px`"
+                class="w-full h-full object-contain group-hover/product:saturate-100 saturate-0 transition group-hover/product:scale-105"
+                placeholder
+                placeholder-class="blur-xl"
+              />
+            </div>
         </div>
       </div>
       <div>
@@ -62,7 +74,7 @@ const imagetoDisplay = computed<string>(() => {
           </div>
 
           <ProductPrice class="text-sm" :sale-price="node.salePrice" :regular-price="node.regularPrice" />
-          <div class="cursor-pointer px-2 py-1.5 border border-brand-gold text-white text-xs w-fit hover:bg-brand-gold transition">
+          <div class="cursor-pointer px-2 py-1.5 border border-brand-gold text-white text-xs w-full lg:text-left text-center lg:w-fit hover:bg-brand-gold transition">
               View
           </div>
       </div>

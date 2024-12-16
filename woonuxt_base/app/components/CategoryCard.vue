@@ -19,7 +19,7 @@ const imgHeight = Math.round(imgWidth * 1.125);
         placeholder placeholder-class="blur-xl" />
     </div>
     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-gold to-brand-gold h-full opacity-[63%] group-hover/product:opacity-0  transition" />
-    <span class="relative z-10 mt-auto mb-2 !text-[24px] font-semibold text-white capitalize md:text-base md:mb-4"
+    <span class="relative z-10 mt-auto mb-2 !text-[24px] font-semibold text-white capitalize md:text-base md:mb-4 px-4 text-center"
       v-html="node.name" />
   </NuxtLink>
 </template>

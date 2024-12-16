@@ -13,6 +13,8 @@ if (!data.value?.product) {
   throw showError({ statusCode: 404, statusMessage: t('messages.shop.productNotFound') });
 }
 
+
+
 const product = ref<Product>(data?.value?.product);
 const quantity = ref<number>(1);
 const activeVariation = ref<Variation | null>(null);
@@ -35,6 +37,13 @@ const mergeLiveStockStatus = (payload: Product): void => {
     }
   });
 };
+
+useSeoMeta({
+  title: product.value?.name,
+  ogTitle: product.value?.name,
+  description: product.value?.description || product.value?.shortDescription,
+  ogDescription: product.value?.description || product.value?.shortDescription,
+});
 
 onMounted(async () => {
   try {
@@ -79,7 +88,7 @@ const disabledAddToCart = computed(() => {
 
 <template>
   <div class="bg-brand-dark1">
-    <div class="max-w-[1000px] m-auto relative py-6 px-10 lg:px-0">
+    <div class="max-w-[1000px] m-auto relative py-6 px-4 lg:px-0">
       <div v-if="product">
         <SEOHead :info="product" />
         <Breadcrumb :product class="mb-6" v-if="storeSettings.showBreadcrumbOnSingleProduct" />
@@ -98,9 +107,12 @@ const disabledAddToCart = computed(() => {
                   <!-- <LazyWPAdminLink :link="`/wp-admin/post.php?post=${product.databaseId}&action=edit`">Edit
                   </LazyWPAdminLink> -->
                 </h1>
-                <div class="flex items-center text-white space-x-2 mb-4">
+                <div v-if="type.salePrice" class="flex items-center text-white space-x-2 mb-4">
                   <p class="text-brand-gold text-2xl">{{ type.salePrice }}</p>
                   <p class="line-through text-gray-400 text-xl">{{ type.regularPrice }}</p>
+                </div>
+                <div v-else class="flex items-center text-white space-x-2 mb-4">
+                  <p class="text-brand-gold text-2xl">{{ type.regularPrice }}</p>
                 </div>
                 <StarRating :rating="product.averageRating || 0" :count="product.reviewCount || 0"
                   v-if="storeSettings.showReviews" />
@@ -128,7 +140,7 @@ const disabledAddToCart = computed(() => {
                 class="mt-4 mb-8" :attributes="product.attributes.nodes" :defaultAttributes="product.defaultAttributes"
                 :variations="product.variations.nodes" @attrs-changed="updateSelectedVariations" />
               <div v-if="isVariableProduct || isSimpleProduct"
-                class="fixed bottom-0 left-0 z-10 flex items-center w-full gap-4 p-4 mt-12 bg-white md:static md:bg-transparent bg-opacity-90 md:p-0">
+                class="fixed bottom-0 left-0 flex items-center w-full gap-4 p-4 mt-12 bg-brand-dark1 md:static md:bg-transparent bg-opacity-90 md:p-0 z-50">
                 <input v-model="quantity" type="number" min="1" aria-label="Quantity"
                   class="bg-transparent border rounded-lg flex text-left text-white p-2.5 w-20 gap-4 items-center justify-center focus:outline-none" />
                 <AddToCartButton class="flex-1 w-full md:max-w-xs" :disabled="disabledAddToCart"

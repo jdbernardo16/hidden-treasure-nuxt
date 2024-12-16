@@ -1,10 +1,12 @@
 <script setup lang="ts">
-const { frontEndUrl, wooNuxtSEO, isDev, stripHtml } = useHelpers();
+const config = useRuntimeConfig();
+const { wooNuxtSEO, isDev, stripHtml } = useHelpers();
 const { path } = useRoute();
 const { info } = defineProps({ info: { type: Object as PropType<Product>, required: true } });
 
+const SITE_URL = config.public.SITE_URL;
 const title = info.name;
-const canonical = `${frontEndUrl}${path}`;
+const canonical = `${SITE_URL}${path}`;
 const siteName = process.env.SITE_TITLE ?? 'WooNuxt';
 
 const img = useImage();
@@ -14,7 +16,7 @@ const twitterImageSrc = img.getSizes(imageURL, { width: 1600, height: 900 }).src
 
 const getFullImageURL = (url: string) => {
   if (url.startsWith('http')) return url;
-  return `${frontEndUrl}${url}`;
+  return `${SITE_URL}${url}`;
 };
 
 const defaultImage = getFullImageURL(defaultImageSrc);
@@ -42,6 +44,6 @@ const twitter = wooNuxtSEO?.find((item) => item.provider === 'twitter') ?? null;
     <Meta v-if="description" name="twitter:description" hid="twitter:description" :content="description" />
     <Meta name="twitter:image" hid="twitter:image" :content="twitterImage" />
     <Meta name="twitter:url" hid="twitter:url" :content="canonical" />
-    <Link rel="canonical" hid="canonical" :href="canonical" />
+    <Link rel="canonical" hid="canonical" href="https://ht.uatproject.website/product" />
   </Head>
 </template>

@@ -91,7 +91,7 @@ const numberSrc = (pageNumber: number) => {
 .prev,
 .next,
 .page-number {
-  @apply bg-white border font-medium border-gray-300 text-sm p-2 text-gray-500 relative inline-flex items-center hover:bg-gray-50 focus:z-10;
+  @apply bg-white border font-medium border-brand-gold text-sm p-2 text-brand-gold relative inline-flex items-center hover:bg-brand-gold hover:text-white focus:z-10;
 }
 
 .prev {
@@ -107,6 +107,6 @@ const numberSrc = (pageNumber: number) => {
 }
 
 .page-number[aria-current='page'] {
-  @apply bg-primary border-primary border bg-opacity-10 text-primary z-10;
+  @apply bg-brand-gold border-brand-gold border bg-opacity-10 text-brand-gold z-10;
 }
 </style>

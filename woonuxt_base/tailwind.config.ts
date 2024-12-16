@@ -9,7 +9,7 @@ export default <Partial<Config>>{
     },
     extend: {
       fontFamily: {
-        sans: ["Syne", ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {

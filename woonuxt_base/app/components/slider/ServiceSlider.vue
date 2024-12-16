@@ -22,7 +22,7 @@
                 <img class="m-auto animateUp" :src="item.icon.url" alt="Target" width="130" height="130">
                 <div class="text-center space-y-4">
                     <p class="text-brand-gold text-3xl font-semibold h-[72px] line-clamp-2 animateUp">{{item.title}}</p>
-                    <p class="text-white line-clamp-3 animateUp">
+                    <p class="text-white line-clamp-3 animateUp lg:min-h-[72px]">
                         {{ item.description }}
                     </p>
                 </div>

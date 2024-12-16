@@ -35,7 +35,7 @@ query getProduct($slug: ID!) {
     ...SimpleProduct
     ...VariableProduct
     ...ExternalProduct
-    related(first: 5) {
+    related(first: 4) {
       nodes {
         ...SimpleProduct
         ...VariableProduct

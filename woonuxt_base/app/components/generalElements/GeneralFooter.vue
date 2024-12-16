@@ -7,7 +7,7 @@
                     <p class="text-sm mb-1">Uncover the Potential, Elevate Your Brand.</p>
                     <p class="text-sm">Newport Beach, CA</p>
                 </div>
-                <div class="flex flex-col lg:flex-row space-y-10 lg:space-x-20 footer-links">
+                <div class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-20 footer-links">
                     <div>
                         <p class="font-bold text-white mb-4">Quick Links</p>
                         <div class="grid grid-cols-2 text-white gap-y-5 gap-x-10">

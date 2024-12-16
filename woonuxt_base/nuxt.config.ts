@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      link: [{ rel: 'icon', href: '/ht-logo.png', type: 'image/svg+xml' }],
+      link: [{ rel: 'icon', href: '/favicon2.png', type: 'image/svg+xml' }],
     },
     pageTransition: { name: 'page', mode: 'default' },
   },
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   googleFonts: {
     // declare your google fonts here
     families: {
-        Syne: [400, 600, 700],
+        Poppins: [400, 600, 700, 800],
     },
     display: "fallback",
     preload: true,
@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     public: {
       API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000', 
       SITE_KEY: process.env.SITE_KEY || '',
+      SITE_URL: process.env.SITE_URL,
     },
   },
 

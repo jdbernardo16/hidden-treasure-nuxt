@@ -37,12 +37,10 @@ const modules = [Autoplay, FreeMode];
 
 // Partner logos (replace with your actual image paths)
 const partners = [
-    "/images/logoipsum-211.svg",
-    "/images/logoipsum-215.svg",
-    "/images/logoipsum-221.svg",
-    "/images/logoipsum-225.svg",
-    "/images/logoipsum-280.svg",
-    "/images/logoipsum-284.svg",
+    "/logos/logo1.png",
+    "/logos/logo2.png",
+    "/ht-logo.png",
+    "/logos/logo4.jpg",
 ];
 </script>
 
@@ -57,7 +55,7 @@ const partners = [
 
 .partner-logo {
     width: auto;
-    height: 50px;
+    height: 100px;
     object-fit: contain;
 }
 </style>
