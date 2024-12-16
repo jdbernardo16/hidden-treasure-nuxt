@@ -15,7 +15,7 @@
                 <div class="w-full bg-brand-gold rounded-2xl lg:rounded-3xl pb-10 px-4 lg:px-10">
                     <div
                         class="w-[100px] lg:w-[200px] rounded-full overflow-hidden m-auto -translate-y-[50%] border-4 lg:border-8 border-[#535353]">
-                        <div class="aspect-square">
+                        <div class="aspect-[1/1]">
                             <img class="w-full h-full object-cover" :src="testimonial.image" alt="Testimonial Image">
                         </div>
                     </div>

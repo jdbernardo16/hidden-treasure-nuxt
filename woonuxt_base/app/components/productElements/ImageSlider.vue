@@ -12,7 +12,7 @@
                v-for="(image, index) in galleryImages"
                :key="index"
             >
-               <div class="aspect-square relative overflow-hidden rounded bg-neutral-700 p-4">
+               <div class="aspect-[1/1] relative overflow-hidden rounded bg-neutral-700 p-4">
                   <!-- Discount Badge -->
                   <NuxtImg
                      :src="image.sourceUrl"
@@ -41,7 +41,7 @@
             <SwiperSlide
                v-for="(image, index) in galleryImages"
                :key="index"
-               class="aspect-square cursor-pointer overflow-hidden border-neutral-500 rounded-lg border-2 transition-all p-1 bg-neutral-800"
+               class="aspect-[1/1] cursor-pointer overflow-hidden border-neutral-500 rounded-lg border-2 transition-all p-1 bg-neutral-800"
             >
                <NuxtImg
                   :src="image.sourceUrl"

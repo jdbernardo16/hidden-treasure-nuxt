@@ -21,7 +21,7 @@ useSeoMeta({
       <div v-else class="flex flex-col items-start justify-between w-full lg:gap-12 mb-24 lg:flex-row">
         <div class="mt-2 lg:sticky top-16 w-full lg:max-w-[260px]">
           <section class="my-8 flex gap-4 items-start justify-center w-full">
-            <img v-if="avatar" :src="avatar" class="rounded-full aspect-square border border-white" alt="user-image" width="48" height="48" />
+            <img v-if="avatar" :src="avatar" class="rounded-full aspect-[1/1] border border-white" alt="user-image" width="48" height="48" />
             <div class="flex-1 text-balance leading-tight w-full text-ellipsis overflow-hidden">
               <div class="text-lg font-semibold">Welcome, {{ viewer?.firstName }}</div>
               <span v-if="viewer?.email" class="text-gray-400 font-light" :title="viewer?.email">{{ viewer?.email }}</span>
