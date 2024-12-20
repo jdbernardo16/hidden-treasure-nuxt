@@ -59,7 +59,7 @@ const imagetoDisplay = computed<string>(() => {
                 :src="node.image?.sourceUrl || '/images/placeholder.jpg'" 
                 :loading="index <= 3 ? 'eager' : 'lazy'"
                 :sizes="`sm:${imgWidth / 2}px md:${imgWidth}px`"
-                class="w-full h-full object-contain group-hover/product:saturate-100 saturate-0 transition group-hover/product:scale-105"
+                class="w-full h-full object-contain transition group-hover/product:scale-105"
                 placeholder
                 placeholder-class="blur-xl"
               />

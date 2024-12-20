@@ -5,7 +5,7 @@ import { User } from 'lucide-vue-next';
 </script>
 
 <template>
-  <NuxtLink to="/my-account" :title="linkTitle" class="hidden sm:inline-flex aspect-square items-center">
+  <NuxtLink to="/my-account" :title="linkTitle" class="hidden sm:inline-flex aspect-[1/1] items-center">
     <Transition name="pop-in" mode="out-in">
       <span v-if="avatar" class="relative avatar">
         <User class="w-6 h-6 text-brand-gold" />

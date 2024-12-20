@@ -42,7 +42,7 @@ const imgWidth = 640;
 <template>
   <div>
     <SaleBadge :node class="absolute text-base top-4 right-4" />
-    <div class="aspect-square relative rounded-xl overflow-hidden">
+    <div class="aspect-[1/1] relative rounded-xl overflow-hidden">
       <NuxtImg
         class="object-contain w-full h-full"
         :width="imgWidth"
@@ -57,7 +57,7 @@ const imgWidth = 640;
       <NuxtImg
         v-for="galleryImg in galleryImages"
         :key="galleryImg.databaseId"
-        class="cursor-pointer rounded-lg aspect-square"
+        class="cursor-pointer rounded-lg aspect-[1/1]"
         :width="imgWidth"
         :height="imgWidth"
         :src="galleryImg.sourceUrl"
