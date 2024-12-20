@@ -6,9 +6,15 @@ const { siteName, description, shortDescription, siteImage } = useAppConfig();
 const { data } = await useAsyncGql('getProductCategories', { first: 6 });
 const productCategories = data.value?.productCategories?.nodes || [];
 
-const { data: productData } = await useAsyncGql('getProducts', { first: 5, orderby: ProductsOrderByEnum.POPULARITY });
-const popularProducts = productData.value.products?.nodes || [];
+const { data: productData } = await useAsyncGql('getProducts', {
+  orderby: ProductsOrderByEnum.POPULARITY,
+});
 
+const allProducts = productData.value.products?.nodes || [];
+
+const featuredProducts = allProducts.filter((product) =>
+  product.terms.nodes.some((term) => term.taxonomyName === 'product_visibility' && term.slug === 'featured'),
+);
 
 useSeoMeta({
   title: `Shop`,
@@ -52,7 +58,7 @@ onMounted(() => {
       <div class="max-w-full md:max-w-[1440px] m-auto px-4 md:px-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div class="flex items-center space-x-6 px-6 py-8 bg-[#535353] text-brand-gold rounded-lg">
           <div class="w-14">
-            <img src="/images/truck.svg" alt="truck">
+            <img src="/images/truck.svg" alt="truck" />
           </div>
           <div class="space-y-3 w-[calc(100%-80px)]">
             <h2 class="text-xl font-semibold">Fast Shipping</h2>
@@ -61,7 +67,7 @@ onMounted(() => {
         </div>
         <div class="flex items-center space-x-6 px-6 py-8 bg-[#535353] text-brand-gold rounded-lg">
           <div class="w-14">
-            <img src="/images/relax.svg" alt="relax">
+            <img src="/images/relax.svg" alt="relax" />
           </div>
           <div class="space-y-3 w-[calc(100%-80px)]">
             <h2 class="text-xl font-semibold">Peace Of Mind</h2>
@@ -70,7 +76,7 @@ onMounted(() => {
         </div>
         <div class="flex items-center space-x-6 px-6 py-8 bg-[#535353] text-brand-gold rounded-lg">
           <div class="w-14">
-            <img src="/images/secure.svg" alt="secure">
+            <img src="/images/secure.svg" alt="secure" />
           </div>
           <div class="space-y-3 w-[calc(100%-80px)]">
             <h2 class="text-xl font-semibold">Secure Payment</h2>
@@ -79,7 +85,7 @@ onMounted(() => {
         </div>
         <div class="flex items-center space-x-6 px-6 py-8 bg-[#535353] text-brand-gold rounded-lg">
           <div class="w-14">
-            <img src="/images/chat.svg" alt="chat">
+            <img src="/images/chat.svg" alt="chat" />
           </div>
           <div class="space-y-3 w-[calc(100%-80px)]">
             <h2 class="text-xl font-semibold">Support 24/7</h2>
@@ -98,10 +104,8 @@ onMounted(() => {
             <ArrowRight class="w-5 h-5" />
           </div>
         </div>
-        <ProductRow :products="popularProducts" class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-8" />
-        
+        <ProductRow :products="featuredProducts" class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-8" />
       </div>
-
     </section>
   </main>
 </template>

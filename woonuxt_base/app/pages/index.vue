@@ -13,8 +13,15 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
   },
 });
 import { ProductsOrderByEnum } from '#woo';
-const { data: productData } = await useAsyncGql('getProducts', { first: 5, orderby: ProductsOrderByEnum.POPULARITY });
-const popularProducts = productData.value.products?.nodes || [];
+const { data: productData } = await useAsyncGql('getProducts', {
+  orderby: ProductsOrderByEnum.POPULARITY,
+});
+
+const allProducts = productData.value.products?.nodes || [];
+
+const featuredProducts = allProducts.filter((product) =>
+  product.terms.nodes.some((term) => term.taxonomyName === 'product_visibility' && term.slug === 'featured'),
+);
 
 useSeoMeta({
   title: `Home`,
@@ -135,14 +142,14 @@ const testimonials = [
       </div>
       <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-20 mb-10 lg:mb-16">
         <ProductCard
-          v-for="(node, i) in popularProducts.slice(0, 4)"
+          v-for="(node, i) in featuredProducts.slice(0, 4)"
           :key="node.databaseId"
           class="w-full animateUp"
           :node="node"
           :index="i"
           :class="{
-            hidden: i === popularProducts.length - 1,
-            'lg:block': i === popularProducts.length - 1,
+            hidden: i === featuredProducts.length - 1,
+            'lg:block': i === featuredProducts.length - 1,
           }" />
       </div>
       <div class="w-fit m-auto animateUp">
