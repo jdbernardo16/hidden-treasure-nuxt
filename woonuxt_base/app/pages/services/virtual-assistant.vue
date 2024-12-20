@@ -1,42 +1,32 @@
 <script lang="ts" setup>
 const items = [
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/virtual/administrative-support.jpg', 
         title: 'Administrative Support', 
         description: 'Handle scheduling, email management, data entry, document preparation, and other administrative tasks with efficiency and precision.' 
     },
     { 
-        image: 'https://placehold.co/600x400',
-        title: 'Customer Support', 
-        description: 'Provide exceptional customer service with prompt responses to inquiries, issue resolution, and maintaining customer satisfaction.' 
-    },
-    { 
-        image: 'https://placehold.co/600x400',
+        image: '/images/virtual/social-media.jpg',
         title: 'Social Media Management', 
         description: 'Grow your online presence with expertly managed accounts, including content creation, post scheduling, and audience engagement on platforms like Instagram, Facebook, LinkedIn, and Twitter.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/virtual/content-writing.jpg', 
         title: 'Content Writing', 
         description: 'Craft compelling blog posts, newsletters, email campaigns, and website content that resonates with your audience and strengthens your brand voice.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/virtual/Ecommerce-Management.jpg', 
         title: 'E-commerce Management', 
         description: 'Manage your online store by handling product listings, inventory updates, order processing, and customer support on platforms like Shopify, WooCommerce, and Etsy.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
-        title: 'Travel and Event Planning', 
-        description: 'Coordinate your travel arrangements and event planning with meticulous attention to detail, ensuring seamless experiences every time.' 
-    },
-    { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/virtual/research.jpg', 
         title: 'Research and Data Analysis', 
         description: 'Conduct thorough market research, competitor analysis, or project-specific data gathering to provide actionable insights for your business.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/virtual/Personal-Assistance.jpg', 
         title: 'Personal Assistance', 
         description: 'Get help with personal tasks such as booking appointments, managing reminders, and organizing your daily life to stay stress-free and productive.' 
     },
@@ -57,7 +47,7 @@ useSeoMeta({
 <template>
     <section class="relative h-[300px] lg:h-[473px]">
         <NuxtImg 
-            src="/images/services.png" 
+            src="/images/virtual/cover.jpg" 
             alt="banner"
             format="webp"
             quality="90"
@@ -67,7 +57,7 @@ useSeoMeta({
         <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">
             <div class="px-4 lg:px-10 py-10 lg:py-16 space-y-6">
                 <p class="text-white text-2xl sm:text-4xl">Services</p>
-                <p class="font-bold text-4xl sm:text-7xl artegra text-brand-gold">Virtual Assistant</p>
+                <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">Virtual Assistant</p>
             </div>
         </div>
     </section>
@@ -89,8 +79,8 @@ useSeoMeta({
                     />
                 </div>
                 <div class="w-full sm:w-1/2 space-y-5 content mt-6 sm:mt-0">
-                    <p class="text-3xl sm:text-4xl font-bold artegra text-brand-gold">{{ item.title }}</p>
-                    <p class="text-xl sm:text-2xl leading-normal">{{item.description}}</p>
+                    <p class="text-2xl sm:text-3xl font-bold artegra text-brand-gold">{{ item.title }}</p>
+                    <p class="sm:text-xl leading-normal">{{item.description}}</p>
                 </div>
             </div>
         </div>

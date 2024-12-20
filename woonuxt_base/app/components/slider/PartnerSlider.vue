@@ -21,7 +21,7 @@
             }"
         >
             <swiper-slide v-for="(partner, index) in partners" :key="index">
-                <img :src="partner" alt="Partner Logo" class="partner-logo m-auto" />
+                <NuxtImg quality="80" :src="partner" alt="Partner Logo" class="partner-logo m-auto" />
             </swiper-slide>
         </swiper>
     </div>
@@ -39,12 +39,16 @@ const modules = [Autoplay, FreeMode];
 const partners = [
     "/logos/logo1.png",
     "/logos/logo2.png",
-    "/ht-logo.png",
-    "/logos/logo4.jpg",
+    "/logos/l1.png",
+    "/logos/l2.png",
+    "/logos/l4.png",
+    "/logos/5.png",
+    "/logos/l3.png",
+    "/logos/l6.png",
 ];
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .partner-swiper {
     width: 100%;
     overflow: hidden;
@@ -57,5 +61,11 @@ const partners = [
     width: auto;
     height: 100px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.34s ease;
+
+    &:hover {
+        filter: brightness(1) invert(0);
+    }
 }
 </style>

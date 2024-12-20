@@ -1,32 +1,32 @@
 <script lang="ts" setup>
 const items = [
     { 
-        image: '/images/digital-marketing/paid-ads.jpg', 
+        image: '/images/digital-marketing/paid-ads.png', 
         title: 'Paid Ads', 
         description: 'Maximize ROI with expertly managed campaigns across platforms like Google Ads, YouTube Ads, Facebook and Instagram Ads (Meta), Print / Magazine, affiliate marketing, and other top-performing platforms.' 
     },
     { 
-        image: '/images/digital-marketing/campaign-development.jpg',
+        image: '/images/digital-marketing/campaign-development.png',
         title: 'Campaign Development', 
         description: 'Custom strategies crafted to engage your audience, drive conversions, and develop growth.' 
     },
     { 
-        image: '/images/digital-marketing/public-relations.jpeg',
+        image: '/images/digital-marketing/public-relations.png',
         title: 'Public Relations', 
         description: 'Create impactful press releases and secure features in top industry publications to enhance your brand\'s credibility.' 
     },
     { 
-        image: '/images/digital-marketing/seo.jpeg', 
+        image: '/images/digital-marketing/seo.jpg', 
         title: 'SEO and Copywriting', 
         description: 'Optimize your website and marketing materials with keyword-rich, engaging content that drives traffic and conversions.' 
     },
     { 
-        image: '/images/digital-marketing/blog.jpg', 
+        image: '/images/digital-marketing/blog.png', 
         title: 'Blog Management', 
         description: 'Establish thought leadership with professionally written, SEO-optimized blog posts that inform, inspire, and convert.' 
     },
     { 
-        image: '/images/digital-marketing/analytics.jpg', 
+        image: '/images/digital-marketing/analytics.png', 
         title: 'Analytics Reporting and Progress Updates', 
         description: 'Stay informed with detailed reports and regular updates, providing insights into campaign performance and progress toward your business goals.' 
     },
@@ -48,7 +48,7 @@ useSeoMeta({
 <template>
     <section class="relative h-[300px] lg:h-[473px]">
         <NuxtImg 
-            src="/images/services.png" 
+            src="/images/digital-marketing/digital.jpg" 
             alt="banner"
             format="webp"
             quality="90"
@@ -58,7 +58,7 @@ useSeoMeta({
         <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">
             <div class="px-4 lg:px-10 py-10 lg:py-16 space-y-6">
                 <p class="text-white text-2xl sm:text-4xl">Services</p>
-                <p class="font-bold text-4xl sm:text-7xl artegra text-brand-gold">Digital Marketing</p>
+                <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">Digital Marketing</p>
             </div>
         </div>
     </section>
@@ -80,8 +80,8 @@ useSeoMeta({
                     />
                 </div>
                 <div class="w-full sm:w-1/2 space-y-5 content mt-6 sm:mt-0">
-                    <p class="text-3xl sm:text-4xl font-bold artegra text-brand-gold">{{ item.title }}</p>
-                    <p class="text-xl sm:text-2xl leading-normal">{{item.description}}</p>
+                    <p class="text-2xl sm:text-3xl font-bold artegra text-brand-gold">{{ item.title }}</p>
+                    <p class="sm:text-xl leading-normal">{{item.description}}</p>
                 </div>
             </div>
         </div>

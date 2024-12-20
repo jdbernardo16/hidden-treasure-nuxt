@@ -28,27 +28,48 @@ useSeoMeta({
 
 const testimonials = [
   {
-    image: "https://picsum.photos/id/1010/200/200",
-    text: "Hidden Treasures transformed our brand identity with exceptional design and strategy. Sales skyrocketed by 70% within six months!",
-    name: "Amanda Carter",
-    position: "CMO, Elegant Furnishings",
+    image: "/images/testimony1.png",
+    text: "We were welcomed warmly and completely taken care of. Our son was very excited about to play on the Barcelona Olympic Baseball Field and that was truly a highlight of the trip. My husband and I met so many wonderful families that are a part of the organization and it was so uplifting to hear these families cheering for all of the boys. There was tons of laughter and jokes and it was so special to see them really be present and enjoy each other.",
+    name: "Ford Family",
+    position: "Event Planning",
     rating: 5,
   },
   {
-    image: "https://picsum.photos/id/1011/200/200",
-    text: "Their innovative digital campaigns brought us global recognition. A true game-changer for our company!",
-    name: "Sophia Gomez",
-    position: "Director, StyleGenix",
+    image: "/images/testimony2.png",
+    text: "I just wanted to let you know what a great experience Anthony had(and I!). The coaches were wonderful and I feel like he truly gained his confidence back. I won’t bore you with the long story, but it was definitely missing. Seeing him smile and enjoy baseball again, making it fun, was well worth it all. Thank you for inviting him to be part of the team. I wish you and your family all the best.",
+    name: "Andrea A. ",
+    position: "Event Planning",
     rating: 5,
   },
   {
-    image: "https://picsum.photos/id/1012/200/200",
-    text: "A pleasure to work with! Their expert team streamlined our online presence, boosting traffic by 120%.",
-    
-    name: "James Fields",
-    position: "Founder, GreenEarth Initiatives",
+    image: "/images/testimony3.png",
+    text: "We don’t know what we would have done without their advertising management and detailed progress reports. Their strategies were a game-changer for us! With just one rental property, they helped us gross over $210,000 a year.",
+    name: "Theresa G.",
+    position: "(IVR) (Marketing)",
     rating: 5,
   },
+  {
+    image: "/images/testimony4.png",
+    text: "Working with this team has been one of the most rewarding experiences of my career. They are, without a doubt, some of the smartest and most strategic thinkers I’ve ever met. Their ability to anticipate needs, craft brilliant plans, and execute flawlessly is unparalleled.",
+    name: "Harry",
+    position: "Marketing Virtual Assistant",
+    rating: 5,
+  },
+  {
+    image: "/images/testimony5.png",
+    text: "Plenty of staff were on hand to help interpret, guide and help out on everything from places to eat, things to do, where to go, and even where to find the best ice cream! There was plenty of downtime built into the schedule to experience the beaches, the nightlife Spain is famous for, the shopping and some great sightseeing.",
+    name: "Hopp Family",
+    position: "Event Planning",
+    rating: 5,
+  },
+  {
+    image: "/images/testimony6.png",
+    text: "Not only did I get top dollar for my items, but they also helped me understand the market and maximize my profits. Their attention to detail and genuine passion for what they do really set them apart. If you’re considering consigning, I highly recommend working with them, they know how to get results.",
+    name: "Frank",
+    position: "Consignment",
+    rating: 5,
+  },
+  
 ];
 </script>
 
@@ -78,7 +99,7 @@ const testimonials = [
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div v-for="item in data?.f2_services" @click="navigateTo(item.link)" class="space-y-6 px-4 pt-20 pb-16 rounded-t-full border-2 border-brand-gold group/service transition hover:bg-brand-gold cursor-pointer">
+                <div v-for="item in data?.f2_services" @click="navigateTo(item.link)" class="space-y-6 px-4 pt-20 pb-10 rounded-t-full border-2 border-brand-gold group/service transition hover:bg-brand-gold cursor-pointer hover:-translate-y-5">
                     <img class="m-auto animateUp" :src="item.icon.url" alt="Target" width="130" height="130">
                     <div class="text-center space-y-4">
                         <p class="text-brand-gold text-3xl font-semibold h-[72px] line-clamp-2 animateUp group-hover/service:text-brand-dark1 transition">{{item.title}}</p>
@@ -91,6 +112,18 @@ const testimonials = [
             <!-- <ServiceSlider :data="data?.f2_services" /> -->
         </div>
     </section>
+
+    <AboutSection />
+
+    <BlogSection />
+
+    <!-- <VideoSection /> -->
+
+    <!-- <section class="bg-brand-dark1">
+        <div class="w-full h-[50vh] bg-fixed bg-center bg-cover bg-no-repeat opacity-50" style="background-image: url('/images/treasure.jpeg')">
+
+        </div>
+    </section> -->
 
     <!-- Section 3: Advantages -->
     <!-- <PortfolioSection /> -->

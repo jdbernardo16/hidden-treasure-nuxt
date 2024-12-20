@@ -65,6 +65,7 @@ const maxWidthClass = computed(() => {
         '2xl': 'sm:max-w-2xl',
         'calculator': 'sm:max-w-[350px] !overflow-visible',
         'computation': 'sm:max-w-[400px] !overflow-visible',
+        'video': 'sm:max-w-[800px] !overflow-visible',
     };
     return widths[props.maxWidth] || widths['2xl'];
 });

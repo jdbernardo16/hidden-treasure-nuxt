@@ -15,7 +15,7 @@ useSeoMeta({
 <template>
     <section class="relative h-[473px] lg:h-[473px]">
         <NuxtImg 
-            src="/images/services.png" 
+            src="/images/event-banner.jpg" 
             alt="banner"
             format="webp"
             quality="90"
@@ -25,13 +25,13 @@ useSeoMeta({
         <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">
             <div class="px-4 lg:px-10 py-10 lg:py-16 space-y-6">
                 <p class="text-white text-2xl sm:text-4xl">Services</p>
-                <p class="font-bold text-4xl sm:text-7xl artegra text-brand-gold">Event Planning Services</p>
+                <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">Event Planning Services</p>
             </div>
         </div>
     </section>
     <section>
         <div class="max-w-[1000px] m-auto px-4 lg:py-10 py-16 wysiwyg">
-            <p class="text-2xl sm:text-3xl leading-snug">Transform your vision into an extraordinary experience with our <b>Event Planning Services</b>, designed to handle every detail from start to finish. Whether you're hosting a corporate event, fundraiser, open house, international gathering, or trade show, our expertise ensures seamless execution and memorable results.
+            <div class="text-xl leading-snug">Transform your vision into an extraordinary experience with our <b>Event Planning Services</b>, designed to handle every detail from start to finish. Whether you're hosting a corporate event, fundraiser, open house, international gathering, or trade show, our expertise ensures seamless execution and memorable results.
                 <br><br>
                 <h4>Comprehensive Event Planning:</h4>
                 <br>
@@ -68,7 +68,7 @@ useSeoMeta({
                     <li><b>Feedback and Analysis:</b> Collect attendee feedback and assess event performance metrics.</li>
                     <li><b>Thank You Notes and Media:</b> Follow up with guests and share event highlights on social and media platforms.</li>
                 </ul>
-            </p>
+            </div>
         </div>
     </section>
 

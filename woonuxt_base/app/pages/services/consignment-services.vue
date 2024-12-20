@@ -1,27 +1,27 @@
 <script lang="ts" setup>
 const items = [
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/consignment/Automobiles.jpg', 
         title: 'Automobiles', 
         description: 'Luxury and exotic cars, vintage classics, and premium vehicles. Whether you’re looking to sell a rare collectible or a recent model, our expert team will help you achieve top market value.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/consignment/Antiques.jpg', 
         title: 'Antiques', 
         description: 'Rare and timeless pieces that hold historical or artistic significance. From antique furniture to vintage artifacts, our consignment services ensure your treasured items receive the attention they deserve.' 
     },
     { 
-        image: 'https://placehold.co/600x400',
+        image: '/images/consignment/Jewelry.jpg',
         title: 'Jewelry', 
         description: 'High-end pieces, including diamonds, watches, and bespoke designs. Our expert jewelry appraisers will help you determine the value of your treasured jewels and find the right buyer.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/consignment/Collectibles.jpg', 
         title: 'Collectibles', 
         description: 'Limited edition items, memorabilia, and other sought-after treasures. Whether you’re a seasoned collector or looking to offload a rare find, our consignment services connect you with enthusiasts and collectors worldwide.' 
     },
     { 
-        image: 'https://placehold.co/600x400', 
+        image: '/images/consignment/others.jpg', 
         title: 'Other Valuable Items', 
         description: 'From fine art to premium electronics, we help you turn assets into profit. Our expert team will guide you through the consignment process, ensuring you receive fair market value for your unique items.' 
     },
@@ -43,7 +43,7 @@ useSeoMeta({
 <template>
     <section class="relative h-[300px] lg:h-[473px]">
         <NuxtImg 
-            src="/images/services.png" 
+            src="/images/consignment/consignment.jpg" 
             alt="banner"
             format="webp"
             quality="90"
@@ -53,7 +53,7 @@ useSeoMeta({
         <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">
             <div class="px-4 lg:px-10 py-10 lg:py-16 space-y-6">
                 <p class="text-white text-2xl sm:text-4xl">Services</p>
-                <p class="font-bold text-4xl sm:text-7xl artegra text-brand-gold">Consignment Services</p>
+                <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">Consignment Services</p>
             </div>
         </div>
     </section>
@@ -76,8 +76,8 @@ useSeoMeta({
                     >
                 </div>
                 <div class="w-full sm:w-1/2 space-y-5 content mt-6 sm:mt-0">
-                    <p class="text-3xl sm:text-4xl font-bold artegra text-brand-gold">{{ item.title }}</p>
-                    <p class="text-xl sm:text-2xl leading-normal">{{item.description}}</p>
+                    <p class="text-2xl sm:text-3xl font-bold artegra text-brand-gold">{{ item.title }}</p>
+                    <p class="sm:text-xl leading-normal">{{item.description}}</p>
                 </div>
             </div>
         </div>

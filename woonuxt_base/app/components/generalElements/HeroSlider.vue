@@ -25,9 +25,9 @@
                 </div>
                 <div
                     class="overlay bg-gradient-to-t from-black to-black/50 w-full h-full absolute top-0 left-0 flex px-6 lg:px-20 items-center">
-                    <div class="max-w-full md:max-w-[573px] space-y-8">
+                    <div class="max-w-full md:max-w-[700px] space-y-8">
                         <h1
-                            class="artegra text-brand-gold text-4xl md:text-[3rem] lg:text-[5rem] leading-tight whitespace-pre-wrap slider-title">{{ slide.title }}</h1>
+                            class="artegra text-brand-gold text-4xl md:text-[3rem] lg:text-[4rem] leading-tight whitespace-pre-wrap slider-title">{{ slide.title }}</h1>
                         <div class="max-w-[520px]">
                             <p class="text-white slider-description">{{ slide.description }}</p>
                         </div>
