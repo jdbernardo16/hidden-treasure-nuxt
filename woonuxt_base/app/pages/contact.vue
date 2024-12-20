@@ -1,8 +1,5 @@
 <template>
-    <ContactForm />    
+  <ContactForm />
 </template>
 
-<script setup>
-
-</script>
-
+<script setup></script>
