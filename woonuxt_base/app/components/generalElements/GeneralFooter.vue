@@ -45,7 +45,7 @@
               <img src="/images/instagram.svg" alt="instagram" />
             </nuxt-link>
           </div>
-          <nuxt-link to="mailto: info@hiddentreasurechests.com" target="_blank">info@hiddentreasurechests.com</nuxt-link>
+          <nuxt-link to="mailto: admin@hiddentreasuresagency.com" target="_blank">admin@hiddentreasuresagency.com</nuxt-link>
         </div>
       </div>
       <img class="absolute top-0 left-0 w-full h-full" src="/images/footer.png" alt="footer" />
