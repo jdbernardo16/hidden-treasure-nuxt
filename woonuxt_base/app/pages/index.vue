@@ -12,6 +12,7 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
     return response[0]?.acf || null;
   },
 });
+
 import { ProductsOrderByEnum } from '#woo';
 const { data: productData } = await useAsyncGql('getProducts', {
   orderby: ProductsOrderByEnum.POPULARITY,
