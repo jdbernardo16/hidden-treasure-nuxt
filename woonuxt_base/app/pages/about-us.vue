@@ -3,7 +3,7 @@ const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
 const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
   query: {
-    slug: 'home',
+    slug: 'about-us',
     _fields: 'acf',
     acf_format: 'standard',
   },
@@ -41,7 +41,7 @@ useSeoMeta({
     'Established in 2017, Hidden Treasures has grown into a globally recognized company servicing a portfolio of over $25 million. Our team, based around the world, brings a wealth of expertise enabling us to deliver exceptional services to clients across industries and continents. We have proudly serviced companies from California to Dubai and have successfully hosted events in iconic locations such as California, Las Vegas, Spain, Italy, and Monaco.',
   ogDescription:
     'Established in 2017, Hidden Treasures has grown into a globally recognized company servicing a portfolio of over $25 million. Our team, based around the world, brings a wealth of expertise enabling us to deliver exceptional services to clients across industries and continents. We have proudly serviced companies from California to Dubai and have successfully hosted events in iconic locations such as California, Las Vegas, Spain, Italy, and Monaco.',
-  ogImage: 'https://ht.uatproject.website/_ipx/f_webp&q_90&s_93x50/images/ht-logo.png',
+  ogImage: '/_ipx/f_webp&q_90&s_93x50/images/ht-logo.png',
   twitterCard: `summary_large_image`,
 });
 
@@ -51,12 +51,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="bg-banner h-[calc(100vh-72px)] lg:h-[calc(100vh-82px)] bg-fixed bg-cover bg-no-repeat" style="background-image: url('/images/Innovate.jpg')">
-    <div class="w-full h-full flex items-center justify-center bg-gradient-to-t from-black to-transparent">
-      <div class="text-center px-4 lg:px-10">
-        <h1 class="text-4xl md:text-6xl font-bold text-brand-gold mb-4 artegra">Welcome to Hidden Treasures</h1>
-        <h2 class="text-2xl md:text-3xl text-white mb-8">Luxury, Innovation, Results</h2>
-        <Button @click="navigateTo('#about')" variant="secondary">Discover More</Button>
+  <section class="relative h-[300px] lg:h-[473px]">
+    <NuxtImg :src="data?.frame_1?.banner?.url" alt="banner" format="webp" quality="90" loading="eager" class="w-full h-full object-cover" />
+    <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">
+      <div class="px-4 lg:px-10 py-10 lg:py-16 space-y-6">
+        <p class="text-white text-2xl sm:text-4xl">{{ data?.frame_1?.header }}</p>
+        <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">{{ data?.frame_1?.sub_header }}</p>
       </div>
     </div>
   </section>
@@ -66,20 +66,11 @@ onMounted(() => {
     <div class="container mx-auto px-4 lg:px-10">
       <div class="flex flex-col md:flex-row items-center lg:space-x-10">
         <div class="md:w-1/2">
-          <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">About Us</h2>
-          <p class="text-gray-600">
-            Established in 2017, Hidden Treasures has grown into a globally recognized company servicing a portfolio of over $25 million. Our team, based around
-            the world, brings a wealth of expertise enabling us to deliver exceptional services to clients across industries and continents. We have proudly
-            serviced companies from California to Dubai and have successfully hosted events in iconic locations such as California, Las Vegas, Spain, Italy, and
-            Monaco.
-          </p>
-          <p class="mt-4 text-gray-600">
-            With experience spanning education, entertainment, athletics, collectibles, automotive, and networking events, we bring a unique, tailored approach
-            to every project we undertake.
-          </p>
+          <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_2?.title }}</h2>
+          <div class="text-gray-600" v-html="data?.frame_2?.content" />
         </div>
         <div class="md:w-1/2 asepct-[4/3] mt-8 md:mt-0">
-          <img src="https://picsum.photos/1200/800?random=3" alt="collage" class="w-full h-full object-cover" />
+          <nuxt-img quality="80" format="webp" :src="data?.frame_2?.right_image?.url" alt="collage" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
@@ -90,19 +81,11 @@ onMounted(() => {
     <div class="container mx-auto px-4 lg:px-10">
       <div class="flex flex-col md:flex-row items-center lg:space-x-10">
         <div class="md:w-1/2 asepct-[4/3]">
-          <img src="https://picsum.photos/1200/800?random=4" alt="collage" class="w-full h-full object-cover" />
+          <nuxt-img quality="80" format="webp" :src="data?.frame_3?.image?.url" alt="collage" class="w-full h-full object-cover" />
         </div>
         <div class="md:w-1/2 md:mt-0 mt-8">
-          <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">Our Mission</h2>
-          <p class="text-gray-600">
-            At Hidden Treasures, our mission is to empower individuals and businesses to reach their fullest potential by providing innovative, luxury-driven
-            solutions tailored to their unique needs. We strive to redefine excellence through a commitment to creativity, precision, and results.
-          </p>
-          <p class="mt-4 text-gray-600">
-            Our goal is not just to deliver services but to build enduring partnerships that inspire confidence and foster growth. By combining global
-            expertise, cutting-edge strategies, and a passion for perfection, we transform visions into tangible achievements, helping our clients thrive in
-            competitive and dynamic industries.
-          </p>
+          <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_3?.title }}</h2>
+          <div class="text-gray-600" v-html="data?.frame_3?.content" />
         </div>
       </div>
     </div>
@@ -111,32 +94,15 @@ onMounted(() => {
   <!-- Core Services Section -->
   <section id="services" class="py-12 bg-brand-dark1">
     <div class="container mx-auto px-4 lg:px-10">
-      <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">What We Do</h2>
+      <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_4?.header }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold">
-          <img src="https://img.icons8.com/?size=100&id=113842&format=png&color=000000" alt="Digital Marketing" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">Digital Marketing</h3>
-          <p class="text-white text-center">
-            From managing campaigns spending up to $1,000 per day to crafting strategies that helped businesses scale from startups to over $1,000,000 in annual
-            revenue.
-          </p>
-        </div>
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold">
-          <img src="https://img.icons8.com/?size=100&id=112288&format=png&color=000000" alt="Consignment" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">Consignment</h3>
-          <p class="text-white text-center">We simplify the process of selling luxury automobiles, collectibles, antiques, jewelry, and more.</p>
-        </div>
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold">
-          <img src="https://img.icons8.com/bubbles/100/000000/calendar.png" alt="Event Planning" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">Event Planning</h3>
-          <p class="text-white text-center">Our team has planned everything from fundraising campaigns to international events with precision.</p>
-        </div>
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold">
-          <img src="https://img.icons8.com/?size=100&id=111133&format=png&color=000000" alt="Digital Marketing" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra text-center">Virtual Assistant Support</h3>
-          <p class="text-white text-center">
-            Starting at just $5/hour, we provide flexible and reliable support for tasks like data entry and e-commerce management.
-          </p>
+        <div
+          v-for="item in data?.frame_4?.what_we_do"
+          :key="item.id"
+          class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold">
+          <nuxt-img :src="item.icon.url" alt="Digital Marketing" class="mb-4 w-[100px]" />
+          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra text-center">{{ item.title }}</h3>
+          <p class="text-white text-center">{{ item.description }}</p>
         </div>
       </div>
     </div>
@@ -146,19 +112,12 @@ onMounted(() => {
   <section id="story" class="pt-16 bg-gray-50">
     <div class="container mx-auto px-4 lg:px-10">
       <div class="m-auto text-center max-w-[1000px]">
-        <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">Our Story</h2>
-        <p class="text-gray-600">
-          Hidden Treasures was founded in Newport Beach, CA with a vision to create a company where luxury, innovation, and results converge. Over the years, we
-          have grown into a trusted partner for businesses and individuals seeking premium services delivered with a personal touch.
-        </p>
-        <p class="mt-4 text-gray-600">
-          Our team brings together decades of combined experience across industries, ensuring every client receives unparalleled expertise and attention to
-          detail.
-        </p>
+        <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_5?.title }}</h2>
+        <div class="text-gray-600" v-html="data?.frame_5?.description" />
       </div>
       <div class="max-w-[800px] m-auto lg:pb-0 py-16">
         <div class="flex flex-col items-center relative lg:space-y-0 space-y-10">
-          <div v-for="(item, index) in items" :key="index" class="w-full relative" :class="items.length > 1 ? 'timeline-item' : ''">
+          <div v-for="(item, index) in data?.frame_5?.timeline" :key="index" class="w-full relative" :class="items.length > 1 ? 'timeline-item' : ''">
             <div
               class="flex lg:items-center w-full lg:h-[200px] space-y-3 lg:space-y-0"
               :class="
@@ -175,7 +134,7 @@ onMounted(() => {
                 :class="[index === 0 ? '!bg-brand-gold w-5 h-5 m-auto' : 'w-[13px] h-[13px]', index > 0 && index % 2 === 0 ? 'lg:mx-10' : 'lg:mx-10']"></div>
               <div class="flex lg:w-1/2" :class="index % 2 === 0 ? 'lg:justify-end' : 'justify-start'">
                 <NuxtImg
-                  :src="item.icon"
+                  :src="item.icon.url"
                   alt="image"
                   width="100%"
                   height="100%"
@@ -196,46 +155,30 @@ onMounted(() => {
   <!-- Why Choose Us Section -->
   <section id="why-choose" class="py-16">
     <div class="container mx-auto px-4 lg:px-10">
-      <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">Why Choose Hidden Treasures?</h2>
+      <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_6?.header }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold text-center">
-          <img src="https://img.icons8.com/?size=100&id=112158&format=png&color=000000" alt="Proven Results" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">Proven Results</h3>
+        <div
+          v-for="item in data?.frame_6?.items"
+          :key="item.id"
+          class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold text-center">
+          <nuxt-img quality="80" width="100" :src="item.icon.url" alt="Proven Results" class="mb-4 w-[100px]" />
+          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">{{ item.title }}</h3>
           <p class="text-center">
-            Our track record includes helping businesses scale to seven figures, executing high-profile events, and delivering ROI-driven marketing campaigns.
+            {{ item.description }}
           </p>
-        </div>
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold text-center">
-          <img src="https://img.icons8.com/?size=100&id=nUWz0NKN2w_E&format=png&color=000000" alt="Comprehensive Expertise" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">Comprehensive Expertise</h3>
-          <p class="text-center">With services spanning multiple disciplines, we provide end-to-end solutions tailored to your unique needs.</p>
-        </div>
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold text-center">
-          <img src="https://img.icons8.com/?size=100&id=113852&format=png&color=000000" alt="Commitment to Excellence" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra">Commitment to Excellence</h3>
-          <p class="text-center">Every project we undertake is approached with a focus on quality, precision, and client satisfaction.</p>
-        </div>
-        <div class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold text-center">
-          <img src="https://img.icons8.com/?size=100&id=114421&format=png&color=000000" alt="Personalized Approach" class="mb-4 w-[100px]" />
-          <h3 class="text-xl font-bold text-brand-gold mb-2 artegra text-center">Personalized Approach</h3>
-          <p class="text-center">We believe in building long-term partnerships and customizing every service to align with your goals.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Closing Statement Section -->
-  <section id="closing" class="bg-fixed bg-cover bg-no-repeat" style="background-image: url('https://picsum.photos/1200/800?random=4')">
+  <section id="closing" class="bg-fixed bg-cover bg-no-repeat" :style="`background-image: url('${data?.frame_7?.background_image?.url}')`">
     <div class="w-full h-full bg-black bg-opacity-55 py-16">
       <div class="max-w-[1000px] mx-auto px-4 lg:px-10 text-center">
-        <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">Your Partner in Success</h2>
-        <p class="text-white">
-          At Hidden Treasures, we’re more than a service provider; we’re your partner in growth, innovation, and success. Whether you’re looking to amplify your
-          brand, streamline your operations, host a standout event, or maximize the value of your assets, we’re here to help every step of the way.
-        </p>
-        <p class="text-white mt-4">Let’s uncover the potential together.</p>
+        <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_7?.header }}</h2>
+        <div class="text-white" v-html="data?.frame_7?.description" />
         <div class="text-center mt-8">
-          <Button @click="navigateTo('/contact')">Uncover Your Potential</Button>
+          <Button @click="navigateTo('/contact')">{{ data?.frame_7?.button_text }}</Button>
         </div>
       </div>
     </div>

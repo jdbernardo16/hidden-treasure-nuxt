@@ -1,10 +1,9 @@
 <template>
   <section class="relative h-[300px] lg:h-[473px]">
-    <NuxtImg src="/images/consignment/consignment.jpg" alt="banner" format="webp" quality="90" loading="eager" class="w-full h-full object-cover" />
+    <NuxtImg :src="cms?.banner?.url" alt="banner" format="webp" quality="90" loading="eager" class="w-full h-full object-cover" />
     <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">
       <div class="px-4 lg:px-10 py-10 lg:py-16 lg:space-y-6">
-        <p class="text-white text-2xl sm:text-4xl">Hidden Treasures</p>
-        <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">Blogs</p>
+        <p class="font-bold text-4xl sm:text-6xl artegra text-brand-gold">{{ cms?.header }}</p>
       </div>
     </div>
   </section>
@@ -114,6 +113,17 @@ interface Blog {
   date: string;
   slug: string;
 }
+
+const { data: cms } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
+  query: {
+    slug: 'blogs',
+    _fields: 'acf',
+    acf_format: 'standard',
+  },
+  transform: (response) => {
+    return response[0]?.acf || null;
+  },
+});
 
 const { data: allBlogs } = useFetch<Blog[]>(`${API_BASE_URL}/wp-json/wp/v2/posts`, {
   query: {

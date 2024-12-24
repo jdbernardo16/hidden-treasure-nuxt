@@ -44,7 +44,7 @@
         <div class="lg:w-[400px]">
           <p class="artegra font-bold text-2xl mb-6">More Articles</p>
           <div class="space-y-6">
-            <template v-if="!morePosts || morePosts.length === 0">
+            <template v-if="!morePosts">
               <!-- Skeleton for More Articles -->
               <div class="flex flex-col lg:space-y-0 space-y-4 lg:flex-row lg:space-x-6">
                 <div class="w-full lg:w-1/3 aspect-[1/1] bg-gray-200 animate-pulse rounded-lg"></div>
@@ -62,6 +62,10 @@
                   <div class="h-4 bg-gray-200 animate-pulse rounded w-full"></div>
                 </div>
               </div>
+            </template>
+
+            <template v-else-if="morePosts.length === 0">
+              <p>No more post available...</p>
             </template>
 
             <template v-else>

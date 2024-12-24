@@ -7,8 +7,8 @@ export default defineAppConfig({
   siteName: 'Hidden Treasures',
   shortDescription: 'Turn Visions, To Victories',
   description: `Hidden Treasures is a top marketing team specializing in strategic campaigns, targeted ads, and consignment solutions. We deliver measurable results, helping businesses and individuals excel with tailored strategies.`,
-  baseUrl: 'https://ht.uatproject.website/',
-  siteImage: 'https://uatproject.website/ht.png',
+  baseUrl: 'https://hiddentreasuresagency.com/',
+  siteImage: 'https://hiddentreasuresagency.com/ht.png',
   storeSettings: {
     autoOpenCart: false,
     showReviews: true,
