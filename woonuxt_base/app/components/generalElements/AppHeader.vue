@@ -39,7 +39,7 @@ const closeMenu = () => {
         <div class="dropdown-menu flex flex-col absolute top-full w-max bg-brand-dark1 p-4 space-y-3 text-sm">
           <NuxtLink to="/services/digital-marketing" class="hover:text-white transition" @click="closeMenu">Digital Marketing</NuxtLink>
           <NuxtLink to="/services/virtual-assistant" class="hover:text-white transition" @click="closeMenu">Virtual Assistant</NuxtLink>
-          <NuxtLink to="/services/event-management" class="hover:text-white transition" @click="closeMenu">Event Management</NuxtLink>
+          <!-- <NuxtLink to="/services/event-management" class="hover:text-white transition" @click="closeMenu">Event Management</NuxtLink> -->
           <NuxtLink to="/services/consignment-services" class="hover:text-white transition" @click="closeMenu">Consignment Services</NuxtLink>
         </div>
       </div>
@@ -79,7 +79,7 @@ const closeMenu = () => {
       <div class="flex flex-col p-4 space-y-4 text-sm">
         <NuxtLink to="/services/digital-marketing" class="hover:text-white transition" @click="closeMenu">Digital Marketing</NuxtLink>
         <NuxtLink to="/services/virtual-assistant" class="hover:text-white transition" @click="closeMenu">Virtual Assistant</NuxtLink>
-        <NuxtLink to="/services/event-management" class="hover:text-white transition" @click="closeMenu">Event Management</NuxtLink>
+        <!-- <NuxtLink to="/services/event-management" class="hover:text-white transition" @click="closeMenu">Event Management</NuxtLink> -->
         <NuxtLink to="/services/consignment-services" class="hover:text-white transition" @click="closeMenu">Consignment Services</NuxtLink>
       </div>
     </div>

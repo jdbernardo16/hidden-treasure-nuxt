@@ -44,6 +44,6 @@ const twitter = wooNuxtSEO?.find((item) => item.provider === 'twitter') ?? null;
     <Meta v-if="description" name="twitter:description" hid="twitter:description" :content="description" />
     <Meta name="twitter:image" hid="twitter:image" :content="twitterImage" />
     <Meta name="twitter:url" hid="twitter:url" :content="canonical" />
-    <Link rel="canonical" hid="canonical" href="https://ht.uatproject.website/product" />
+    <Link rel="canonical" hid="canonical" href="https://hiddentreasuresagency.com/product" />
   </Head>
 </template>
