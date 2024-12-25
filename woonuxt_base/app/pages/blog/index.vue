@@ -10,11 +10,11 @@
   <section class="bg-brand-dark1">
     <div class="max-w-[1440px] m-auto lg:px-20 px-4 py-16">
       <div class="grid grid-cols-1 lg:grid-cols-6 gap-10">
-        <div
-          @click="navigateTo(`/blog/${blog.slug}`)"
+        <nuxt-link
+          :to="`/blog/${blog.slug}`"
           v-for="(blog, index) in featuredBlogs.slice(0, 1)"
           :key="index"
-          class="lg:col-span-3 group/featured-blog cursor-pointer">
+          class="lg:col-span-3 group/featured-blog cursor-pointer block">
           <div class="aspect-[1/1] overflow-hidden rounded-lg">
             <NuxtImg
               quality="80"
@@ -29,10 +29,10 @@
             <p class="text-xl font-bold mb-3 text-brand-gold line-clamp-2">{{ blog?.title?.rendered }}</p>
             <p class="line-clamp-2 whitespace-pre-wrap">{{ blog?.acf?.blog_content?.short_description }}</p>
           </div>
-        </div>
+        </nuxt-link>
         <div class="lg:col-span-3 space-y-10">
-          <div
-            @click="navigateTo(`/blog/${blog.slug}`)"
+          <nuxt-link
+            :to="`/blog/${blog.slug}`"
             v-for="blog in featuredBlogs.slice(1, 999)"
             class="flex flex-col lg:space-y-0 space-y-4 lg:flex-row lg:space-x-6 group/blog cursor-pointer">
             <div class="w-full lg:w-1/3 aspect-[1/1] overflow-hidden rounded-lg">
@@ -49,7 +49,7 @@
               <p class="text-xl font-bold text-brand-gold line-clamp-2">{{ blog?.title?.rendered }}</p>
               <p class="line-clamp-2 whitespace-pre-wrap">{{ blog?.acf?.blog_content?.short_description }}</p>
             </div>
-          </div>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@
         <div></div>
       </div>
       <div class="grid lg:grid-cols-3 gap-10 lg:gap-20 grid-cols-1">
-        <div @click="navigateTo(`/blog/${blog.slug}`)" v-for="blog in nonFeaturedBlogs" class="space-y-4 group/blog cursor-pointer">
+        <nuxt-link :to="`/blog/${blog.slug}`" v-for="blog in nonFeaturedBlogs" class="space-y-4 group/blog cursor-pointer">
           <div class="w-full aspect-[4/3] overflow-hidden rounded-lg">
             <NuxtImg
               quality="80"
@@ -83,7 +83,7 @@
             <p class="text-xl font-bold text-brand-gold line-clamp-2">{{ blog?.title?.rendered }}</p>
             <p class="line-clamp-2 whitespace-pre-wrap">{{ blog?.acf?.blog_content?.short_description }}</p>
           </div>
-        </div>
+        </nuxt-link>
       </div>
       <div class="w-fit m-auto mt-10">
         <Button v-if="hasMoreBlogs" @click="loadMore" size="lg"> Load More </Button>

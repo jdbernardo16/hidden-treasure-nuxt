@@ -79,6 +79,7 @@ export default defineNuxtConfig({
       addPage('product-category-page-pager', '/product-category/:categorySlug/page/:pageNumber', 'product-category/[slug].vue');
       addPage('order-received', '/checkout/order-received/:orderId', 'order-summary.vue');
       addPage('order-summary', '/order-summary/:orderId', 'order-summary.vue');
+      addPage('blog-post', '/blog/:slug', 'blog/[slug].vue');
     },
   },
 

@@ -14,7 +14,7 @@
         <div class="lg:flex-1">
           <!-- Image -->
           <div v-if="!blog" class="w-full h-64 bg-gray-200 animate-pulse rounded-lg mb-4"></div>
-          <nuxt-img
+          <img
             v-else
             :src="blog.acf.blog_content.blog_image.url"
             alt="banner"
@@ -69,18 +69,18 @@
             </template>
 
             <template v-else>
-              <div
-                @click="navigateTo(`/blog/${post.slug}`)"
+              <nuxt-link
+                :to="`/blog/${post.slug}`"
                 v-for="post in morePosts?.slice(0, 4)"
                 :key="post.id"
-                class="flex flex-col lg:space-y-0 space-y-4 lg:flex-row lg:space-x-6 group/blog cursor-pointer">
+                class="flex flex-col lg:space-y-0 space-y-4 lg:flex-row lg:space-x-6 group/blog cursor-pointer block">
                 <div class="w-full lg:w-1/3 aspect-[1/1] overflow-hidden rounded-lg">
-                  <NuxtImg
+                  <img
                     quality="80"
                     loading="lazy"
                     width="300"
                     class="w-full h-full object-cover group-hover/blog:scale-105 transition"
-                    :src="post.acf.blog_content.blog_image.url"
+                    :src="post.acf.blog_content.blog_image.sizes.thumbnail"
                     placeholder-class="blur-xl" />
                 </div>
                 <div class="flex-1 space-y-3 transition group-hover/blog:text-brand-gold">
@@ -90,7 +90,7 @@
                   <p class="text-xl font-bold text-brand-gold line-clamp-2">{{ post.title.rendered }}</p>
                   <p class="line-clamp-2 whitespace-pre-wrap" v-html="post.acf.blog_content.short_description"></p>
                 </div>
-              </div>
+              </nuxt-link>
             </template>
           </div>
         </div>
@@ -131,7 +131,7 @@ const route = useRoute();
 const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
 
-const { data: blog } = useFetch<Blog | null>(`${API_BASE_URL}/wp-json/wp/v2/posts?slug=${route.params.slug}`, {
+const { data: blog, error } = useFetch<Blog | null>(`${API_BASE_URL}/wp-json/wp/v2/posts?slug=${route.params.slug}`, {
   query: {
     _fields: 'acf,title,date,slug', // Select specific fields to reduce payload size
     acf_format: 'standard', // Ensure the format for ACF data
@@ -140,6 +140,10 @@ const { data: blog } = useFetch<Blog | null>(`${API_BASE_URL}/wp-json/wp/v2/post
     return response?.length > 0 ? response[0] : null; // Return the first post or null
   },
 });
+
+if (error.value) {
+  throw showError({ statusCode: 404, statusMessage: 'Blog post not found' });
+}
 
 const { data: morePosts } = useFetch<Blog[]>(`${API_BASE_URL}/wp-json/wp/v2/posts`, {
   query: {
