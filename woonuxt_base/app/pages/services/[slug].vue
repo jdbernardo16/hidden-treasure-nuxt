@@ -3,6 +3,8 @@ const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
 const route = useRoute();
 const slug = route.params.slug;
+const { stripHtml } = useHelpers();
+
 const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
   query: {
     slug: slug,
@@ -17,18 +19,17 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
 onMounted(() => {
   window.scrollTo(0, 0);
 });
-
-useSeoMeta({
-  title: data.value?.frame_1?.header,
-  ogTitle: data.value?.frame_1?.header,
-  description: data.value?.frame_2?.service_description,
-  ogDescription: data.value?.frame_2?.service_description,
-  ogImage: data.value?.frame_1?.banner?.url,
-  twitterCard: `summary_large_image`,
-});
 </script>
 
 <template>
+  <Head>
+    <Title>{{ data?.frame_1?.header || '' }}</Title>
+    <Meta name="description" hid="description" :content="stripHtml(data?.frame_2?.service_description) || ''" />
+    <Meta property="og:title" hid="og:title" :content="data?.frame_1?.header || ''" />
+    <Meta property="og:description" hid="og:description" :content="stripHtml(data?.frame_2?.service_description) || ''" />
+    <Meta property="og:image" hid="og:image" :content="data?.frame_1?.banner?.url || ''" />
+    <Meta name="twitter:card" hid="twitter:card" content="summary_large_image" />
+  </Head>
   <section v-if="data?.frame_1" class="relative h-[300px] lg:h-[473px]">
     <NuxtImg :src="data?.frame_1?.banner?.url" alt="banner" format="webp" quality="90" loading="eager" class="w-full h-full object-cover" />
     <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 flex flex-col justify-end">

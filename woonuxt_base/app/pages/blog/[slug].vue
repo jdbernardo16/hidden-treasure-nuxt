@@ -1,4 +1,12 @@
 <template>
+  <Head>
+    <Title>{{ blog?.title?.rendered || '' }}</Title>
+    <Meta name="description" hid="description" :content="blog?.acf?.blog_content?.short_description || ''" />
+    <Meta property="og:title" hid="og:title" :content="blog?.title?.rendered || ''" />
+    <Meta property="og:description" hid="og:description" :content="blog?.acf?.blog_content?.short_description || ''" />
+    <Meta property="og:image" hid="og:image" :content="blog?.acf?.blog_content?.blog_image?.url || ''" />
+    <Meta name="twitter:card" hid="twitter:card" content="summary_large_image" />
+  </Head>
   <section>
     <div class="max-w-[1440px] m-auto px-4 lg:px-20 py-10 lg:py-16">
       <!-- Back Button -->
@@ -165,16 +173,6 @@ const { data: morePosts } = useFetch<Blog[]>(`${API_BASE_URL}/wp-json/wp/v2/post
     }
     return [];
   },
-});
-
-useSeoMeta({
-  title: blog.value?.acf?.meta_tags?.meta_title || blog.value?.title?.rendered || '',
-  description: blog.value?.acf?.meta_tags?.meta_description || blog.value?.acf?.blog_content?.short_description || '',
-  ogImage: blog.value?.acf?.meta_tags?.meta_image || blog.value?.acf?.blog_content?.blog_image?.url || '',
-  twitterCard: 'summary_large_image',
-  twitterTitle: blog.value?.title?.rendered || '',
-  twitterDescription: blog.value?.acf?.blog_content?.short_description || '',
-  twitterImage: blog.value?.acf?.blog_content?.blog_image?.url || '',
 });
 
 onMounted(() => {

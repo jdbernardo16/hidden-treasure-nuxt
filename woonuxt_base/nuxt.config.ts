@@ -6,10 +6,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  css: [
-    './assets/css/general.scss',
-    './assets/css/custom-fonts.css'
-  ],
+  css: ['./assets/css/general.scss', './assets/css/custom-fonts.css'],
 
   app: {
     head: {
@@ -34,17 +31,21 @@ export default defineNuxtConfig({
 
   components: [{ path: resolve('./app/components'), pathPrefix: false }],
 
-  modules: ['woonuxt-settings', 'nuxt-graphql-client', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/google-fonts',],
+  modules: ['woonuxt-settings', 'nuxt-graphql-client', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/google-fonts', 'nuxt-gtag'],
+
+  gtag: {
+    id: 'G-7DMFKHCX4P',
+  },
 
   googleFonts: {
     // declare your google fonts here
     families: {
-        Poppins: [400, 600, 700, 800],
+      Poppins: [400, 600, 700, 800],
     },
-    display: "fallback",
+    display: 'fallback',
     preload: true,
     text: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&'()*+,—-.:?_<>/€`,
-},
+  },
 
   'graphql-client': {
     clients: {
@@ -62,7 +63,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000', 
+      API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000',
       SITE_KEY: process.env.SITE_KEY || '',
       SITE_URL: process.env.SITE_URL,
     },
