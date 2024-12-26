@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <form @submit.prevent="handleSubmit" class="w-full lg:w-[calc(100%-530px)]">
+        <form @submit.prevent="handleSubmit" class="w-full lg:w-[calc(100%-530px)]" ref="formRef" @focusin="loadRecaptcha">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <TextInput
               custom-input-class="bg-transparent"
@@ -63,7 +63,7 @@
               :maxlength="500" />
           </div>
 
-          <div>
+          <div v-if="recaptchaLoaded">
             <vue-recaptcha :sitekey="sitekey" @verify="verifySubmission" @expired="expiredRecaptcha" ref="grecaptcha" />
           </div>
 
@@ -85,7 +85,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, reactive } from 'vue';
 const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
 const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
@@ -98,11 +98,19 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
     return response[0]?.acf || null;
   },
 });
+const formRef = ref(null);
+const recaptchaLoaded = ref(false);
+
 const VueRecaptcha = defineAsyncComponent({
   loader: () => import('vue-recaptcha').then((module) => module.VueRecaptcha),
   loadingComponent: () => '<div>Loading...</div>',
-  delay: 4000,
 });
+
+const loadRecaptcha = () => {
+  if (!recaptchaLoaded.value) {
+    recaptchaLoaded.value = true;
+  }
+};
 
 const form = ref({
   'your-name': '',

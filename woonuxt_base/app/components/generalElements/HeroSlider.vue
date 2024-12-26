@@ -16,7 +16,7 @@
     <swiper-slide v-for="slide in content" :key="slide.id">
       <div class="h-full relative lg:text-left text-center">
         <div class="slider-image w-full h-full">
-          <NuxtImg class="w-full h-full object-cover" :src="slide.banner.url" alt="package" loading="eager" />
+          <NuxtImg class="w-full h-full object-cover" :src="slide.banner.url" alt="banner" loading="eager" />
         </div>
         <div class="overlay bg-gradient-to-t from-black to-black/50 w-full h-full absolute top-0 left-0 flex px-6 lg:px-20 items-center">
           <div class="max-w-full md:max-w-[700px] space-y-8">
@@ -46,25 +46,6 @@ import 'swiper/css';
 defineProps<{
   content: any;
 }>();
-
-const slides = [
-  {
-    id: 1,
-    title: 'Where Excellence Meets Opportunity',
-    description:
-      'Hidden Treasures is a top marketing team specializing in strategic campaigns, targeted ads, and consignment solutions. We deliver measurable results, helping businesses and individuals excel with tailored strategies.',
-    image: '/images/vision.jpg',
-    buttonText: 'Unvail Your Treasures',
-  },
-  {
-    id: 2,
-    title: 'Promotional Prestige',
-    description:
-      'Hidden Treasures empowers businesses to unlock their full potential with cutting-edge marketing solutions, impactful branding, and scalable growth strategies. Together, we redefine success.',
-    image: '/images/Innovate.jpg',
-    buttonText: 'Discover Innovation',
-  },
-];
 
 const modules = [Autoplay, Pagination, EffectFade];
 </script>

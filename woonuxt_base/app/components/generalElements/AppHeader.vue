@@ -47,7 +47,7 @@ const closeMenu = () => {
 
     <div class="lg:flex items-center space-x-6 text-brand-gold hidden">
       <div class="relative dropdown-parent">
-        <NuxtLink class="hover:text-white transition flex items-center" @click="closeMenu">Services <ChevronDown class="w-5 h-5 ml-2" /></NuxtLink>
+        <div class="hover:text-white transition flex items-center" @click="closeMenu">Services <ChevronDown class="w-5 h-5 ml-2" /></div>
         <div class="dropdown-menu flex flex-col absolute top-full w-max bg-brand-dark1 p-4 space-y-3 text-sm">
           <NuxtLink to="/services/digital-marketing" class="hover:text-white transition" @click="closeMenu">Digital Marketing</NuxtLink>
           <NuxtLink to="/services/virtual-assistant" class="hover:text-white transition" @click="closeMenu">Virtual Assistant</NuxtLink>
@@ -87,7 +87,7 @@ const closeMenu = () => {
     class="fixed lg:hidden h-screen bg-brand-dark1 top-0 w-[90%] z-50 right-0 px-10 py-20 text-brand-gold flex flex-col space-y-6 text-xl transition duration-500"
     :class="open ? 'translate-x-0' : 'translate-x-[110%]'">
     <div>
-      <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Services</NuxtLink>
+      <div class="hover:text-white transition" @click="closeMenu">Services</div>
       <div class="flex flex-col p-4 space-y-4 text-sm">
         <NuxtLink to="/services/digital-marketing" class="hover:text-white transition" @click="closeMenu">Digital Marketing</NuxtLink>
         <NuxtLink to="/services/virtual-assistant" class="hover:text-white transition" @click="closeMenu">Virtual Assistant</NuxtLink>

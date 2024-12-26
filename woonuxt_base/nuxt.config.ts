@@ -34,7 +34,12 @@ export default defineNuxtConfig({
 
   components: [{ path: resolve('./app/components'), pathPrefix: false }],
 
-  modules: ['woonuxt-settings', 'nuxt-graphql-client', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/google-fonts',],
+  modules: ['woonuxt-settings', 'nuxt-graphql-client', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/google-fonts', 'nuxt-gtag'],
+
+  gtag: {
+    id: "G-XXXXXXXXXX",
+    enabled: false,
+  },
 
   googleFonts: {
     // declare your google fonts here
