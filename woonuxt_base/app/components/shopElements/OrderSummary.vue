@@ -24,7 +24,7 @@ const { cart, isUpdatingCart } = useCart();
       <Transition name="scale-y" mode="out-in">
         <div v-if="cart && cart.appliedCoupons" class="flex justify-between">
           <span>{{ $t('messages.shop.discount') }}</span>
-          <span class="text-primary tabular-nums">- <span v-html="cart.discountTotal" /></span>
+          <span class="text-brand-gold tabular-nums">- <span v-html="cart.discountTotal" /></span>
         </div>
       </Transition>
       <div class="flex justify-between mt-4">

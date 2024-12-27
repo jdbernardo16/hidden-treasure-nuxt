@@ -6,15 +6,45 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  css: [
-    './assets/css/general.scss',
-    './assets/css/custom-fonts.css'
-  ],
+  site: {
+    url: 'https://hiddentreasuresagency.com/',
+    name: 'Hidden Treasures',
+  },
+  css: ['./assets/css/general.scss', './assets/css/custom-fonts.css'],
 
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
       link: [{ rel: 'icon', href: '/favicon3.png', type: 'image/svg+xml' }],
+      script: [
+        {
+          hid: 'meta-pixel',
+          innerHTML: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '453183277830202');
+            fbq('track', 'PageView');
+          `,
+          type: 'text/javascript',
+          charset: 'utf-8',
+        },
+      ],
+      __dangerouslyDisableSanitizersByTagID: {
+        'meta-pixel': ['innerHTML'],
+      },
+      noscript: [
+        {
+          hid: 'fb-pixel-noscript',
+          innerHTML: `<img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=453183277830202&ev=PageView&noscript=1"/>`,
+        },
+      ],
     },
     pageTransition: { name: 'page', mode: 'default' },
   },
@@ -34,22 +64,47 @@ export default defineNuxtConfig({
 
   components: [{ path: resolve('./app/components'), pathPrefix: false }],
 
-  modules: ['woonuxt-settings', 'nuxt-graphql-client', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/google-fonts', 'nuxt-gtag'],
+  modules: [
+    'woonuxt-settings',
+    'nuxt-graphql-client',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/i18n',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/sitemap',
+    'nuxt-gtag',
+  ],
 
   gtag: {
-    id: "G-XXXXXXXXXX",
-    enabled: false,
+    id: 'G-7DMFKHCX4P',
+    enabled: true,
+  },
+
+  sitemap: {
+    excludeAppSources: true,
+    defaults: {
+      lastmod: new Date().toISOString(),
+      priority: 0.5,
+      changefreq: 'weekly',
+    },
+    sources: [`${process.env.API_BASE_URL}/wp-json/sitemap/v1/generate`],
+    xslColumns: [
+      { label: 'URL', width: '75%' },
+      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
+    ],
+    xslTips: false,
   },
 
   googleFonts: {
     // declare your google fonts here
     families: {
-        Poppins: [400, 600, 700, 800],
+      Poppins: [400, 600, 700, 800],
     },
-    display: "fallback",
+    display: 'fallback',
     preload: true,
     text: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&'()*+,—-.:?_<>/€`,
-},
+  },
 
   'graphql-client': {
     clients: {
@@ -67,7 +122,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000', 
+      API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000',
       SITE_KEY: process.env.SITE_KEY || '',
       SITE_URL: process.env.SITE_URL,
     },
