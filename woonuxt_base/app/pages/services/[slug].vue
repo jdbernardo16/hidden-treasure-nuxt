@@ -39,8 +39,13 @@ onMounted(() => {
     </div>
   </section>
   <section>
-    <div class="max-w-[1000px] px-4 mx-auto py-16 text-center wysiwyg">
-      <div class="text-xl sm:text-3xl leading-snug" v-html="data?.frame_2?.service_description" />
+    <div class="max-w-[1000px] px-4 mx-auto py-16 text-justify">
+      <div class="text-xl sm:text-3xl leading-snug wysiwyg" v-html="data?.frame_2?.service_description" />
+      <div v-if="data?.frame_2?.button_text" class="w-fit m-auto mt-10">
+        <nuxt-link :to="data?.frame_2?.button_link">
+          <Button size="lg">{{ data?.frame_2?.button_text }}</Button>
+        </nuxt-link>
+      </div>
     </div>
     <div class="max-w-[1000px] mx-auto py-16 space-y-10 lg:space-y-16 px-4">
       <div v-for="item in data?.frame_3?.items" class="flex flex-col sm:flex-row items-center w-full service-card">
@@ -48,13 +53,24 @@ onMounted(() => {
           <NuxtImg class="w-full h-full object-cover" :src="item?.image?.url" alt="image" quality="80" width="640" format="webp" loading="eager" />
         </div>
         <div class="w-full sm:w-1/2 space-y-5 content mt-6 sm:mt-0">
-          <p class="text-2xl sm:text-3xl font-bold artegra text-brand-gold">{{ item?.label }}</p>
+          <nuxt-link
+            v-if="item?.package_link"
+            :to="item?.package_link"
+            class="text-2xl sm:text-3xl font-bold artegra text-brand-gold transition hover:underline"
+            >{{ item?.label }}</nuxt-link
+          >
+          <p v-else class="text-2xl sm:text-3xl font-bold artegra text-brand-gold">{{ item?.label }}</p>
           <p class="sm:text-xl leading-normal">{{ item?.content }}</p>
+          <div v-if="item?.cta_button?.text">
+            <nuxt-link :to="item?.cta_button?.link">
+              <Button>{{ item?.cta_button?.text }}</Button>
+            </nuxt-link>
+          </div>
         </div>
       </div>
     </div>
-    <div class="max-w-[1000px] mx-auto pb-16 wysiwyg px-4 w-full" >
-      <div class="w-full overflow-x-auto" v-html="data?.frame_3?.additional_content" />
+    <div class="max-w-[1000px] mx-auto pb-16 wysiwyg px-4 w-full">
+      <div class="w-full overflow-x-auto table-responsive" v-html="data?.frame_3?.additional_content" />
     </div>
   </section>
 
@@ -62,6 +78,11 @@ onMounted(() => {
     <div class="max-w-[1000px] mx-auto px-4 sm:px-20 text-center py-16">
       <p class="text-brand-gold text-3xl sm:text-4xl font-bold artegra mb-10">{{ data?.frame_4?.header }}</p>
       <div class="text-white text-lg sm:text-xl leading-relaxed" v-html="data?.frame_4?.content" />
+      <div v-if="data?.frame_4?.button_text" class="w-fit m-auto mt-10">
+        <nuxt-link :to="data?.frame_4?.button_link">
+          <Button size="lg">{{ data?.frame_4?.button_text }}</Button>
+        </nuxt-link>
+      </div>
     </div>
   </section>
 

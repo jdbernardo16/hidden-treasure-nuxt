@@ -7,20 +7,19 @@
       </div>
       <div class="max-w-[1080px] m-auto flex flex-col lg:flex-row lg:space-x-20 relative z-10">
         <div class="lg:w-[450px] lg:mb-0 mb-8">
-          <h2 class="lg:text-[40px] text-3xl leading-tight mb-6 artegra text-brand-gold">
-            {{ data?.contact_header }}
-          </h2>
+          <h2 class="lg:text-[40px] text-3xl leading-tight mb-6 artegra text-brand-gold">Let’s Start Uncovering Hidden Opportunities</h2>
           <div class="text-white">
             <p>
-              {{ data?.contact_description }}
+              Reach out to Hidden Treasures today and discover how we can transform your brand’s potential into measurable success. We’re here to help you every
+              step of the way.
             </p>
           </div>
         </div>
 
-        <form @submit.prevent="handleSubmit" class="w-full lg:w-[calc(100%-530px)]" ref="formRef" @focusin="loadRecaptcha">
+        <form @submit.prevent="handleSubmit" class="w-full lg:w-[calc(100%-530px)]">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <TextInput
-              custom-input-class="bg-transparent"
+              custom-input-class="bg-white"
               v-model="form['your-name']"
               :error="errors['your-name']"
               type="text"
@@ -29,7 +28,7 @@
               placeholder="Enter your name here"
               label="Full Name" />
             <TextInput
-              custom-input-class="bg-transparent"
+              custom-input-class="bg-white"
               v-model="form['your-email']"
               :error="errors['your-email']"
               type="email"
@@ -39,7 +38,7 @@
               label="Email Address" />
 
             <TextInput
-              custom-input-class="bg-transparent"
+              custom-input-class="bg-white"
               v-model="form['your-subject']"
               :error="errors['your-subject']"
               type="text"
@@ -50,7 +49,7 @@
               label="Subject" />
 
             <TextInput
-              custom-input-class="bg-transparent"
+              custom-input-class="bg-white pl-4"
               v-model="form['your-message']"
               :error="errors['your-message']"
               textarea
@@ -63,7 +62,7 @@
               :maxlength="500" />
           </div>
 
-          <div v-if="recaptchaLoaded">
+          <div>
             <vue-recaptcha :sitekey="sitekey" @verify="verifySubmission" @expired="expiredRecaptcha" ref="grecaptcha" />
           </div>
 
@@ -85,32 +84,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, reactive } from 'vue';
+import { ref } from 'vue';
 const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
-const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
-  query: {
-    slug: 'contact-us',
-    _fields: 'acf',
-    acf_format: 'standard',
-  },
-  transform: (response) => {
-    return response[0]?.acf || null;
-  },
-});
-const formRef = ref(null);
-const recaptchaLoaded = ref(false);
-
 const VueRecaptcha = defineAsyncComponent({
   loader: () => import('vue-recaptcha').then((module) => module.VueRecaptcha),
   loadingComponent: () => '<div>Loading...</div>',
+  delay: 4000,
 });
-
-const loadRecaptcha = () => {
-  if (!recaptchaLoaded.value) {
-    recaptchaLoaded.value = true;
-  }
-};
 
 const form = ref({
   'your-name': '',

@@ -365,10 +365,28 @@
 }
 
 .wysiwyg table thead tr {
-    background-color: #cfa560 !important;
+    background-color: black !important;
     font-weight: 700;
-    color: white;
+    color: #CFA560;
 }
+
+.wysiwyg .table-responsive {
+    tbody td {
+      &:first-child {
+        min-width: 200px !important;
+        font-weight: bold;
+        height: 100%;
+      }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wysiwyg .table-responsive {
+        tbody td {
+          font-size: 14px;
+        }
+      }
+  }
 
 
 

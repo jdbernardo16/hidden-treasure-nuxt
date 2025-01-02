@@ -12,28 +12,6 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
   },
 });
 
-const items = [
-  { title: '2017', description: 'Founded in Newport Beach, CA', icon: 'https://img.icons8.com/?size=200&id=91234&format=png&color=000000' },
-  { title: '2018', description: 'First global project launched in California', icon: 'https://img.icons8.com/?size=200&id=115350&format=png&color=000000' },
-  {
-    title: '2019',
-    description: 'Expanded presence in the automotive and collectibles market',
-    icon: 'https://img.icons8.com/?size=200&id=91197&format=png&color=000000',
-  },
-  {
-    title: '2020',
-    description: 'Hosted major events in Las Vegas and Monaco',
-    icon: 'https://img.icons8.com/?size=200&id=muSM3G14dJuM&format=png&color=000000',
-  },
-  {
-    title: '2021',
-    description: 'Launched virtual assistant support services',
-    icon: 'https://img.icons8.com/?size=200&id=OfKXlxB4IrZ1&format=png&color=000000',
-  },
-  { title: '2022', description: 'Serving a portfolio of over $25 million', icon: 'https://img.icons8.com/?size=200&id=115635&format=png&color=000000' },
-  { title: '2023', description: 'Continued global expansion and innovation', icon: 'https://img.icons8.com/?size=200&id=124059&format=png&color=000000' },
-];
-
 useSeoMeta({
   title: 'About Us',
   ogTitle: 'About Us',
@@ -95,15 +73,16 @@ onMounted(() => {
   <section id="services" class="py-12 bg-brand-dark1">
     <div class="container mx-auto px-4 lg:px-10">
       <h2 class="text-3xl lg:text-[40px] leading-tight artegra text-brand-gold mb-6">{{ data?.frame_4?.header }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <nuxt-link
           v-for="item in data?.frame_4?.what_we_do"
           :key="item.id"
-          class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold">
+          :to="item.link"
+          class="bg-transparent p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-brand-gold transition hover:translate-y-[-5px] hover:bg-neutral-800">
           <nuxt-img :src="item.icon.url" alt="Digital Marketing" class="mb-4 w-[100px]" />
           <h3 class="text-xl font-bold text-brand-gold mb-2 artegra text-center">{{ item.title }}</h3>
           <p class="text-white text-center">{{ item.description }}</p>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </section>
@@ -117,14 +96,18 @@ onMounted(() => {
       </div>
       <div class="max-w-[800px] m-auto lg:pb-0 py-16">
         <div class="flex flex-col items-center relative lg:space-y-0 space-y-10">
-          <div v-for="(item, index) in data?.frame_5?.timeline" :key="index" class="w-full relative" :class="items.length > 1 ? 'timeline-item' : ''">
+          <div
+            v-for="(item, index) in data?.frame_5?.timeline"
+            :key="index"
+            class="w-full relative"
+            :class="data?.frame_5?.timeline.length > 1 ? 'timeline-item' : ''">
             <div
               class="flex lg:items-center w-full lg:h-[200px] space-y-3 lg:space-y-0"
               :class="
                 index % 2 === 0 ? 'flex-col-reverse lg:flex-row-reverse lg:text-left text-center' : 'flex-col-reverse lg:flex-row lg:text-right text-center'
               ">
               <div class="w-full lg:w-1/2 lg:pl-0">
-                <h3 class="text-brand-gold mb-3 font-bold text-xl artegra">
+                <h3 class="text-brand-gold mb-3 font-bold text-xl">
                   {{ item.title }}
                 </h3>
                 <div class="ck-content" v-html="item?.description" />

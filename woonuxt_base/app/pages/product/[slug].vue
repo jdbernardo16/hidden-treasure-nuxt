@@ -144,8 +144,8 @@ const disabledAddToCart = computed(() => {
                 class="mt-4 mb-8" :attributes="product.attributes.nodes" :defaultAttributes="product.defaultAttributes"
                 :variations="product.variations.nodes" @attrs-changed="updateSelectedVariations" />
               <div v-if="isVariableProduct || isSimpleProduct"
-                class="fixed bottom-0 left-0 flex items-center w-full gap-4 p-4 mt-12 bg-brand-dark1 md:static md:bg-transparent bg-opacity-90 md:p-0 z-50">
-                <input v-model="quantity" type="number" min="1" aria-label="Quantity"
+                class="fixed bottom-0 left-0 flex items-center w-full gap-4 p-4 mt-12 bg-brand-dark1 md:static md:bg-transparent bg-opacity-90 md:p-0 z-40">
+                <input v-if="product.productCategories.nodes[0].slug !== 'sports-cards'" v-model="quantity" type="number" min="1" aria-label="Quantity"
                   class="bg-transparent border rounded-lg flex text-left text-white p-2.5 w-20 gap-4 items-center justify-center focus:outline-none" />
                 <AddToCartButton class="flex-1 w-full md:max-w-xs" :disabled="disabledAddToCart"
                   :class="{ loading: isUpdatingCart }" />
