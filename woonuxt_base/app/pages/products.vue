@@ -9,37 +9,46 @@ const allProducts = (data.value?.products?.nodes || []) as Product[];
 setProducts(allProducts);
 
 onMounted(() => {
-  if (!isQueryEmpty.value) updateProductList();
+    if (!isQueryEmpty.value) updateProductList();
 });
 
 watch(
-  () => route.query,
-  () => {
-    if (route.name !== 'products') return;
-    updateProductList();
-  },
+    () => route.query,
+    () => {
+        if (route.name !== 'products') return;
+        updateProductList();
+    },
 );
 
 useHead({
-  title: `Products`,
-  meta: [{ hid: 'description', name: 'description', content: 'Products' }],
+    title: `Products`,
+    meta: [{ hid: 'description', name: 'description', content: 'Products' }],
 });
 </script>
 
 <template>
-  <section class="bg-brand-dark4">
-    <div class="max-w-[1440px] m-auto flex items-start gap-16 px-4 lg:px-10" v-if="allProducts.length">
-      <Filters class="border-brand-gold" v-if="storeSettings.showFilters" />
+    <section class="bg-brand-dark4">
+        <div
+            class="max-w-[1440px] m-auto flex items-start gap-16 px-4 lg:px-10"
+            v-if="allProducts.length"
+        >
+            <Filters class="border-brand-gold" v-if="storeSettings.showFilters" />
 
-      <div class="w-full">
-        <div class="flex items-center justify-between w-full gap-4 mt-8 md:gap-8">
-          <ProductResultCount />
-          <OrderByDropdown class="hidden md:inline-flex" v-if="storeSettings.showOrderByDropdown" />
-          <ShowFilterTrigger v-if="storeSettings.showFilters" class="md:hidden" />
+            <div class="w-full">
+                <div class="flex items-center justify-between w-full gap-4 mt-8 md:gap-8">
+                    <ProductResultCount />
+                    <OrderByDropdown
+                        class="hidden md:inline-flex"
+                        v-if="storeSettings.showOrderByDropdown"
+                    />
+                    <ShowFilterTrigger v-if="storeSettings.showFilters" class="md:hidden" />
+                </div>
+                <ProductGrid />
+            </div>
         </div>
-        <ProductGrid />
-      </div>
-    </div>
-    <NoProductsFound v-else>Could not fetch products from your store. Please check your configuration.</NoProductsFound>
-  </section>
+        <NoProductsFound v-else
+            >Could not fetch products from your store. Please check your
+            configuration.</NoProductsFound
+        >
+    </section>
 </template>
