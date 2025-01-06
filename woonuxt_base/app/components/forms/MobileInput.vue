@@ -18,14 +18,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed } from 'vue';
 
 /*--------------*
  * PROPS
  *--------------*/
 const props = defineProps({
     modelValue: {
-        default: "",
+        default: '',
         required: true,
     },
     error: {
@@ -34,11 +34,11 @@ const props = defineProps({
     },
     placeholder: {
         type: String,
-        default: "Mobile Number",
+        default: 'Mobile Number',
     },
     label: {
         type: String,
-        default: "Mobile Number",
+        default: 'Mobile Number',
     },
     name: {
         type: String,
@@ -57,7 +57,7 @@ const props = defineProps({
 /*--------------*
  * EMITS
  *--------------*/
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue']);
 
 /*--------------*
  * COMPUTED
@@ -67,7 +67,7 @@ const value = computed({
         return props.modelValue;
     },
     set(value: string) {
-        emit("update:modelValue", value);
+        emit('update:modelValue', value);
     },
 });
 

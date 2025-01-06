@@ -1,7 +1,11 @@
 <template>
     <Teleport to="body">
         <transition leave-active-class="duration-200">
-            <div v-show="show" class="fixed inset-0 flex items-center justify-center overflow-y-auto px-4 py-6 sm:px-0 z-[999]" scroll-region>
+            <div
+                v-show="show"
+                class="fixed inset-0 flex items-center justify-center overflow-y-auto px-4 py-6 sm:px-0 z-[999]"
+                scroll-region
+            >
                 <transition
                     enter-active-class="ease-out duration-300"
                     enter-from-class="opacity-0"
@@ -10,7 +14,11 @@
                     leave-from-class="opacity-100"
                     leave-to-class="opacity-0"
                 >
-                    <div v-show="show" class="fixed inset-0 transform transition-all" @click="close">
+                    <div
+                        v-show="show"
+                        class="fixed inset-0 transform transition-all"
+                        @click="close"
+                    >
                         <div class="absolute inset-0 bg-black opacity-25"></div>
                     </div>
                 </transition>
@@ -26,7 +34,7 @@
                     <div
                         v-show="show"
                         class="mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto"
-                        :class="maxWidthClass, cstmClass"
+                        :class="(maxWidthClass, cstmClass)"
                     >
                         <slot v-if="show"></slot>
                     </div>
@@ -42,30 +50,30 @@ import { computed, watch } from 'vue';
 const props = defineProps({
     show: {
         type: Boolean,
-        default: false
+        default: false,
     },
     maxWidth: {
         type: String,
-        default: '2xl'
+        default: '2xl',
     },
     cstmClass: {
         type: String,
-        default: ''
-    }
+        default: '',
+    },
 });
 
 const emit = defineEmits(['close']);
 
 const maxWidthClass = computed(() => {
     const widths = {
-        'sm': 'sm:max-w-sm',
-        'md': 'sm:max-w-md',
-        'lg': 'sm:max-w-lg',
-        'xl': 'sm:max-w-xl',
+        sm: 'sm:max-w-sm',
+        md: 'sm:max-w-md',
+        lg: 'sm:max-w-lg',
+        xl: 'sm:max-w-xl',
         '2xl': 'sm:max-w-2xl',
-        'calculator': 'sm:max-w-[350px] !overflow-visible',
-        'computation': 'sm:max-w-[400px] !overflow-visible',
-        'video': 'sm:max-w-[800px] !overflow-visible',
+        calculator: 'sm:max-w-[350px] !overflow-visible',
+        computation: 'sm:max-w-[400px] !overflow-visible',
+        video: 'sm:max-w-[800px] !overflow-visible',
     };
     return widths[props.maxWidth] || widths['2xl'];
 });
@@ -74,11 +82,14 @@ const close = () => {
     emit('close');
 };
 
-watch(() => props.show, (show) => {
-    if (show) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = null;
-    }
-});
+watch(
+    () => props.show,
+    (show) => {
+        if (show) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = null;
+        }
+    },
+);
 </script>
