@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
+import { ChevronUp } from 'lucide-vue-next';
 const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
     query: {
         slug: 'header-footer',
@@ -11,23 +12,36 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
         return response[0]?.acf || null;
     },
 });
+
+const scrollToTop = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
 </script>
 <template>
     <footer class="order-last">
         <div class="relative">
             <div
+                class="w-10 h-10 rounded-full bg-brand-gold absolute -top-5 lg:right-20 right-5 z-50 grid place-content-center cursor-pointer hover:bg-opacity-70 transition"
+                @click="scrollToTop"
+            >
+                <ChevronUp class="w-6 h-6 text-white" />
+            </div>
+            <div
                 class="px-4 lg:px-10 py-10 flex lg:flex-row flex-col lg:space-y-0 space-y-10 w-full justify-between relative z-10 bg-[#232027]/[0.85]"
             >
                 <div class="text-neutral-200">
-                    <NuxtImg
-                        class="mb-4"
-                        :src="data?.footer?.column_1?.footer_logo?.url"
-                        alt="logo"
-                        width="204"
-                        format="webp"
-                        quality="90"
-                        data-test-id="logo-image"
-                    />
+                    <nuxt-link class="block" to="/">
+                        <NuxtImg
+                            class="mb-4"
+                            :src="data?.footer?.column_1?.footer_logo?.url"
+                            alt="logo"
+                            width="204"
+                            format="webp"
+                            quality="90"
+                            data-test-id="logo-image"
+                        />
+                    </nuxt-link>
                     <p class="text-sm mb-1">{{ data?.footer?.column_1?.description }}</p>
                     <p class="text-sm">{{ data?.footer?.column_1?.location }}</p>
                 </div>

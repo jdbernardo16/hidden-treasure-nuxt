@@ -22,7 +22,7 @@ const checkboxChanged = () => {
 
 <template>
     <div
-        class="cursor-pointer flex font-semibold mt-8 leading-none justify-between items-center"
+        class="cursor-pointer flex font-semibold mt-8 leading-none justify-between items-center text-brand-gold"
         @click="isOpen = !isOpen"
     >
         <span>{{ filterTitle }}</span>
@@ -41,7 +41,10 @@ const checkboxChanged = () => {
                 :value="term.slug"
                 @change="checkboxChanged"
             />
-            <label :for="term.slug" class="cursor-pointer m-0 text-sm flex items-center flex-wrap">
+            <label
+                :for="term.slug"
+                class="cursor-pointer m-0 text-sm flex items-center flex-wrap !text-white"
+            >
                 <span v-html="term.name" />
                 <small
                     v-if="attribute.showCount"

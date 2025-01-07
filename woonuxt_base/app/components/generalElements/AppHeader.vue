@@ -124,6 +124,7 @@ const closeMenu = () => {
         class="fixed lg:hidden h-screen bg-brand-dark1 top-0 w-[90%] z-50 right-0 px-10 py-20 text-brand-gold flex flex-col space-y-6 text-xl transition duration-500"
         :class="open ? 'translate-x-0' : 'translate-x-[110%]'"
     >
+        <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">Home</NuxtLink>
         <div>
             <div class="hover:text-white transition" @click="closeMenu">Services</div>
             <div class="flex flex-col p-4 space-y-4 text-sm">

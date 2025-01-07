@@ -56,7 +56,7 @@
                 <div class="lg:col-span-3 space-y-10">
                     <nuxt-link
                         :to="`/blog/${blog.slug}`"
-                        v-for="blog in featuredBlogs.slice(1, 999)"
+                        v-for="blog in featuredBlogs.slice(1, 4)"
                         class="flex flex-col lg:space-y-0 space-y-4 lg:flex-row lg:space-x-6 group/blog cursor-pointer"
                     >
                         <div class="w-full lg:w-1/3 aspect-[1/1] overflow-hidden rounded-lg">
