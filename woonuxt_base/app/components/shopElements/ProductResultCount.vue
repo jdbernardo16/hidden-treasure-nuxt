@@ -13,7 +13,7 @@ const page = ref(parseInt(route.params.pageNumber as string) || 1);
         <span class="font-normal">{{
             Math.min(page * productsPerPage, products.length) + ' '
         }}</span>
-        (<span>{{ $t('messages.shop.productResultCount.of') }}</span>
+        (<span>{{ $t('messages.shop.productResultCount.of') + ' ' }}</span>
         <span class="font-normal">{{ products.length }}</span
         >)
     </div>

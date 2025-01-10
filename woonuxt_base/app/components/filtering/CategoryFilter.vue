@@ -39,10 +39,7 @@ const checkboxChanged = () => {
                 :class="isOpen ? 'rotate-180' : ''"
             />
         </div>
-        <div
-            v-show="isOpen"
-            class="mt-3 mr-1 max-h-[240px] grid gap-1.5 overflow-auto custom-scrollbar"
-        >
+        <div v-show="isOpen" class="mt-3 mr-1 max-h-[240px] grid gap-1.5">
             <div v-for="term in terms" :key="term.slug" class="flex gap-2 items-start">
                 <input
                     :id="term.slug"

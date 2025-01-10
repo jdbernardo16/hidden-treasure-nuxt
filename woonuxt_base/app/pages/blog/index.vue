@@ -18,6 +18,46 @@
             </div>
         </div>
     </section>
+    <!-- <section class="bg-brand-dark1">
+        <div class="max-w-[1440px] m-auto lg:px-20 py-16 px-4">
+            <div class="grid grid-cols-3 gap-8">
+                <nuxt-link
+                    :to="`/blog/${blog.slug}`"
+                    v-for="(blog, index) in featuredBlogs.slice(0, 1)"
+                    :key="index"
+                >
+                    <article
+                        class="overflow-hidden rounded-lg shadow transition hover:shadow-lg group/blog"
+                    >
+                        <div class="aspect-[1/1] overflow-hidden">
+                            <NuxtImg
+                                quality="80"
+                                loading="lazy"
+                                width="560"
+                                class="w-full h-full object-cover group-hover/blog:scale-105 transition"
+                                :src="blog?.acf?.blog_content?.blog_image.url"
+                                placeholder-class="blur-xl"
+                            />
+                        </div>
+
+                        <div class="bg-brand-dark3 p-4 sm:p-6">
+                            <div class="block text-xs text-neutral-400">
+                                {{ formatDate(blog?.date) }}
+                            </div>
+
+                            <h3 class="mt-0.5 text-xl text-brand-gold line-clamp-2 font-bold">
+                                {{ blog?.title?.rendered }}
+                            </h3>
+
+                            <p class="mt-2 line-clamp-3 text-sm/relaxed text-white">
+                                {{ blog?.acf?.blog_content?.short_description }}
+                            </p>
+                        </div>
+                    </article>
+                </nuxt-link>
+            </div>
+        </div>
+    </section> -->
     <section class="bg-brand-dark1">
         <div class="max-w-[1440px] m-auto lg:px-20 px-4 py-16">
             <div class="grid grid-cols-1 lg:grid-cols-6 gap-10">
@@ -89,7 +129,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-brand-dark1">
+    <section v-if="nonFeaturedBlogs.length > 0" class="bg-brand-dark1">
         <div class="max-w-[1440px] m-auto px-4 lg:px-20 py-10 lg:py-16">
             <div class="flex justify-between items-start">
                 <div class="flex space-x-4 items-start mb-10">
