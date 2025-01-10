@@ -27,7 +27,7 @@ const productsToShow = computed(() =>
 
 <style lang="postcss" scoped>
 .product-grid {
-    @apply my-4 min-h-[600px] grid transition-all gap-8 lg:my-8 grid-cols-2;
+    @apply my-4 min-h-[600px] grid transition-all gap-8 md:gap-10 lg:my-8 grid-cols-2;
 }
 .product-grid:empty {
     display: none;

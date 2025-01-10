@@ -57,7 +57,7 @@ const numberSrc = (pageNumber: number) => {
 </script>
 
 <template>
-    <div class="flex justify-center mt-8 mb-16 col-span-full tabular-nums">
+    <div class="flex justify-center mt-10 mb-16 col-span-full tabular-nums">
         <!-- Pagination -->
         <nav
             v-if="numberOfPages && numberOfPages > 1"
@@ -106,7 +106,7 @@ const numberSrc = (pageNumber: number) => {
 .prev,
 .next,
 .page-number {
-    @apply bg-white border font-medium border-brand-gold text-sm p-2 text-brand-gold relative inline-flex items-center hover:bg-brand-gold hover:text-white focus:z-10;
+    @apply bg-brand-dark1 border font-medium border-brand-gold text-sm p-2 text-brand-gold relative inline-flex items-center hover:bg-brand-gold hover:text-white focus:z-10;
 }
 
 .prev {

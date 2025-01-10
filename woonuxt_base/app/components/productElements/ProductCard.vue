@@ -7,7 +7,7 @@ const props = defineProps({
 });
 
 const imgWidth = 280;
-const imgHeight = Math.round(imgWidth * 1.125);
+const imgHeight = Math.round(imgWidth * (488 / 284));
 
 // example: ?filter=pa_color[green,blue],pa_size[large]
 const filterQuery = ref(route.query?.filter as string);
@@ -57,26 +57,21 @@ const imagetoDisplay = computed<string>(() => {
     >
         <div>
             <SaleBadge :node class="absolute top-2 right-2" />
-            <div class="relative bg-[#363636] aspect-[385/234] px-5 lg:px-10 py-5">
-                <!-- <NuxtImg
-            :width="imgWidth"
-            :height="imgHeight"
-            :src="imagetoDisplay"
-            :alt="node.image?.altText || node.name || 'Product image'"
-            :title="node.image?.title || node.name"
-            :loading="index <= 3 ? 'eager' : 'lazy'"
-            :sizes="`sm:${imgWidth / 2}px md:${imgWidth}px`"
-            class="w-full h-full group-hover/product:saturate-100 saturate-0 transition group-hover/product:scale-105"
-            placeholder
-            placeholder-class="blur-xl" /> -->
-                <div class="w-full h-[200px] lg:h-[150px]">
+            <div class="relative bg-transparent aspect-[284/488]">
+                <div
+                    class="w-full h-full border-4 transition group-hover/product:scale-105 rounded-lg overflow-hidden shadow-lg"
+                >
                     <NuxtImg
                         :alt="node.image?.altText || node.name || 'Product image'"
                         :title="node.image?.title || node.name"
                         :src="node.image?.sourceUrl || '/images/placeholder.jpg'"
                         :loading="index <= 3 ? 'eager' : 'lazy'"
-                        :sizes="`sm:${imgWidth / 2}px md:${imgWidth}px`"
-                        class="w-full h-full object-contain transition group-hover/product:scale-105"
+                        class="w-full h-full object-cover"
+                        quality="80"
+                        format="webp"
+                        :size="imgWidth"
+                        :width="imgWidth"
+                        :height="imgHeight"
                         placeholder
                         placeholder-class="blur-xl"
                     />
