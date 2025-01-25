@@ -34,9 +34,28 @@ export default defineNuxtConfig({
                     type: 'text/javascript',
                     charset: 'utf-8',
                 },
+                {
+                    hid: 'voiceflow-widget',
+                    innerHTML: `
+            (function(d, t) {
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function() {
+                  window.voiceflow.chat.load({
+                    verify: { projectID: '6780f16040d0634c3490b975' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                  });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            })(document, 'script');
+          `,
+                    type: 'text/javascript',
+                    charset: 'utf-8',
+                },
             ],
             __dangerouslyDisableSanitizersByTagID: {
                 'meta-pixel': ['innerHTML'],
+                'voiceflow-widget': ['innerHTML'],
             },
             noscript: [
                 {
