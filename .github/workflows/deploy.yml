@@ -18,6 +18,18 @@ jobs:
               with:
                   node-version: 23.4
 
+            - name: Create .env file
+              run: |
+                  echo "GQL_HOST=${{ secrets.GQL_HOST }}" >> .env
+                  echo "NUXT_PUBLIC_PRODUCTS_PER_PAGE=${{ secrets.NUXT_PUBLIC_PRODUCTS_PER_PAGE }}" >> .env
+                  echo "NUXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${{ secrets.NUXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}" >> .env
+                  echo "PRIMARY_COLOR=${{ secrets.PRIMARY_COLOR }}" >> .env
+                  echo "NUXT_IMAGE_DOMAINS=${{ secrets.NUXT_IMAGE_DOMAINS }}" >> .env
+                  echo "API_BASE_URL=${{ secrets.API_BASE_URL }}" >> .env
+                  echo "SITE_URL=${{ secrets.SITE_URL }}" >> .env
+                  echo "APP_HOST=${{ secrets.APP_HOST }}" >> .env
+                  echo "SITE_KEY=${{ secrets.SITE_KEY }}" >> .env
+
             - name: Install dependencies
               run: npm ci
 
