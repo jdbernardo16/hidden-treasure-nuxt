@@ -32,7 +32,6 @@ export default defineNuxtConfig({
             fbq('track', 'PageView');
           `,
                     type: 'text/javascript',
-                    charset: 'utf-8',
                 },
                 {
                     hid: 'voiceflow-widget',
@@ -50,7 +49,21 @@ export default defineNuxtConfig({
             })(document, 'script');
           `,
                     type: 'text/javascript',
-                    charset: 'utf-8',
+                },
+                {
+                    hid: 'gtag',
+                    innerHTML: `
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16839371435"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-16839371435');
+            </script>
+          `,
+                    type: 'text/javascript',
                 },
             ],
             __dangerouslyDisableSanitizersByTagID: {
@@ -92,14 +105,7 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         '@nuxtjs/google-fonts',
         '@nuxtjs/sitemap',
-        'nuxt-gtag',
     ],
-
-    gtag: {
-        id: 'G-7DMFKHCX4P',
-        enabled: true,
-    },
-
     sitemap: {
         excludeAppSources: true,
         defaults: {
