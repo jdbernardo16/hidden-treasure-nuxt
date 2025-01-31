@@ -27,6 +27,16 @@ const stripe: Stripe | null = stripeKey ? await loadStripe(stripeKey) : null;
 const elements = ref();
 const isPaid = ref<boolean>(false);
 
+useHead({
+    script: [
+        {
+            innerHTML: `
+            gtag('event', 'conversion', {'send_to': 'AW-16839371435/DzyfCO376pYaEKvV0d0-'});
+            `,
+        },
+    ],
+});
+
 onBeforeMount(async () => {
     if (query.cancel_order) window.close();
 });

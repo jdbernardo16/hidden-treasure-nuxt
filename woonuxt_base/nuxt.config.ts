@@ -50,21 +50,21 @@ export default defineNuxtConfig({
           `,
                     type: 'text/javascript',
                 },
-                {
-                    hid: 'gtag',
-                    innerHTML: `
-            <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16839371435"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+                //         {
+                //             hid: 'gtag',
+                //             innerHTML: `
+                //     <!-- Google tag (gtag.js) -->
+                //     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16839371435"></script>
+                //     <script>
+                //       window.dataLayer = window.dataLayer || [];
+                //       function gtag(){dataLayer.push(arguments);}
+                //       gtag('js', new Date());
 
-              gtag('config', 'AW-16839371435');
-            </script>
-          `,
-                    type: 'text/javascript',
-                },
+                //       gtag('config', 'AW-16839371435');
+                //     </script>
+                //   `,
+                //             type: 'text/javascript',
+                //         },
             ],
             __dangerouslyDisableSanitizersByTagID: {
                 'meta-pixel': ['innerHTML'],

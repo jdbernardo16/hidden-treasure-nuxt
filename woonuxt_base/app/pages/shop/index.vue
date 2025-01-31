@@ -18,6 +18,16 @@ const featuredProducts = allProducts.filter((product) =>
     ),
 );
 
+useHead({
+    script: [
+        {
+            innerHTML: `
+            gtag('event', 'conversion', {'send_to': 'AW-16839371435/DzyfCO376pYaEKvV0d0-'});
+            `,
+        },
+    ],
+});
+
 const config = useRuntimeConfig();
 const API_BASE_URL = config.public.API_BASE_URL;
 const { data: cms } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {

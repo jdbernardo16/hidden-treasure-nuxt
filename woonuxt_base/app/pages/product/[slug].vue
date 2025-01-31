@@ -43,6 +43,16 @@ const mergeLiveStockStatus = (payload: Product): void => {
     });
 };
 
+useHead({
+    script: [
+        {
+            innerHTML: `
+            gtag('event', 'conversion', {'send_to': 'AW-16839371435/DzyfCO376pYaEKvV0d0-'});
+            `,
+        },
+    ],
+});
+
 useSeoMeta({
     title: product.value?.name,
     ogTitle: product.value?.name,

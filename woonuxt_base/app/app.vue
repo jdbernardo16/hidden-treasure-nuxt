@@ -15,7 +15,9 @@ const closeCartAndMenu = () => {
 };
 
 watch([isShowingCart, isShowingMobileMenu], () => {
-    isShowingCart.value || isShowingMobileMenu.value ? addBodyClass('overflow-hidden') : removeBodyClass('overflow-hidden');
+    isShowingCart.value || isShowingMobileMenu.value
+        ? addBodyClass('overflow-hidden')
+        : removeBodyClass('overflow-hidden');
 });
 
 watch(
@@ -25,6 +27,19 @@ watch(
 
 useHead({
     titleTemplate: `%s - ${siteName}`,
+    script: [
+        // Load the Google Analytics script asynchronously
+        { src: 'https://www.googletagmanager.com/gtag/js?id=AW-16839371435', async: true },
+        // Inline script for initializing dataLayer and gtag
+        {
+            innerHTML: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16839371435');
+    `,
+        },
+    ],
 });
 
 onMounted(() => {
@@ -37,7 +52,7 @@ onMounted(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         const animateUp = gsap.utils.toArray('.animateUp');
-        animateUp.forEach(grow => {
+        animateUp.forEach((grow) => {
             gsap.from(grow, {
                 scrollTrigger: {
                     trigger: grow,
@@ -46,12 +61,12 @@ onMounted(() => {
                 y: 20,
                 opacity: 0,
                 duration: 2,
-                ease: "Expo.easeOut",
+                ease: 'Expo.easeOut',
             });
         });
 
         const scaleUp = gsap.utils.toArray('.scaleUp');
-        scaleUp.forEach(grow => {
+        scaleUp.forEach((grow) => {
             gsap.from(grow, {
                 scrollTrigger: {
                     trigger: grow,
@@ -60,12 +75,12 @@ onMounted(() => {
                 scale: 0,
                 opacity: 0,
                 duration: 2,
-                ease: "Expo.easeOut",
+                ease: 'Expo.easeOut',
             });
         });
 
         const fadeIn = gsap.utils.toArray('.fadeIn');
-        fadeIn.forEach(grow => {
+        fadeIn.forEach((grow) => {
             gsap.from(grow, {
                 scrollTrigger: {
                     trigger: grow,
@@ -73,11 +88,11 @@ onMounted(() => {
                 },
                 opacity: 0,
                 duration: 2,
-                ease: "Expo.easeOut",
+                ease: 'Expo.easeOut',
             });
         });
-    }, 200)
-})
+    }, 200);
+});
 </script>
 
 <template>
@@ -95,8 +110,11 @@ onMounted(() => {
         <NuxtPage />
 
         <Transition name="fade">
-            <div v-if="isShowingCart || isShowingMobileMenu" class="bg-black opacity-25 inset-0 z-40 fixed"
-                @click="closeCartAndMenu" />
+            <div
+                v-if="isShowingCart || isShowingMobileMenu"
+                class="bg-black opacity-25 inset-0 z-40 fixed"
+                @click="closeCartAndMenu"
+            />
         </Transition>
         <GeneralFooter />
     </div>
@@ -120,7 +138,8 @@ pre {
 
 select {
     @apply bg-white border rounded-md font-medium border-gray-300 flex-1 text-sm p-1.5 pr-12 pl-4 text-gray-500 relative inline-flex items-center hover:bg-gray-50 focus:z-20 py-2 px-4 appearance-none;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4 6l4 4 4-4'/%3E%3C/svg%3E") center right 10px no-repeat;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4 6l4 4 4-4'/%3E%3C/svg%3E")
+        center right 10px no-repeat;
     background-size: 1rem;
     padding-right: 2.5rem;
 }
