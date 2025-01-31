@@ -9,6 +9,14 @@ const addToCartButtonText = computed(() =>
     isLoading.value ? t('messages.shop.adding') : t('messages.shop.addToCart'),
 );
 
+const trackAddToCart = () => {
+    if (window.gtag) {
+        window.gtag('event', 'conversion', {
+            send_to: 'AW-16839371435/DzyfCO376pYaEKvV0d0-',
+        });
+    }
+};
+
 // stop loading when cart is updated
 watch(cart, (val) => {
     isLoading.value = false;
@@ -30,7 +38,10 @@ watch(cart, (val) => {
         variant="secondary"
         :class="{ disabled: disabled }"
         :disabled="disabled"
-        @click="isLoading = true"
+        @click="
+            isLoading = true;
+            trackAddToCart();
+        "
         class="flex items-center space-x-4 justify-center"
     >
         <span>{{ addToCartButtonText }}</span>
