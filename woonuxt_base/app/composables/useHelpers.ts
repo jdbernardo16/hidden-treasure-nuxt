@@ -9,7 +9,7 @@ export function useHelpers() {
     const wooNuxtVersionInfo: string = pkg.version || '0.0.0';
     const productsPerPage: number = runtimeConfig.public?.PRODUCTS_PER_PAGE || 24;
     const wooNuxtSEO = runtimeConfig.public?.WOO_NUXT_SEO as WooNuxtSEOItem[];
-    const frontEndUrl = runtimeConfig.public.FRONT_END_URL;
+    const frontEndUrl = runtimeConfig.public?.FRONT_END_URL?.replace(/\/$/, '') || null;
     const isDev: boolean = process.env.NODE_ENV === 'development';
     const FALLBACK_IMG = '/images/placeholder.jpg';
 
@@ -204,6 +204,24 @@ export function useHelpers() {
         }
     };
 
+    /**
+     * Get domain from URL
+     * @param {string} url - The URL to get the domain from.
+     * @returns {string} The domain.
+     */
+    const getDomain = (url: string): string => {
+        const match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+        if (
+            match !== null &&
+            match.length > 2 &&
+            typeof match[2] === 'string' &&
+            match[2].length > 0
+        ) {
+            return match[2];
+        }
+        return '';
+    };
+
     return {
         isShowingMobileMenu,
         wooNuxtVersionInfo,
@@ -229,5 +247,6 @@ export function useHelpers() {
         stripHtml,
         debounce,
         logGQLError,
+        getDomain,
     };
 }

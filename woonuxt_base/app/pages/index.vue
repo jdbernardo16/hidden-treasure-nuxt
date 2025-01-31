@@ -63,10 +63,10 @@ useSeoMeta({
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-16">
-                <div
+                <nuxt-link
                     v-for="item in data?.f2_services"
-                    @click="navigateTo(item.link)"
-                    class="space-y-6 px-4 pt-20 pb-10 rounded-t-full border-2 border-brand-gold group/service transition hover:bg-brand-gold cursor-pointer hover:-translate-y-5"
+                    :to="item.link"
+                    class="space-y-6 px-4 pt-20 pb-10 rounded-t-full border-2 border-brand-gold group/service transition hover:bg-brand-gold cursor-pointer hover:-translate-y-5 block"
                 >
                     <img
                         class="m-auto animateUp"
@@ -79,13 +79,13 @@ useSeoMeta({
                         <p
                             class="text-brand-gold text-3xl font-semibold h-[72px] line-clamp-2 animateUp group-hover/service:text-brand-dark1 transition"
                         >
-                            {{ item.title }}
+                            {{ item?.title }}
                         </p>
                         <p class="text-white animateUp lg:min-h-[72px]">
-                            {{ item.description }}
+                            {{ item?.description }}
                         </p>
                     </div>
-                </div>
+                </nuxt-link>
             </div>
             <!-- <ServiceSlider :data="data?.f2_services" /> -->
         </div>

@@ -32,27 +32,43 @@ export default defineNuxtConfig({
             fbq('track', 'PageView');
           `,
                     type: 'text/javascript',
-                    charset: 'utf-8',
                 },
                 {
-                    type: 'text/javascript',
+                    hid: 'voiceflow-widget',
                     innerHTML: `
             (function(d, t) {
-              var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-              v.onload = function() {
-                window.voiceflow.chat.load({
-                  verify: { projectID: '6780f16040d0634c3490b975' },
-                  url: 'https://general-runtime.voiceflow.com',
-                  versionID: 'production'
-                });
-              }
-              v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function() {
+                  window.voiceflow.chat.load({
+                    verify: { projectID: '6780f16040d0634c3490b975' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                  });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
             })(document, 'script');
           `,
+                    type: 'text/javascript',
+                },
+                {
+                    hid: 'gtag',
+                    innerHTML: `
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16839371435"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-16839371435');
+            </script>
+          `,
+                    type: 'text/javascript',
                 },
             ],
             __dangerouslyDisableSanitizersByTagID: {
                 'meta-pixel': ['innerHTML'],
+                'voiceflow-widget': ['innerHTML'],
             },
             noscript: [
                 {
@@ -89,14 +105,7 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         '@nuxtjs/google-fonts',
         '@nuxtjs/sitemap',
-        'nuxt-gtag',
     ],
-
-    gtag: {
-        id: 'G-7DMFKHCX4P',
-        enabled: true,
-    },
-
     sitemap: {
         excludeAppSources: true,
         defaults: {
@@ -127,6 +136,7 @@ export default defineNuxtConfig({
             default: {
                 host: process.env.GQL_HOST || 'http://localhost:4000/graphql',
                 corsOptions: { mode: 'cors', credentials: 'include' },
+                headers: { Origin: process.env.APP_HOST || 'http://localhost:3000' },
             },
         },
     },
