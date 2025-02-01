@@ -23,6 +23,13 @@ watch(
 useHead({
     title: `Products`,
     meta: [{ hid: 'description', name: 'description', content: 'Products' }],
+    script: [
+        {
+            innerHTML: `
+            gtag('event', 'conversion', {'send_to': 'AW-16839371435/DzyfCO376pYaEKvV0d0-'});
+            `,
+        },
+    ],
 });
 </script>
 

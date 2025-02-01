@@ -105,7 +105,12 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         '@nuxtjs/google-fonts',
         '@nuxtjs/sitemap',
+        'nuxt-gtag',
     ],
+    gtag: {
+        id: 'G-7DMFKHCX4P',
+        enabled: true,
+    },
     sitemap: {
         excludeAppSources: true,
         defaults: {

@@ -13,6 +13,16 @@ const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
     },
 });
 
+useHead({
+    script: [
+        {
+            innerHTML: `
+            gtag('event', 'conversion', {'send_to': 'AW-16839371435/DzyfCO376pYaEKvV0d0-'});
+            `,
+        },
+    ],
+});
+
 import { ProductsOrderByEnum } from '#woo';
 const { data: productData } = await useAsyncGql('getProducts', {
     orderby: ProductsOrderByEnum.POPULARITY,
