@@ -34,7 +34,7 @@
                     <div
                         v-show="show"
                         class="mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto"
-                        :class="(maxWidthClass, cstmClass)"
+                        :class="maxWidthClass"
                     >
                         <slot v-if="show"></slot>
                     </div>

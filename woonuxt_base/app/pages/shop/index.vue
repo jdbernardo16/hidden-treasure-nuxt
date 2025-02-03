@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ProductsOrderByEnum } from '#woo';
 import { ArrowRight } from 'lucide-vue-next';
+import SubscriptionModal from '../../components/modals/SubscriptionModal.vue';
 const { siteName, description, shortDescription, siteImage } = useAppConfig();
 
 const { data } = await useAsyncGql('getProductCategories', { first: 6 });
@@ -11,6 +12,33 @@ const { data: productData } = await useAsyncGql('getProducts', {
 });
 
 const allProducts = productData.value.products?.nodes || [];
+
+const showModal = ref(false);
+
+// Function to check if 30 minutes have passed since last modal show
+const has30MinutesPassed = () => {
+    const lastShowTime = localStorage.getItem('lastModalShowTime');
+    if (!lastShowTime) return true;
+
+    const lastTime = new Date(lastShowTime).getTime();
+    const now = new Date().getTime();
+    const timeDiff = now - lastTime;
+
+    // 30 minutes in milliseconds (30 * 60 * 1000)
+    return timeDiff >= 1800000;
+};
+
+// Update the last modal show time in localStorage
+const updateLastShowTime = () => {
+    localStorage.setItem('lastModalShowTime', new Date().toISOString());
+};
+
+onMounted(() => {
+    if (has30MinutesPassed()) {
+        showModal.value = true;
+        updateLastShowTime();
+    }
+});
 
 const featuredProducts = allProducts.filter((product) =>
     product.terms.nodes.some(
@@ -129,6 +157,7 @@ onMounted(() => {
                 />
             </div>
         </section>
+        <SubscriptionModal v-model:show="showModal" :cms="cms.subscription_modal" />
     </main>
 </template>
 
