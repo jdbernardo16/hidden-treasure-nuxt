@@ -5,8 +5,8 @@
                 @click="() => emit('update:show', false)"
                 class="w-5 h-5 text-brand-gold absolute top-4 right-4 cursor-pointer"
             />
-            <div class="flex items-center w-full bg-black">
-                <div class="w-5/12 h-[500px]">
+            <div class="flex items-center w-full bg-black md:flex-row flex-col">
+                <div class="w-full md:w-5/12 md:h-[500px] md:block hidden">
                     <img
                         class="w-full h-full object-cover"
                         :src="cms?.image?.url"
@@ -14,7 +14,7 @@
                         loading="lazy"
                     />
                 </div>
-                <div class="w-7/12 p-6 h-full block">
+                <div class="w-full md:w-7/12 p-6 pt-10 md:p-6 md:h-full block">
                     <div class="text-center text-white mb-6">
                         <p class="font-bold text-2xl mb-2">{{ cms?.title }}</p>
                         <p>{{ cms?.description }}</p>
@@ -38,7 +38,7 @@
                             placeholder="Enter email address here"
                             label="Email Address"
                         />
-                        <div class="flex justify-end w-full">
+                        <div class="flex justify-center md:justify-end w-full">
                             <vue-recaptcha
                                 :sitekey="sitekey"
                                 @verify="verifySubmission"
