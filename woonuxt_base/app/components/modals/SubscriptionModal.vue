@@ -7,12 +7,11 @@
             />
             <div class="flex items-center w-full bg-black">
                 <div class="w-5/12 h-[500px]">
-                    <nuxt-img
+                    <img
                         class="w-full h-full object-cover"
                         :src="cms?.image?.url"
                         alt="shop banner"
                         loading="lazy"
-                        format="webp"
                     />
                 </div>
                 <div class="w-7/12 p-6 h-full block">
