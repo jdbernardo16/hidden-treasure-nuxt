@@ -6,6 +6,8 @@ const { storeSettings } = useAppConfig();
 const { arraysEqual, formatArray, checkForVariationTypeOfAny } = useHelpers();
 const { addToCart, isUpdatingCart } = useCart();
 const { t } = useI18n();
+const config = useRuntimeConfig();
+const SITE_URL = config.public.SITE_URL;
 const slug = route.params.slug as string;
 
 const { data } = await useAsyncGql('getProduct', { slug });
@@ -225,6 +227,7 @@ const disabledAddToCart = computed(() => {
                                     class="flex-1 w-full md:max-w-xs"
                                     :disabled="disabledAddToCart"
                                     :class="{ loading: isUpdatingCart }"
+                                    :productUrl="`${SITE_URL}/product/${slug}`"
                                 />
                             </div>
                             <a
