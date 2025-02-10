@@ -164,11 +164,15 @@ const handleSubmit = async () => {
                 errors[field.field] = field.message;
             });
         } else {
-            alert('success');
             gtag('event', 'conversion', {
                 send_to: 'AW-16839371435/Cqh_CK3Ii5waEKvV0d0-',
                 value: 1.0,
                 currency: 'USD',
+            });
+
+            gtag('event', 'form_submit', {
+                event_category: 'Subscription',
+                event_label: 'Subscription Form Submit',
             });
 
             emit('update:show', false);

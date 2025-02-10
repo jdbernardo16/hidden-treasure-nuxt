@@ -175,6 +175,17 @@ const handleSubmit = async () => {
             // Handle successful form submission
             showSuccessModal.value = true;
 
+            gtag('event', 'conversion', {
+                send_to: 'AW-16839371435/alLaCJS3i5waEKvV0d0-',
+                value: 1.0,
+                currency: 'USD',
+            });
+
+            gtag('event', 'form_submit', {
+                event_category: 'Subscription',
+                event_label: 'Subscription Form Submit',
+            });
+
             // Clear the form and errors
             Object.keys(form.value).forEach((key) => {
                 form.value[key] = ''; // Reset each form field
