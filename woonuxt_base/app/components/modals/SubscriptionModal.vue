@@ -164,6 +164,13 @@ const handleSubmit = async () => {
                 errors[field.field] = field.message;
             });
         } else {
+            alert('success');
+            gtag('event', 'conversion', {
+                send_to: 'AW-16839371435/Cqh_CK3Ii5waEKvV0d0-',
+                value: 1.0,
+                currency: 'USD',
+            });
+
             emit('update:show', false);
             // Add a small delay before showing the success modal
             setTimeout(() => {
