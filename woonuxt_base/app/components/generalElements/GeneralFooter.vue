@@ -17,6 +17,15 @@ const scrollToTop = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
+
+const handleClick = (title, link) => {
+    gtag('event', 'social_media_click', {
+        event_category: 'Outbound Link',
+        event_label: title,
+        event_value: link,
+        non_interaction: false,
+    });
+};
 </script>
 <template>
     <footer class="order-last">
@@ -78,11 +87,12 @@ const scrollToTop = () => {
                 </div>
                 <div class="text-white text-sm footer-links">
                     <div class="flex space-x-2 mb-3 lg:ml-auto w-fit">
-                        <nuxt-link
+                        <a
                             v-for="item in data?.footer?.column_4?.social_media_links"
                             :key="item"
-                            :to="item?.link"
+                            :href="item?.link"
                             target="_blank"
+                            @click="handleClick(item?.title, item?.link)"
                         >
                             <nuxt-img
                                 format="webp"
@@ -92,7 +102,7 @@ const scrollToTop = () => {
                                 :src="item?.icon?.url"
                                 :alt="item?.icon?.name"
                             />
-                        </nuxt-link>
+                        </a>
                     </div>
                     <nuxt-link
                         :to="`mailto: ${data?.footer?.column_4?.admin_email}`"
