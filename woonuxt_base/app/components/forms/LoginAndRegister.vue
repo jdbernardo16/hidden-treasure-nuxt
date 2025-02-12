@@ -139,6 +139,11 @@ const handleFormSubmit = async (userInfo) => {
     if (formView.value === 'register') {
         const { success, error } = await registerUser(userInfo);
         if (success) {
+            gtag('event', 'conversion', {
+                send_to: 'AW-16839371435/LThyCJrO95waEKvV0d0-',
+                value: 1.0,
+                currency: 'USD',
+            });
             errorMessage.value = '';
             message.value =
                 t('messages.account.accountCreated') + ' ' + t('messages.account.loggingIn');
