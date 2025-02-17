@@ -15,7 +15,7 @@ useSeoMeta({
 
 const mockProjects = [
     {
-        image: 'https://picsum.photos/id/237/300/300',
+        image: 'https://picsum.photos/id/147/300/300',
         title: 'Miraculous Education',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
@@ -66,18 +66,18 @@ const mockProjects = [
 </script>
 <template>
     <section class="bg-brand-dark4">
-        <div class="mx-auto max-w-screen-xl px-4 py-20 lg:flex lg:items-center">
+        <div class="mx-auto max-w-screen-xl px-4 py-10 lg:py-20 lg:flex lg:items-center">
             <div class="mx-auto text-center space-y-4 max-w-3xl">
                 <div class="font-semibold text-white">
                     <p>Portfolio</p>
                 </div>
                 <div>
-                    <h1 class="text-5xl font-extrabold text-primary leading-relaxed">
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-primary lg:leading-relaxed">
                         Our Diverse Project Showcase
                     </h1>
                 </div>
                 <div class="text-white">
-                    <p class="text-lg">
+                    <p class="lg:text-lg">
                         Turning bold ideas into campaigns that inspire, engage, and deliver results.
                         Let’s create something impactful together.
                     </p>
@@ -86,11 +86,17 @@ const mockProjects = [
         </div>
     </section>
     <section class="bg-brand-dark4">
-        <div class="max-w-[1440px] px-20 py-20">
-            <div class="grid grid-cols-3 w-full gap-16">
-                <div class="text-white" v-for="project in mockProjects" :key="project.title">
+        <div class="max-w-[1440px] px-4 lg:px-20 py-10 lg:py-20 m-auto">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 md:gap-10 lg:gap-16 portfolio-container"
+            >
+                <div
+                    class="text-white portfolio-item"
+                    v-for="project in mockProjects"
+                    :key="project.title"
+                >
                     <div class="aspect-w-1 aspect-h-1 bg-white overflow-hidden rounded-lg mb-6">
-                        <nuxt-img
+                        <NuxtImg
                             quality="80"
                             format="webp"
                             :src="project.image"
@@ -99,7 +105,7 @@ const mockProjects = [
                         />
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-2 h-16 line-clamp-2">
+                        <h3 class="text-xl lg:text-2xl font-bold mb-2 lg:h-16 line-clamp-2">
                             {{ project.title }}
                         </h3>
                         <p class="line-clamp-2 leading-relaxed mb-4">
