@@ -86,7 +86,7 @@ const mockProjects = [
         </div>
     </section>
     <section class="bg-brand-dark4">
-        <div class="max-w-[1440px] px-4 lg:px-20 py-10 lg:py-20 m-auto">
+        <div class="max-w-[1440px] px-4 lg:px-20 py-10 lg:pt-20 lg:pb-40 m-auto">
             <div
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 md:gap-10 lg:gap-16 portfolio-container"
             >
