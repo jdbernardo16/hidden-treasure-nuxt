@@ -121,7 +121,7 @@ const mockProjects = [
                             </div>
                         </div>
                         <a
-                            :href="project.link"
+                            href="/portfolio-demo/demo"
                             class="flex items-center space-x-2 text-white transition hover:text-primary"
                         >
                             <p>View project</p>
