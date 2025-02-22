@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue';
+import { useFetch } from '#app';
 import { ChevronRight } from 'lucide-vue-next';
 useSeoMeta({
     title: 'Portfolio',
@@ -13,75 +15,42 @@ useSeoMeta({
         'Transforming Ideas into, Impactful Campaigns, Turning bold ideas into campaigns that inspire, engage, and deliver results. Let’s create something impactful together.',
 });
 
-const mockProjects = [
-    {
-        image: 'https://picsum.photos/id/147/300/300',
-        title: 'Miraculous Education',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
-        tags: ['Education', 'Technology'],
-        link: '#',
+const config = useRuntimeConfig();
+const API_BASE_URL = config.public.API_BASE_URL;
+const { data: allPortfolios } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/portfolio`, {
+    query: {
+        _fields: 'thumbnail,acf,title,date,slug,featured_media', // Select specific fields to reduce payload size
+        acf_format: 'standard', // Ensure the format for ACF data
     },
-    {
-        image: 'https://picsum.photos/id/238/300/300',
-        title: 'Innovative Healthcare',
-        description:
-            'Praesent egestas tristique nibh. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.',
-        tags: ['Healthcare', 'Innovation'],
-        link: '#',
+    transform: (response) => {
+        return response || []; // Return the array of posts or an empty array
     },
-    {
-        image: 'https://picsum.photos/id/239/300/300',
-        title: 'Sustainable Agriculture',
-        description:
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-        tags: ['Agriculture', 'Sustainability'],
-        link: '#',
+});
+
+const { data } = useFetch(`${API_BASE_URL}/wp-json/wp/v2/pages`, {
+    query: {
+        slug: 'portfolio',
+        _fields: 'acf',
+        acf_format: 'standard',
     },
-    {
-        image: 'https://picsum.photos/id/240/300/300',
-        title: 'Creative Arts Platform',
-        description:
-            'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.',
-        tags: ['Arts', 'Creativity'],
-        link: '#',
+    transform: (response) => {
+        return response[0]?.acf || null;
     },
-    {
-        image: 'https://picsum.photos/id/241/300/300',
-        title: 'Financial Technology Solutions',
-        description:
-            'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.',
-        tags: ['Finance', 'Technology'],
-        link: '#',
-    },
-    {
-        image: 'https://picsum.photos/id/242/300/300',
-        title: 'Renewable Energy Initiatives',
-        description:
-            'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.',
-        tags: ['Energy', 'Environment'],
-        link: '#',
-    },
-];
+});
 </script>
 <template>
     <section class="bg-brand-dark4">
         <div class="mx-auto max-w-screen-xl px-4 py-10 lg:py-20 lg:flex lg:items-center">
             <div class="mx-auto text-center space-y-4 max-w-3xl">
                 <div class="font-semibold text-white">
-                    <p>Portfolio</p>
+                    <p>{{ data?.frame_1?.eyebrow }}</p>
                 </div>
                 <div>
                     <h1 class="text-4xl lg:text-5xl font-extrabold text-primary lg:leading-relaxed">
-                        Our Diverse Project Showcase
+                        {{ data?.frame_1?.header }}
                     </h1>
                 </div>
-                <div class="text-white">
-                    <p class="lg:text-lg">
-                        Turning bold ideas into campaigns that inspire, engage, and deliver results.
-                        Let’s create something impactful together.
-                    </p>
-                </div>
+                <div class="text-white text-lg" v-html="data?.frame_1?.description" />
             </div>
         </div>
     </section>
@@ -92,36 +61,36 @@ const mockProjects = [
             >
                 <div
                     class="text-white portfolio-item"
-                    v-for="project in mockProjects"
-                    :key="project.title"
+                    v-for="project in allPortfolios"
+                    :key="project?.title?.rendered"
                 >
                     <div class="aspect-w-1 aspect-h-1 bg-white overflow-hidden rounded-lg mb-6">
                         <NuxtImg
                             quality="80"
                             format="webp"
-                            :src="project.image"
-                            :alt="project.title"
+                            :src="project.acf?.thumbnail?.image?.url"
+                            :alt="project?.title?.rendered"
                             class="w-full h-full object-cover"
                         />
                     </div>
                     <div>
                         <h3 class="text-xl lg:text-2xl font-bold mb-2 lg:h-16 line-clamp-2">
-                            {{ project.title }}
+                            {{ project?.title?.rendered }}
                         </h3>
                         <p class="line-clamp-2 leading-relaxed mb-4">
-                            {{ project.description }}
+                            {{ project.acf?.thumbnail?.excerpt }}
                         </p>
                         <div class="relative space-x-2 mb-6">
                             <div
-                                v-for="tag in project.tags"
+                                v-for="tag in project?.acf?.frame_1?.tags"
                                 :key="tag"
                                 class="bg-primary text-white inline-block text-sm font-semibold px-2 py-1"
                             >
-                                {{ tag }}
+                                {{ tag.tag_label }}
                             </div>
                         </div>
                         <a
-                            href="/portfolio-demo/demo"
+                            :href="`/portfolio/${project?.slug}`"
                             class="flex items-center space-x-2 text-white transition hover:text-primary"
                         >
                             <p>View project</p>

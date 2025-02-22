@@ -148,7 +148,7 @@ onMounted(() => {
                                 <h3 class="text-brand-gold mb-3 font-bold text-xl">
                                     {{ item.title }}
                                 </h3>
-                                <div class="ck-content" v-html="item?.description" />
+                                <div class="wysiwyg" v-html="item?.description" />
                             </div>
                             <div
                                 class="shrink-0 rounded-full z-10 bg-black lg:block hidden"
