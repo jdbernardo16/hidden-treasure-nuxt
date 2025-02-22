@@ -1,0 +1,1 @@
+import{_ as o}from"./CIZCnkPD.js";import{an as n,o as a,h as r,w as c,f as _,t as i,b as l}from"./CUwGKLZn.js";const g={__name:"ResetFiltersButton",setup(p){const{resetFilter:t}=n();return(e,u)=>{const s=o;return a(),r(s,{onClick:l(t)},{default:c(()=>[_(i(e.$t("messages.general.clearFilters")),1)]),_:1},8,["onClick"])}}};export{g as default};
