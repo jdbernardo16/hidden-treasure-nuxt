@@ -129,7 +129,7 @@ useSeoMeta({
                 <ProductCard
                     v-for="(node, i) in featuredProducts.slice(0, 4)"
                     :key="node.databaseId"
-                    class="w-full animateUp"
+                    class="w-full"
                     :node="node"
                     :index="i"
                     :class="{
@@ -161,7 +161,7 @@ useSeoMeta({
                     </p>
                 </div>
             </div>
-            <div class="w-full px-4 md:px-10 lg:px-[160px] animateUp">
+            <div class="w-full px-4 md:px-10 lg:px-[160px]">
                 <TestimonySlider :items="data?.testimonies" />
             </div>
         </div>

@@ -20,34 +20,32 @@ export default defineNuxtConfig({
                 {
                     hid: 'meta-pixel',
                     innerHTML: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '453183277830202');
-            fbq('track', 'PageView');
-          `,
+                        !function(f,b,e,v,n,t,s)
+                        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                        n.queue=[];t=b.createElement(e);t.async=!0;
+                        t.src=v;s=b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t,s)}(window, document,'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                        fbq('init', '453183277830202');
+                        fbq('track', 'PageView');
+                    `,
                     type: 'text/javascript',
                 },
                 {
-                    hid: 'voiceflow-widget',
+                    hid: 'tawk.to-widget',
                     innerHTML: `
-            (function(d, t) {
-                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                v.onload = function() {
-                  window.voiceflow.chat.load({
-                    verify: { projectID: '6780f16040d0634c3490b975' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production'
-                  });
-                }
-                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-            })(document, 'script');
-          `,
+                        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                        (function(){
+                        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                        s1.async=true;
+                        s1.src='https://embed.tawk.to/67bd840c8453c9190cca5b97/1iku4nkfu';
+                        s1.charset='UTF-8';
+                        s1.setAttribute('crossorigin','*');
+                        s0.parentNode.insertBefore(s1,s0);
+                        })();
+                    `,
                     type: 'text/javascript',
                 },
                 //         {
@@ -68,7 +66,7 @@ export default defineNuxtConfig({
             ],
             __dangerouslyDisableSanitizersByTagID: {
                 'meta-pixel': ['innerHTML'],
-                'voiceflow-widget': ['innerHTML'],
+                'tawk.to-widget': ['innerHTML'],
             },
             noscript: [
                 {
