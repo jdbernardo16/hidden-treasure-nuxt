@@ -52,9 +52,10 @@
                                 SUBSCRIBE
                             </Button>
                         </div>
-                        <p class="text-white text-xs text-center">
-                            {{ cms?.footer_text }}
-                        </p>
+                        <div
+                            class="text-white text-xs text-center wysiwyg"
+                            v-html="cms?.footer_text"
+                        />
                     </form>
                 </div>
             </div>
