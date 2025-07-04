@@ -35,7 +35,7 @@ useHead({
 
 <template>
     <section class="bg-brand-dark4">
-        <nuxt-img
+        <img
             v-if="route.query.filter === 'sale[true]'"
             quality="80"
             format="webp"
