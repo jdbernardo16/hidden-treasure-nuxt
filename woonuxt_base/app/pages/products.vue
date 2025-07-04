@@ -35,6 +35,14 @@ useHead({
 
 <template>
     <section class="bg-brand-dark4">
+        <nuxt-img
+            v-if="route.query.filter === 'sale[true]'"
+            quality="80"
+            format="webp"
+            src="/images/july4.png"
+            alt="July 4 background"
+            class="w-full"
+        />
         <div
             class="max-w-[1440px] m-auto flex items-start gap-16 px-4 lg:px-10"
             v-if="allProducts.length"
