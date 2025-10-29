@@ -10,6 +10,7 @@ setProducts(allProducts);
 
 onMounted(() => {
     if (!isQueryEmpty.value) updateProductList();
+    window.scrollTo(0, 0);
 });
 
 watch(

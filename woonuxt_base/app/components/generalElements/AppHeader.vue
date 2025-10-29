@@ -80,8 +80,8 @@ const closeMenu = () => {
             <NuxtLink to="/about-us" class="hover:text-white transition" @click="closeMenu"
                 >About Us</NuxtLink
             >
-            <NuxtLink to="/shop" class="hover:text-white transition" @click="closeMenu"
-                >Consignment</NuxtLink
+            <NuxtLink to="/products" class="hover:text-white transition" @click="closeMenu"
+                >Shop</NuxtLink
             >
             <NuxtLink to="/portfolio" class="hover:text-white transition" @click="closeMenu"
                 >Portfolio</NuxtLink
