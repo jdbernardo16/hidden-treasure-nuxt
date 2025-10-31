@@ -150,8 +150,11 @@ const closeMenu = () => {
             </div>
         </div>
         <NuxtLink to="/" class="hover:text-white transition" @click="closeMenu">About Us</NuxtLink>
-        <NuxtLink to="/shop" class="hover:text-white transition" @click="closeMenu"
+        <!-- <NuxtLink to="/shop" class="hover:text-white transition" @click="closeMenu"
             >Consignment</NuxtLink
+        > -->
+        <NuxtLink to="/products" class="hover:text-white transition" @click="closeMenu"
+            >shop</NuxtLink
         >
         <NuxtLink to="/portfolio" class="hover:text-white transition" @click="closeMenu"
             >Portfolio</NuxtLink
