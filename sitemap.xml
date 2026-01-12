@@ -1,676 +1,766 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/__sitemap__/style.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/about-us</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blogs</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/cart</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/checkout</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/consignment</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/consignment-services</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/contact-us</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/digital-marketing</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/header-footer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/home</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/my-account</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/portfolio</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/privacy-policy</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/services</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/shop</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/terms-and-conditions</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/virtual-assistant</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/7-mistakes-to-avoid-when-selling-on-consignment</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/design-that-speaks-volumes-elevating-your-brand-with-hidden-treasures</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/empower-your-business-with-hidden-treasures-virtual-assistant-services</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/how-to-build-a-luxury-brand-identity-that-stands-out-in-2025</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/how-to-choose-the-best-items-to-consign-a-data-driven-guide-for-maximizing-profits</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/innovating-with-hidden-treasures-ai-seo-and-beyond</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/luxury-with-purpose-the-sustainable-future-of-consignment</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/maximizing-your-reach-with-paid-ads</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/proven-strategies-to-boost-customer-retention</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/sample-blog-2</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/sample-blog-3</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/sample-blog-post-4</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/the-future-of-digital-marketing-2025-trends-you-cant-ignore</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/the-new-era-of-consignment-turning-pre-owned-luxury-into-opportunity</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/top-5-reasons-to-sell-on-consignment</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/top-marketing-trends-to-watch-in-2025</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/unlocking-hidden-potential-an-overview-of-our-services</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/unveiling-the-art-of-marketing-why-your-brand-deserves-the-hidden-treasures-touch</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/what-can-you-sell-on-consignment</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/what-is-consignment-a-complete-guide-to-selling-smarter</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/why-your-brand-needs-a-story-not-just-a-logo</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/blog/your-treasure-our-passion-why-clients-choose-us</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/billy-dewell-1950-bowman-22-psa-6-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/bob-griese-1971-topps-160-sgc-6-5-football</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/bob-lanier-hof-1976-buckmans-discs-psa-9-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/bob-mcluckie-1947-62-d-cummings-son-famous-fighters-psa-6-ex-mt-boxing-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/bobby-charlton-1970-anglo-confectionery-10-el-salvador-world-cup-1970-psa-7</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/bobby-layne-1957-topps-32-psa-8-football</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/bobby-moore-1968-charles-buchans-football-monthly-hand-cut-5-psa-8-nm-mt-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/cal-ripken-jr-1984-all-star-game-program-inserts-hand-cut-psa9-mint-baseball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/christopher-nkunku-javier-pastore-rc-2016-17-panini-foot-album-stickers-708-709-psa-9-mint-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/cristiano-ronaldo-2018-panini-donruss-out-of-this-world-ow10-psa-9-mint-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/dan-fouts-hof-1984-topps-179-sgc-96-mint-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/dave-bowen-1959-cadet-sweets-ltd-40-footballers-psa-10-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/dave-cowens-hof-1976-buckmans-discs-psa-9-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/david-beckham-2006-panini-world-cup-stickers-103-sgc-9-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/delles-howell-1972-sunoco-stamps-psa-4-vg-ex-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/dennis-eckersley-hof-1978-wiffle-insert-discs-psa-9-mint-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/derek-jeter-2001-upper-deck-spx-37-sgc9-5-mt-baseball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/diego-maradona-hof-1986-panini-egypt-football-87-stickers-297-psa-6-ex-mt</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/dusty-rhodes-hof-1998-bandai-new-japan-pro-wrestling-73-psa-8-nm-mt-wrestling</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/dusty-rhodes-hof-1998-bandai-new-japan-pro-wrestling-73-psa-9-mint-wrestling</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/erling-haaland-2019-topps-ucl-stickers-419-psa-8-nm-mt-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/erling-haaland-2019-topps-ucl-stickers-419-psa-8-nm-mt-soccer-card-2</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/erling-haaland-2021-22-best-of-the-best-bb-01-psa-9-mint-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/erling-haaland-2021-22-best-of-the-best-bb-01-psa-9-mint-soccer-card-2</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/ernie-ladd-hof-1982-wrestling-all-stars-series-a-32-psa-8-nm-mt-wrestling</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/frank-klaus-1910-t218-mecca-cigarettes-sgc-5-5-ex-70-boxing-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/gail-goodrich-hof-1976-buckmans-discs-psa-6-ex-mt-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/gordie-howe-hof-2000-canada-50th-anniversary-nhl-all-star-game-psa-9-mint</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/h-dixon-g-sellers-h-twilley-j-namath-1969-topps-psa-6-ex-mt-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/hulk-hogan-1985-topps-wwf-60-psa-8-wrestling</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/iron-sheik-hof-1985-topps-wwf-stickers-5-psa-8-nm-mt-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/iron-sheik-hof-2007-topps-chrome-wwe-heritage-ii-96-psa-9-mint-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/javonte-williams-2021-panini-contenders-autographed-rps-variation-115-sgc-9-mt</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/jesse-tannehill-1910-piedmont-sgc-4-vg-ex-50-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/jim-kelly-rc-1987-topps-362-bgs-9-mint-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/jim-kiick-1972-topps-9-sgc-8-5-nm-mt-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/jimmy-greaves-1959-cadet-sweets-ltd-footballers-36-psa-8-nm-mt-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/jimmy-greaves-1959-cadet-sweets-ltd-footballers-36-psa-8-nm-mt-soccer-card-2</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/joe-namath-hof-1972-topps-100-sgc-6-5-ex-nm-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/john-frill-1909-t206-sweet-caporal-psa-3-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/julio-cesar-chavez-hof-1991-kayo-216-sgc-9-5-mt-boxing-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/kellen-winslow-1981-topps-stickers-109-psa-6-ex-mt-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/kellen-winslow-1981-topps-stickers-109-psa-6-ex-mt-football-card-2</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/kenneth-snyder-1954-bowman-69-psa-7-football</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/kylian-mbappe-2018-panini-adrenalyn-xl-151-fifa-world-cup-russia-psa-7-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/ladainian-tomlinson-2001-ultra-2499-253-psa-8-nm-mt-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/lamine-yamal-rc-2024-topps-now-uefa-euro-national-debut-5-psa-9-mint-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/lloyd-moseby-1988-grenada-baseball-stamps-psa-9-mint-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/magic-johnson-hof-1990-fleer-93-psa-9-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/mariekson-gregroius-2011-bowman-chrome-prospects-bcp209-psa9-mint-baseball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/michael-jordan-1995-upper-deck-jordan-milk-caps-50-psa9-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/michael-jordan-1996-97-collectors-choice-jordan-a-cut-above-ca4-psa-8-5-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/michael-jordan-1996-upper-deck-jordan-flying-high-metal-7-psa8-nmmt-basketball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/michael-jordan-hof-1992-legends-sports-memorabilia-nscc-c14-psa-9-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/michael-porter-jr-rc-2018-panini-status-new-breed-autographs-nb-mpj-psa-10-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/mike-kreevich-1936-s-and-s-game-psa-7-nm-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/mohamed-salah-2018-panini-prizm-world-cup-54-psa-9-mint-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/nolan-ryan-hof-1993-king-b-17-psa-9-mint-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/patsy-kline-1910-t225-prizefighter-series-102-sgc-4-vg-ex-50-boxing-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/paul-stanley-1978-swedish-samlarsaker-period-after-number-828-psa-8-nm-mt</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/peyton-manning-1998-finest-121-psa-8-nm-mt-football</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/phil-jackson-1972-topps-32-sgc-6-basketball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/ric-flair-hof-1986-carnation-major-league-wrestling-psa-6-ex-mt-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/rick-barry-hof-1976-buckmans-discs-psa-9-mint-basketball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/rick-martel-1986-wrestling-stars-hand-cut-38-psa-10-gem-mint-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/roger-maris-lou-burdette-1962-topps-stamps-panel-sgc-4-vg-ex-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/ronaldinho-2004-panini-stickers-colecciones-este-psa-8-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/ronaldinho-hof-2006-panini-world-cup-germany-sticker-393-psa-8-nm-mt-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/ronaldo-1997-merlin-calcio-dinizio-kick-off-f-psa-6-ex-mt-soccer-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/rube-manning-1909-piedmont-cigarettes-t206-batting-sgc3-vg40-baseball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/sandy-koufax-hof-1962-topps-5-sgc-6-ex-nm-baseball-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/shawn-michaels-hof-1992-merlin-wwf-stickers-241-sgc-9-mint-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/stanley-matthews-hof-1935-carreras-ltd-popular-personalities-65-psa-6-ex-mt</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/stephen-curry-2015-panini-hoops-highlights-5-psa-9-mint-basketball</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/ted-dibiase-1989-wwf-gold-bond-the-million-dollar-man-ice-cream-psa-7</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/the-rock-2005-topps-wwe-heritage-2-psa-9-wrestling</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/tiger-jeet-singh-1974-yamakatsu-new-japan-pro-28-psa-6-ex-mt-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/tiger-jeet-singh-1974-yamakatsu-new-japan-pro-wrestling-28-psa-6-ex-mt-wrestling-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/undertaker-1999-cardinal-wwf-trivia-series-2-psa-10-wrestling</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/undertaker-hof-1998-cardinal-wwf-trivia-series-psa-9-mint-wrestling-card</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/vitamin-smith-1952-bowman-large-73-psa-5-5-ex-football-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/wahoo-mcdaniel-hof-1986-monty-gum-wrestling-stars-hand-cut-16-psa-7-nm-wrestling-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <loc>https://hiddentreasuresagency.com/product/wahoo-mcdaniel-hof-1986-monty-gum-wrestling-stars-hand-cut-16-psa-7-nm-wrestling-card-2</loc>
+    </url>
+    <url>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/wayne-gretzky-1985-topps-120-psa-8-nm-mt-hockey-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/wayne-gretzky-1998-u-d-choice-128-psa-9-mint-ice-hockey-card</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/xavi-2004-05-panini-barca-campeon-18-sgc-8-5-soccer</loc>
     </url>
     <url>
-        <lastmod>2026-01-12T15:01:57Z</lastmod>
+        <lastmod>2026-01-12T15:29:52Z</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
         <loc>https://hiddentreasuresagency.com/product/zollie-toth-1952-bowman-large-58-psa-5-ex-football-card</loc>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.0.1 at 2026-01-12T15:04:54.942Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v7.0.1 at 2026-01-12T15:33:07.050Z -->
